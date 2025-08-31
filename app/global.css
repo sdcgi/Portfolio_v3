@@ -1,3 +1,4 @@
+html { scrollbar-gutter: stable both-edges; }
 @import './variables.css';
 
 /* Minimal, neutral; no shadows, no rounded corners */
@@ -56,7 +57,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .tile:hover .media img,
   .tile:hover .media video { transform: scale(var(--hover-zoom-scale)); }
 }
-@media (hover:hover){ .tile:hover .media img, .tile:hover .media video { transform: scale(var(--hover-zoom-scale)); } }
 
 /* Meta text uses site font; never looks like a link */
 .tile .meta { padding: 8px 2px 0; display: flex; justify-content: space-between; gap: 8px; font-family: var(--font-sans); }
@@ -76,6 +76,11 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .grid.single-one .tile { width: 100%; max-width: none; }
 }
 
+/* Leaf-native mode: use chosen object-fit for images/videos in leaf grids */
+.grid.leaf-native .tile .media img,
+.grid.leaf-native .tile .media video { object-fit: var(--leaf-native-fit); }
+
+
 /* 3-image leaves: force 3 columns on desktop */
 @media (min-width: 1100px) {
   .grid.cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
@@ -92,3 +97,13 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 /* Utilities */
 .page-inner { padding: 8px 0 24px; }
 .hidden { display: none; }
+
+/* Hover zoom conditioned by level knobs */
+.grid{--hover-enabled:0;}
+.grid.level-top{--hover-enabled:var(--hover-zoom-top,1);} 
+.grid.level-sub{--hover-enabled:var(--hover-zoom-sub,0);} 
+.grid.level-leaf{--hover-enabled:var(--hover-zoom-leaf,0);} 
+@media (hover:hover){
+  .grid .tile:hover .media img,
+  .grid .tile:hover .media video{transform:scale(calc(1 + (var(--hover-enabled) * (var(--hover-zoom-scale) - 1))));}
+}

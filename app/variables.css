@@ -3,11 +3,16 @@
    Global UI Variables (ROOT)
    =========================== */
 :root {
+
+  /*Sitewide */
+--leaf-native-aspect: 1;      /* 1 = leaf grids use native aspect per image */
+--leaf-native-fit: contain;   /* contain|cover when native aspect is on */
+
   /* Fonts + colors */
   --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --bg: #fff;
-  --text: #111;
-  --muted: #666;
+  --text: #757575;
+  --muted: #a9a9a9;
   --border: #e5e5e5;
   --accent-bg: #efefef;
   --placeholder: #f3f3f3;
@@ -31,13 +36,16 @@
   --show-sub-counts: 0;
 
   /* Mouseover hover zoom style */
-  --hover-zoom-scale: 1.03;     /* amount of zoom on hover */
-  --hover-zoom-duration: 300ms; /* animation time */
+  --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
+  --hover-zoom-duration: 150ms; /* animation time */
   --hover-zoom-ease: ease-out;  /* easing curve */
+  --hover-zoom-top: 1; /* if zoom on hover for TOP gallery */
+  --hover-zoom-sub: 1; /* if zoom on hover for a Project (neseted) gallery */
+  --hover-zoom-leaf: 0; /* if zoom on hover for gallery images */
 
 
   /* Lightbox */
-  --lightbox-overlay: rgba(0,0,0,.9);
+  --lightbox-overlay: hsla(0, 0%, 100%, 0.901);
   --lightbox-max-w: 98vw;
   --lightbox-max-h: 96lvh;
 

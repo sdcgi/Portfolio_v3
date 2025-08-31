@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 export type FolderTile = {
   kind: 'folder';
@@ -25,11 +25,11 @@ export default function Grid({
   level = 'sub',
 }: {
   items: Tile[];
-  ratio?: string;               // CSS aspect-ratio (e.g., '1 / 1' or 'var(--tile-aspect-top)')
-  desktopCols?: number;         // 3..6
+  ratio?: string;
+  desktopCols?: number;
   enableDensityToggle?: boolean;
   onItemClick?: (item: Tile, index: number) => void;
-  level?: Level;                // tells us which knobs to read
+  level?: Level;
 }) {
   const [density, setDensity] = useState<'comfortable' | 'compact'>('comfortable');
   const cols = Math.max(3, Math.min(6, desktopCols));
@@ -55,8 +55,21 @@ export default function Grid({
     const pick = (name: string, def = '1') => Number((cs.getPropertyValue(name).trim() || def)) > 0;
     if (level === 'top') return { titles: pick('--show-top-titles','0'), counts: pick('--show-top-counts','1') };
     if (level === 'sub') return { titles: pick('--show-sub-titles','0'), counts: pick('--show-sub-counts','1') };
-    return { titles: false, counts: false }; // leaf/images don't show labels below tiles
+    return { titles: false, counts: false };
   }, [level]);
+
+  // ✅ Client-driven flag: leaf grids use each image's native aspect when enabled via CSS var
+  const [leafNative, setLeafNative] = useState(false);
+  useEffect(() => {
+    // only relevant for leaf grids (all images)
+    if (!(items.length > 0 && items.every(it => (it as any).kind === 'image'))) {
+      setLeafNative(false);
+      return;
+    }
+    const cs = getComputedStyle(document.documentElement);
+    const v = cs.getPropertyValue('--leaf-native-aspect').trim();
+    setLeafNative(Number(v || '0') > 0);
+  }, [items]);
 
   return (
     <div className="page-inner">
@@ -71,7 +84,8 @@ export default function Grid({
       </div>
 
       <div
-        className={`grid ${isSingleImageGrid ? 'single-one' : ''} ${isThreeImageLeaf ? 'cols-3' : ''}`}
+        className={`grid ${isSingleImageGrid ? 'single-one' : ''} ${isThreeImageLeaf ? 'cols-3' : ''} level-${level} ${leafNative ? 'leaf-native' : ''}`}
+        data-level={level}
         style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)' }}
       >
         {items.map((it, i) => (
@@ -83,6 +97,7 @@ export default function Grid({
             single={isSingleImageGrid}
             showTitle={showFlags.titles}
             showCount={showFlags.counts}
+            nativeAspect={leafNative}
           />
         ))}
       </div>
@@ -91,16 +106,15 @@ export default function Grid({
 }
 
 function TileView({
-  item, ratio, onClick, single, showTitle, showCount
+  item, ratio, onClick, single, showTitle, showCount, nativeAspect
 }: {
   item: Tile; ratio: string; onClick?: () => void; single?: boolean;
-  showTitle?: boolean; showCount?: boolean;
+  showTitle?: boolean; showCount?: boolean; nativeAspect?: boolean;
 }) {
   if (item.kind === 'folder') {
     const countText = getCount(item);
     return (
       <div className="tile">
-        {/* Only the image is a link */}
         <Link href={item.path} prefetch className="block-link">
           <div className="media" style={{ ['--ratio' as any]: ratio }}>
             {item.cover && (
@@ -126,13 +140,23 @@ function TileView({
         onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
       >
         <div className="media" style={{ ['--ratio' as any]: ratio }}>
-          <Image src={item.src} alt={item.alt || ''} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
+          <Image
+            src={item.src}
+            alt={item.alt || ''}
+            fill
+            sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
+            onLoadingComplete={nativeAspect ? (img) => {
+              const w = img.naturalWidth || 1, h = img.naturalHeight || 1;
+              const media = img.closest('.media');
+              if (media) (media as HTMLElement).style.setProperty('--ratio', `${w}/${h}`);
+            } : undefined}
+          />
         </div>
       </div>
     );
   }
 
-  // video tile (keep short label under poster for Motion if desired)
+  // video tile
   return (
     <div
       className="tile clickable"
@@ -142,11 +166,11 @@ function TileView({
       onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
     >
       <div className="media" style={{ ['--ratio' as any]: '16 / 9' }}>
-        {item.poster && <Image src={item.poster} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />}
+        {item.poster && (
+          <Image src={item.poster} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
+        )}
       </div>
-      <div className="meta">
-        <div className="label">{item.displayName}</div>
-      </div>
+      <div className="meta"><div className="label">{item.displayName}</div></div>
     </div>
   );
 }
