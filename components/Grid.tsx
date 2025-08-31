@@ -47,9 +47,9 @@ export default function Grid({
   const isThreeImageLeaf = useMemo(() => allImages && items.length === 3, [allImages, items]);
 
   // read CSS variables for show/hide controls (per level)
-  const showFlags = useMemo(() => {
+  const showFlags = useMemo<{ titles: boolean; counts: boolean }>(() => {
     if (typeof window === 'undefined') {
-      return { titles: level === 'top' ? 0 : 0, counts: 1 };
+      return { titles: false, counts: true };
     }
     const cs = getComputedStyle(document.documentElement);
     const pick = (name: string, def = '1') => Number((cs.getPropertyValue(name).trim() || def)) > 0;
