@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Striplight-Room/GlassStripLight-Room-05-2.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-05-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-05.jpg"
+    },
+    {
+      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-08.jpg"
+    }
+  ]
+}

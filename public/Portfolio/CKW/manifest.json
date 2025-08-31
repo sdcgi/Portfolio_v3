@@ -1,0 +1,27 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/CKW/HeatPump.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/CKW/Burglar.jpg"
+    },
+    {
+      "src": "/Portfolio/CKW/CKW%20Solar%20Panel%20Env%2006.jpg"
+    },
+    {
+      "src": "/Portfolio/CKW/CKW_Car_10-2.jpg"
+    },
+    {
+      "src": "/Portfolio/CKW/CKW_Car_10.jpg"
+    },
+    {
+      "src": "/Portfolio/CKW/CKW-Solar-Panel-Env-06-2.jpg"
+    },
+    {
+      "src": "/Portfolio/CKW/HeatPump-2.jpg"
+    },
+    {
+      "src": "/Portfolio/CKW/HeatPump.jpg"
+    }
+  ]
+}

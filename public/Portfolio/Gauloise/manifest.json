@@ -1,0 +1,30 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Gauloise/Gauloises-Coq.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Gauloise/Gauloises-Coq.jpg"
+    },
+    {
+      "src": "/Portfolio/Gauloise/ret-GAU-Leaf_1000x300-FLT2.jpg"
+    },
+    {
+      "src": "/Portfolio/Gauloise/ret-GAU-Lone-Cigarette-HDRI-17-Wide-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Gauloise/ret-GAU-Lone-Coq-HDRI-026-8-FINAL-Offset-Right.jpg"
+    },
+    {
+      "src": "/Portfolio/Gauloise/ret-GAU-Mask-Valid-Scene-016-Wide-A3H-FLT-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Gauloise/ret-GAU-Mask-Valid-Scene-016-Wide-A3H-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Gauloise/ret-GAU-Mobile-SPOT-Wide-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Gauloise/ret-GAU-Tobacco-Frame-023-FLT.jpg"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+export default function About(){return (<div className="page-inner"><h1>About</h1><p>Short bio / statement.</p></div>);}

@@ -1,0 +1,12 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/X-ray/Xray-Engine-1.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/X-ray/Xray-Engine-1.jpg"
+    },
+    {
+      "src": "/Portfolio/X-ray/Xray-Engine-2.jpg"
+    }
+  ]
+}

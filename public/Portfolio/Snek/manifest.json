@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Snek/Snek_0004%20FLT-2.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Snek/Snek_0004%20FLT-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Snek/Snek_0004%20FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Snek/Snek_0004-FLT.jpg"
+    }
+  ]
+}

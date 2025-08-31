@@ -1,0 +1,39 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Studer/dark-1.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Studer/dark-1.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/dark-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studer%20A827%2008%202%20FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studer%20A827%2008%202%20Port%20FLT-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studer%20A827%2008%202%20Port%20FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studer%20A827%2008%203-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studer%20A827%2008%203.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studer-A827-08-2-Port-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studer-A827-08-3.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studio%20Corridor%2008c-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Studer/Studio%20Corridor%2008c.jpg"
+    }
+  ]
+}

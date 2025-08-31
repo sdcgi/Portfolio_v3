@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Harris/Tweed-headphones-10.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Harris/Tweed-06.jpg"
+    },
+    {
+      "src": "/Portfolio/Harris/Tweed-09.jpg"
+    },
+    {
+      "src": "/Portfolio/Harris/Tweed-headphones-10.jpg"
+    }
+  ]
+}

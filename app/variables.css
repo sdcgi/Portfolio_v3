@@ -1,0 +1,11 @@
+
+:root {
+  --bg: #fff;
+  --text: #111;
+  --muted: #666;
+  --border: #e5e5e5;
+  --accent-bg: #efefef;
+  --placeholder: #f3f3f3;
+  --gap: 12px;
+  --show-counts: 1;
+}

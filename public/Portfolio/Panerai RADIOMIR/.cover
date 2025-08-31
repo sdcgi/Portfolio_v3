@@ -1,0 +1,7 @@
+# Name an image file to use as a cover below (with its file extension).
+# The site will scan for the named file in this, or child directories until it finds it.
+# If no file is listed below, it will use the 1st image it finds in the directory.
+# So you can just put a single image in the directory to sutomatically use as a cover
+# and it will be hidden in the grid whern you click through.
+
+public/Portfolio/Panerai RADIOMIR/Solo with rock-assets/Blue.png

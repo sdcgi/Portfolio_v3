@@ -1,0 +1,1115 @@
+{
+  "kind": "portfolio-root",
+  "folders": [
+    {
+      "name": "ADP",
+      "displayName": "ADP",
+      "path": "/Portfolio/ADP",
+      "cover": "/Portfolio/ADP/ADP-Purfume-05-MAIN-sd.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Bat",
+      "displayName": "Bat",
+      "path": "/Portfolio/Bat",
+      "cover": "/Portfolio/Bat/Bat_0001.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "BeLove",
+      "displayName": "BeLove",
+      "path": "/Portfolio/BeLove",
+      "cover": "/Portfolio/BeLove/ret-Cupids.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Beverage",
+      "displayName": "Beverage",
+      "path": "/Portfolio/Beverage",
+      "cover": null,
+      "counts": {
+        "images": 0,
+        "folders": 2
+      }
+    },
+    {
+      "name": "Black Bags",
+      "displayName": "Black Bags",
+      "path": "/Portfolio/Black%20Bags",
+      "cover": "/Portfolio/Black%20Bags/Bag-Procedural_0003.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Black-Feathers",
+      "displayName": "Black Feathers",
+      "path": "/Portfolio/Black-Feathers",
+      "cover": "/Portfolio/Black-Feathers/ret-HM-Black-Fathers-09-with-Gold-FLT1.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "BlackHole",
+      "displayName": "BlackHole",
+      "path": "/Portfolio/BlackHole",
+      "cover": null,
+      "counts": {
+        "images": 0,
+        "folders": 2
+      }
+    },
+    {
+      "name": "BMW",
+      "displayName": "BMW",
+      "path": "/Portfolio/BMW",
+      "cover": "/Portfolio/BMW/BMW-Drop-Sculpt-14-big-FLT.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Bose",
+      "displayName": "Bose",
+      "path": "/Portfolio/Bose",
+      "cover": "/Portfolio/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Breeze",
+      "displayName": "Breeze",
+      "path": "/Portfolio/Breeze",
+      "cover": "/Portfolio/Breeze/Breeze-Block_0002.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Bricolage",
+      "displayName": "Bricolage",
+      "path": "/Portfolio/Bricolage",
+      "cover": "/Portfolio/Bricolage/ret-BRC-BOIS-022full-Amd-1.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Cartier Panthere",
+      "displayName": "Cartier Panthere",
+      "path": "/Portfolio/Cartier%20Panthere",
+      "cover": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV.jpg",
+      "counts": {
+        "images": 10,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Cartier Rooms",
+      "displayName": "Cartier Rooms",
+      "path": "/Portfolio/Cartier%20Rooms",
+      "cover": "/Portfolio/Cartier%20Rooms/Arches-06_01.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Cartier-Xray",
+      "displayName": "Cartier Xray",
+      "path": "/Portfolio/Cartier-Xray",
+      "cover": "/Portfolio/Cartier-Xray/Kinkan-Black.jpg",
+      "counts": {
+        "images": 15,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Chair",
+      "displayName": "Chair",
+      "path": "/Portfolio/Chair",
+      "cover": "/Portfolio/Chair/CHAIR-School-seat-Cube-04.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Chanel Lipstick",
+      "displayName": "Chanel Lipstick",
+      "path": "/Portfolio/Chanel%20Lipstick",
+      "cover": "/Portfolio/Chanel%20Lipstick/Chanel-Lipstic-2.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Chanel Xray2",
+      "displayName": "Chanel Xray2",
+      "path": "/Portfolio/Chanel%20Xray2",
+      "cover": "/Portfolio/Chanel%20Xray2/Haute-Parfumerie-Kinkan-4-5-FLT.jpg",
+      "counts": {
+        "images": 14,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Cheerios",
+      "displayName": "Cheerios",
+      "path": "/Portfolio/Cheerios",
+      "cover": "/Portfolio/Cheerios/Cheerios-Milk-Storm.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Chocobarre",
+      "displayName": "Chocobarre",
+      "path": "/Portfolio/Chocobarre",
+      "cover": "/Portfolio/Chocobarre/Blue-Pattern_0004-c-FLT.jpg",
+      "counts": {
+        "images": 10,
+        "folders": 0
+      }
+    },
+    {
+      "name": "CKW",
+      "displayName": "CKW",
+      "path": "/Portfolio/CKW",
+      "cover": "/Portfolio/CKW/HeatPump.jpg",
+      "counts": {
+        "images": 7,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Clay",
+      "displayName": "Clay",
+      "path": "/Portfolio/Clay",
+      "cover": "/Portfolio/Clay/Black-and-Yellow-Lights-03.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Crysanth",
+      "displayName": "Crysanth",
+      "path": "/Portfolio/Crysanth",
+      "cover": "/Portfolio/Crysanth/Crysanth%20012%20Blue.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Cube-on-Black",
+      "displayName": "Cube On Black",
+      "path": "/Portfolio/Cube-on-Black",
+      "cover": "/Portfolio/Cube-on-Black/Glow-Cube-2-01.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Cycloid",
+      "displayName": "Cycloid",
+      "path": "/Portfolio/Cycloid",
+      "cover": "/Portfolio/Cycloid/Cycloid_0013.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Dalmore Luminaries",
+      "displayName": "Dalmore Luminaries",
+      "path": "/Portfolio/Dalmore%20Luminaries",
+      "cover": "/Portfolio/Dalmore%20Luminaries/Collectible_Bottle_sd_WIP7_25_Print_2_0088-v2.jpg",
+      "counts": {
+        "images": 15,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Davidoff",
+      "displayName": "Davidoff",
+      "path": "/Portfolio/Davidoff",
+      "cover": "/Portfolio/Davidoff/Davidoff%20G2+R2_26a%2001%20gold.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Dessange",
+      "displayName": "Dessange",
+      "path": "/Portfolio/Dessange",
+      "cover": "/Portfolio/Dessange/Dessange-Bottle-11-FLT-SD-FLT.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Dirty Sport",
+      "displayName": "Dirty Sport",
+      "path": "/Portfolio/Dirty%20Sport",
+      "cover": "/Portfolio/Dirty%20Sport/Football%20(real%20dark)%20TWEAK.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Dog",
+      "displayName": "Dog",
+      "path": "/Portfolio/Dog",
+      "cover": "/Portfolio/Dog/ret-Dog4-ortho2.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Energizer",
+      "displayName": "Energizer",
+      "path": "/Portfolio/Energizer",
+      "cover": "/Portfolio/Energizer/ret-Energizer_Candle_V1_rgb.jpg",
+      "counts": {
+        "images": 7,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Executive-Toys",
+      "displayName": "Executive Toys",
+      "path": "/Portfolio/Executive-Toys",
+      "cover": "/Portfolio/Executive-Toys/Execturive-toys-Newton.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Fractured",
+      "displayName": "Fractured",
+      "path": "/Portfolio/Fractured",
+      "cover": "/Portfolio/Fractured/Chanel-no.5_w11_v03.Close_A.STILL_.0074-copy.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Frying",
+      "displayName": "Frying",
+      "path": "/Portfolio/Frying",
+      "cover": "/Portfolio/Frying/ret-Frying-Pan-011-egg.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Gauloise",
+      "displayName": "Gauloise",
+      "path": "/Portfolio/Gauloise",
+      "cover": "/Portfolio/Gauloise/Gauloises-Coq.jpg",
+      "counts": {
+        "images": 8,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Gold",
+      "displayName": "Gold",
+      "path": "/Portfolio/Gold",
+      "cover": "/Portfolio/Gold/Murex_Romosus_0006.jpg",
+      "counts": {
+        "images": 6,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Gold-Skull",
+      "displayName": "Gold Skull",
+      "path": "/Portfolio/Gold-Skull",
+      "cover": "/Portfolio/Gold-Skull/Gold-Skull_0001-FLT.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Guinness",
+      "displayName": "Guinness",
+      "path": "/Portfolio/Guinness",
+      "cover": "/Portfolio/Guinness/Guinness-015-copy-copy.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Hand of God",
+      "displayName": "Hand Of God",
+      "path": "/Portfolio/Hand%20of%20God",
+      "cover": "/Portfolio/Hand%20of%20God/arthur-hand_09-v2-FLT1.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Harris",
+      "displayName": "Harris",
+      "path": "/Portfolio/Harris",
+      "cover": "/Portfolio/Harris/Tweed-headphones-10.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Head",
+      "displayName": "Head",
+      "path": "/Portfolio/Head",
+      "cover": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Heineken",
+      "displayName": "Heineken",
+      "path": "/Portfolio/Heineken",
+      "cover": "/Portfolio/Heineken/CITY_ENERGY12-inter-etoile5-CMJN-def1.jpg",
+      "counts": {
+        "images": 14,
+        "folders": 0
+      }
+    },
+    {
+      "name": "HNY 2023",
+      "displayName": "HNY 2023",
+      "path": "/Portfolio/HNY%202023",
+      "cover": "/Portfolio/HNY%202023/MerryChristmass2022_L.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Hooks",
+      "displayName": "Hooks",
+      "path": "/Portfolio/Hooks",
+      "cover": "/Portfolio/Hooks/SD-Hooks-6-2.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Huggies",
+      "displayName": "Huggies",
+      "path": "/Portfolio/Huggies",
+      "cover": "/Portfolio/Huggies/Big%20Whizzer.jpg",
+      "counts": {
+        "images": 11,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Imaginary Watches",
+      "displayName": "Imaginary Watches",
+      "path": "/Portfolio/Imaginary%20Watches",
+      "cover": "/Portfolio/Imaginary%20Watches/Meteor_03b_SQ_FNT.jpg",
+      "counts": {
+        "images": 9,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Japan Window",
+      "displayName": "Japan Window",
+      "path": "/Portfolio/Japan%20Window",
+      "cover": "/Portfolio/Japan%20Window/Japan-Window-04a-FLT.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Joypad",
+      "displayName": "Joypad",
+      "path": "/Portfolio/Joypad",
+      "cover": "/Portfolio/Joypad/Joypad-3k-2008-Upsidedown.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "L'oreal",
+      "displayName": "L'Oreal",
+      "path": "/Portfolio/L'oreal",
+      "cover": "/Portfolio/L'oreal/Loreal-Infini-8-BG-19.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Leather & Lenses",
+      "displayName": "Leather & Lenses",
+      "path": "/Portfolio/Leather%20&%20Lenses",
+      "cover": "/Portfolio/Leather%20&%20Lenses/Channel-Bag-on-Block-fix-05-2.jpg",
+      "counts": {
+        "images": 7,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Light Work",
+      "displayName": "Light Work",
+      "path": "/Portfolio/Light%20Work",
+      "cover": "/Portfolio/Light%20Work/Floating-Bland-Office-09-FLT-3.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Lightbulb",
+      "displayName": "Lightbulb",
+      "path": "/Portfolio/Lightbulb",
+      "cover": "/Portfolio/Lightbulb/3W_Exploding-Lightbulb-tall-flt.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Lines",
+      "displayName": "Lines",
+      "path": "/Portfolio/Lines",
+      "cover": "/Portfolio/Lines/Lines1.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "MacBook",
+      "displayName": "MacBook",
+      "path": "/Portfolio/MacBook",
+      "cover": "/Portfolio/MacBook/ret-Blake-MacBook-Air-010-Darling-copy-11.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "MAGA",
+      "displayName": "MAGA",
+      "path": "/Portfolio/MAGA",
+      "cover": "/Portfolio/MAGA/CTW%20rough%20cover%2005-2.jpg",
+      "counts": {
+        "images": 7,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Maserati",
+      "displayName": "Maserati",
+      "path": "/Portfolio/Maserati",
+      "cover": "/Portfolio/Maserati/Maserati-05-FLT-3.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Meat Veg",
+      "displayName": "Meat Veg",
+      "path": "/Portfolio/Meat%20Veg",
+      "cover": "/Portfolio/Meat%20Veg/Meat-Veg-05-Smaller-Plate.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Mess",
+      "displayName": "Mess",
+      "path": "/Portfolio/Mess",
+      "cover": "/Portfolio/Mess/Blackpool_v07.Redshift_ROP1.0001-copy.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Milo",
+      "displayName": "Milo",
+      "path": "/Portfolio/Milo",
+      "cover": "/Portfolio/Milo/Spoon-scaled-Cheerleaders-037b-flipped-2.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Mycellium",
+      "displayName": "Mycellium",
+      "path": "/Portfolio/Mycellium",
+      "cover": "/Portfolio/Mycellium/Mycelium_0003-2.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Nespresso Citiz",
+      "displayName": "Nespresso Citiz",
+      "path": "/Portfolio/Nespresso%20Citiz",
+      "cover": "/Portfolio/Nespresso%20Citiz/Beijing_0003-10k-resized-R1.2.jpg",
+      "counts": {
+        "images": 10,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Nespresso Film",
+      "displayName": "Nespresso Film",
+      "path": "/Portfolio/Nespresso%20Film",
+      "cover": "/Portfolio/Nespresso%20Film/Nespresso-box-05-FLT-16bit-EDIT-FINAL-fix-2018.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Nesspresso U-Milk",
+      "displayName": "Nesspresso U Milk",
+      "path": "/Portfolio/Nesspresso%20U-Milk",
+      "cover": "/Portfolio/Nesspresso%20U-Milk/Plates-def3-rvb-3.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "New Scientist",
+      "displayName": "New Scientist",
+      "path": "/Portfolio/New%20Scientist",
+      "cover": "/Portfolio/New%20Scientist/Apple%20vapor%20White%20LIGHTER.jpg",
+      "counts": {
+        "images": 22,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Nicholas",
+      "displayName": "Nicholas",
+      "path": "/Portfolio/Nicholas",
+      "cover": "/Portfolio/Nicholas/ret-NIK-Cocktail-glass_0015-7k-FLT2.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Nokia",
+      "displayName": "Nokia",
+      "path": "/Portfolio/Nokia",
+      "cover": "/Portfolio/Nokia/4-Nokia-3k-1.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Numbers",
+      "displayName": "Numbers",
+      "path": "/Portfolio/Numbers",
+      "cover": "/Portfolio/Numbers/PipeLetters_0004b-FLT.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Olay",
+      "displayName": "Olay",
+      "path": "/Portfolio/Olay",
+      "cover": "/Portfolio/Olay/Olay-Stitching-1.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Panerai Luna Rossa",
+      "displayName": "Panerai Luna Rossa",
+      "path": "/Portfolio/Panerai%20Luna%20Rossa",
+      "cover": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB-2.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Panerai RADIOMIR",
+      "displayName": "Panerai RADIOMIR",
+      "path": "/Portfolio/Panerai%20RADIOMIR",
+      "cover": "/Portfolio/Panerai%20RADIOMIR/Layer%2011.png",
+      "counts": {
+        "images": 11,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Panerai_Brabus",
+      "displayName": "Panerai Brabus",
+      "path": "/Portfolio/Panerai_Brabus",
+      "cover": "/Portfolio/Panerai_Brabus/c89n5_010_asm_0009_AOV_Beauty-copy.jpg",
+      "counts": {
+        "images": 6,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Panerai_x10",
+      "displayName": "Panerai X10",
+      "path": "/Portfolio/Panerai_x10",
+      "cover": "/Portfolio/Panerai_x10/Panerai_x10_10Front245mm_Simple.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Pepsi",
+      "displayName": "Pepsi",
+      "path": "/Portfolio/Pepsi",
+      "cover": "/Portfolio/Pepsi/Pepsi-Can-with-condensation.jpg",
+      "counts": {
+        "images": 9,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Phage",
+      "displayName": "Phage",
+      "path": "/Portfolio/Phage",
+      "cover": "/Portfolio/Phage/Phage-08-2.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "PingPong",
+      "displayName": "PingPong",
+      "path": "/Portfolio/PingPong",
+      "cover": "/Portfolio/PingPong/PingPong_0001c2.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Planets-White",
+      "displayName": "Planets White",
+      "path": "/Portfolio/Planets-White",
+      "cover": "/Portfolio/Planets-White/PLA-Earth-004-A2.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Plexi",
+      "displayName": "Plexi",
+      "path": "/Portfolio/Plexi",
+      "cover": "/Portfolio/Plexi/Plexi-02g-copy.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Pod",
+      "displayName": "Pod",
+      "path": "/Portfolio/Pod",
+      "cover": "/Portfolio/Pod/Pod-08g.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Post-Logistics",
+      "displayName": "Post Logistics",
+      "path": "/Portfolio/Post-Logistics",
+      "cover": "/Portfolio/Post-Logistics/Post-Logistics-A-12-no-xrefs-03.1.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Powder-Impression",
+      "displayName": "Powder Impression",
+      "path": "/Portfolio/Powder-Impression",
+      "cover": "/Portfolio/Powder-Impression/Powder-Impression-02.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Qbit",
+      "displayName": "Qbit",
+      "path": "/Portfolio/Qbit",
+      "cover": "/Portfolio/Qbit/qbit-07.jpg",
+      "counts": {
+        "images": 6,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Refractions",
+      "displayName": "Refractions",
+      "path": "/Portfolio/Refractions",
+      "cover": "/Portfolio/Refractions/Reafactions-v2-015.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Renault",
+      "displayName": "Renault",
+      "path": "/Portfolio/Renault",
+      "cover": "/Portfolio/Renault/ret-Renault-Van-COW-White-029-VAN-FLT2-copy.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Rolex",
+      "displayName": "Rolex",
+      "path": "/Portfolio/Rolex",
+      "cover": "/Portfolio/Rolex/Rolex_Submariner_Print-01-FLT.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Seiko",
+      "displayName": "Seiko",
+      "path": "/Portfolio/Seiko",
+      "cover": "/Portfolio/Seiko/ret-Samurai-v5.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Shapes",
+      "displayName": "Shapes",
+      "path": "/Portfolio/Shapes",
+      "cover": "/Portfolio/Shapes/ret-TVs-mk2-004-2.jpg",
+      "counts": {
+        "images": 8,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Sliced",
+      "displayName": "Sliced",
+      "path": "/Portfolio/Sliced",
+      "cover": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0001.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Snek",
+      "displayName": "Snek",
+      "path": "/Portfolio/Snek",
+      "cover": "/Portfolio/Snek/Snek_0004%20FLT-2.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Sphere-block",
+      "displayName": "Sphere Block",
+      "path": "/Portfolio/Sphere-block",
+      "cover": "/Portfolio/Sphere-block/Cube-Box-Overlapped_0002.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Spheres",
+      "displayName": "Spheres",
+      "path": "/Portfolio/Spheres",
+      "cover": "/Portfolio/Spheres/Ball%20Bearings%2006.jpg",
+      "counts": {
+        "images": 7,
+        "folders": 0
+      }
+    },
+    {
+      "name": "SSE",
+      "displayName": "SSE",
+      "path": "/Portfolio/SSE",
+      "cover": "/Portfolio/SSE/6_TICKETS-19.jpg",
+      "counts": {
+        "images": 8,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Stitched Type",
+      "displayName": "Stitched Type",
+      "path": "/Portfolio/Stitched%20Type",
+      "cover": "/Portfolio/Stitched%20Type/35%E2%82%AC%2009%20Green-2.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Storage-Locker",
+      "displayName": "Storage Locker",
+      "path": "/Portfolio/Storage-Locker",
+      "cover": "/Portfolio/Storage-Locker/Industrial-Vents-Girders_0010-Balloons-FLT.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Striplight-Room",
+      "displayName": "Striplight Room",
+      "path": "/Portfolio/Striplight-Room",
+      "cover": "/Portfolio/Striplight-Room/GlassStripLight-Room-05-2.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Strips",
+      "displayName": "Strips",
+      "path": "/Portfolio/Strips",
+      "cover": "/Portfolio/Strips/Strip%20curtain_0004%20sd.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Studer",
+      "displayName": "Studer",
+      "path": "/Portfolio/Studer",
+      "cover": "/Portfolio/Studer/dark-1.jpg",
+      "counts": {
+        "images": 11,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Sushi",
+      "displayName": "Sushi",
+      "path": "/Portfolio/Sushi",
+      "cover": "/Portfolio/Sushi/Sushi%2004%20FLT-2.jpg",
+      "counts": {
+        "images": 6,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Tesselated",
+      "displayName": "Tesselated",
+      "path": "/Portfolio/Tesselated",
+      "cover": "/Portfolio/Tesselated/Black-tesselated-shape-06.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "TIDE",
+      "displayName": "TIDE",
+      "path": "/Portfolio/TIDE",
+      "cover": "/Portfolio/TIDE/PG-Tide-X2-Ultra-Cannes-Footballers.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Tiled",
+      "displayName": "Tiled",
+      "path": "/Portfolio/Tiled",
+      "cover": "/Portfolio/Tiled/Triangle-Tile-02-2.jpg",
+      "counts": {
+        "images": 6,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Toyota",
+      "displayName": "Toyota",
+      "path": "/Portfolio/Toyota",
+      "cover": "/Portfolio/Toyota/Aygo_white%20studio%20004%208k.jpg",
+      "counts": {
+        "images": 8,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Trainers",
+      "displayName": "Trainers",
+      "path": "/Portfolio/Trainers",
+      "cover": "/Portfolio/Trainers/DSC_0080-Edit%20FLT.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Up In Smoke",
+      "displayName": "Up In Smoke",
+      "path": "/Portfolio/Up%20In%20Smoke",
+      "cover": "/Portfolio/Up%20In%20Smoke/Pink-and-Yellow-Smoke-Girls.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "V",
+      "displayName": "V",
+      "path": "/Portfolio/V",
+      "cover": "/Portfolio/V/50.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Washing",
+      "displayName": "Washing",
+      "path": "/Portfolio/Washing",
+      "cover": "/Portfolio/Washing/ret-Handmade-Cracked-screen-project-scaled-19.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "White Flags",
+      "displayName": "White Flags",
+      "path": "/Portfolio/White%20Flags",
+      "cover": "/Portfolio/White%20Flags/UnionJ-05s0197-FLT-2.jpg",
+      "counts": {
+        "images": 6,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Wings",
+      "displayName": "Wings",
+      "path": "/Portfolio/Wings",
+      "cover": "/Portfolio/Wings/ret-Wing-BLOOD-BLACK.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Wood Sculptures",
+      "displayName": "Wood Sculptures",
+      "path": "/Portfolio/Wood%20Sculptures",
+      "cover": "/Portfolio/Wood%20Sculptures/Disc-wood-frame-08-16x12-FLT.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Woolite",
+      "displayName": "Woolite",
+      "path": "/Portfolio/Woolite",
+      "cover": "/Portfolio/Woolite/Woolite-Kiss.jpg",
+      "counts": {
+        "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Woven",
+      "displayName": "Woven",
+      "path": "/Portfolio/Woven",
+      "cover": "/Portfolio/Woven/Money%20Weave%207%20Adobe%20copy-2.jpg",
+      "counts": {
+        "images": 9,
+        "folders": 0
+      }
+    },
+    {
+      "name": "X-ray",
+      "displayName": "X Ray",
+      "path": "/Portfolio/X-ray",
+      "cover": "/Portfolio/X-ray/Xray-Engine-1.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Zeppelin",
+      "displayName": "Zeppelin",
+      "path": "/Portfolio/Zeppelin",
+      "cover": "/Portfolio/Zeppelin/Drivers_v3_1-FIN.jpg",
+      "counts": {
+        "images": 25,
+        "folders": 0
+      }
+    }
+  ]
+}

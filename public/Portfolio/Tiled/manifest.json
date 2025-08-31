@@ -1,0 +1,24 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Tiled/Triangle-Tile-02-2.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Tiled/Triangle-Tile-02-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Tiled/Triangle-Tile-02-3.jpg"
+    },
+    {
+      "src": "/Portfolio/Tiled/Triangle-Tile-02-4.jpg"
+    },
+    {
+      "src": "/Portfolio/Tiled/Triangle-Tile-02.jpg"
+    },
+    {
+      "src": "/Portfolio/Tiled/Triangle-Tile-02b-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Tiled/Triangle-Tile-02b.jpg"
+    }
+  ]
+}

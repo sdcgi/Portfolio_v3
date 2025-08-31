@@ -1,0 +1,33 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Pepsi/Pepsi-Can-with-condensation.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Pepsi/Pepsi-Can-Microphone1.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/Pepsi-Can-with-condensation.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/ret-Can-Layers-on-blue-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/ret-Can-Layers-on-blue-3.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/ret-Can-Layers-on-blue-4.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/ret-Can-Layers-on-blue.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/ret-Mic-Stand_SD-Tweak.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/ret-Pepsi-Site-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Pepsi/ret-Pepsi-Truck2.jpg"
+    }
+  ]
+}

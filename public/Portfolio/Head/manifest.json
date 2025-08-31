@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg"
+    },
+    {
+      "src": "/Portfolio/Head/LED-Headlight_v01.Front_.0001-copy.jpg"
+    },
+    {
+      "src": "/Portfolio/Head/LED-Headlight_v01.Sideish.0001-copy.jpg"
+    }
+  ]
+}

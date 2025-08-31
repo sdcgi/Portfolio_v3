@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Cube-on-Black/Glow-Cube-2-01.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Cube-on-Black/Glow-Cube-2-01.jpg"
+    },
+    {
+      "src": "/Portfolio/Cube-on-Black/Glow-Cube-3-05.jpg"
+    },
+    {
+      "src": "/Portfolio/Cube-on-Black/Glow-Cube-5-01a.jpg"
+    }
+  ]
+}

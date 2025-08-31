@@ -1,0 +1,21 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Cartier%20Rooms/Arches-06_01.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Cartier%20Rooms/Arches-06_01.jpg"
+    },
+    {
+      "src": "/Portfolio/Cartier%20Rooms/Doors-Open-05.jpg"
+    },
+    {
+      "src": "/Portfolio/Cartier%20Rooms/Corridor-13-whiteFloor.jpg"
+    },
+    {
+      "src": "/Portfolio/Cartier%20Rooms/Corridor-13.jpg"
+    },
+    {
+      "src": "/Portfolio/Cartier%20Rooms/BigRoom_0016.jpg"
+    }
+  ]
+}

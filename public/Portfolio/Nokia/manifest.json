@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Nokia/4-Nokia-3k-1.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Nokia/4-Nokia-3k-1.jpg"
+    },
+    {
+      "src": "/Portfolio/Nokia/4-Nokia-3k.jpg"
+    },
+    {
+      "src": "/Portfolio/Nokia/ret-4-Nokia-3k-1.jpg"
+    }
+  ]
+}

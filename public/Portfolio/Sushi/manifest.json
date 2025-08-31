@@ -1,0 +1,24 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Sushi/Sushi%2004%20FLT-2.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Sushi/Sushi%2004%20FLT-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Sushi/Sushi%2004%20FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Sushi/Beer%20Bottle%2003%2010k%20FLT-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Sushi/Beer%20Bottle%2003%2010k%20FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Sushi/Sushi%20wireframe.jpg"
+    },
+    {
+      "src": "/Portfolio/Sushi/Bottle%20wireframe.jpg"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Lightbulb/3W_Exploding-Lightbulb-tall-flt.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Lightbulb/3W_Exploding-Lightbulb-tall-flt.jpg"
+    },
+    {
+      "src": "/Portfolio/Lightbulb/ret-3W_Exploding-Lightbulb-Explo-flt.jpg"
+    },
+    {
+      "src": "/Portfolio/Lightbulb/ret-3W_Exploding-Lightbulb-tall-flt.jpg"
+    }
+  ]
+}

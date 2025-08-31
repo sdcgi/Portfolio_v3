@@ -1,0 +1,18 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Cheerios/Cheerios-Milk-Storm.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Cheerios/Cheerios-Milk-Storm.jpg"
+    },
+    {
+      "src": "/Portfolio/Cheerios/ret-cheerios-festival-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Cheerios/ret-cheerios-festival.jpg"
+    },
+    {
+      "src": "/Portfolio/Cheerios/ret-cheerios-festival1.jpg"
+    }
+  ]
+}

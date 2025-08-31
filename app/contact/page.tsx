@@ -1,0 +1,1 @@
+export default function Contact(){return (<div className="page-inner"><h1>Contact</h1><p>Email, links, or form endpoint.</p></div>);}

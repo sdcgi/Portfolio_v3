@@ -1,0 +1,21 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Bat/Bat_0001.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Bat/Bat_0001.jpg"
+    },
+    {
+      "src": "/Portfolio/Bat/Bat_0003.jpg"
+    },
+    {
+      "src": "/Portfolio/Bat/Bat_0004.jpg"
+    },
+    {
+      "src": "/Portfolio/Bat/Bat_0005.jpg"
+    },
+    {
+      "src": "/Portfolio/Bat/Bat-copy.jpg"
+    }
+  ]
+}

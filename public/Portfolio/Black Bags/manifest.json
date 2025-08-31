@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Black%20Bags/Bag-Procedural_0003.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Black%20Bags/Bag-Procedural_0001.jpg"
+    },
+    {
+      "src": "/Portfolio/Black%20Bags/Bag-Procedural_0002.jpg"
+    },
+    {
+      "src": "/Portfolio/Black%20Bags/Bag-Procedural_0003.jpg"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Pod/Pod-08g.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Pod/Pod-08g.jpg"
+    },
+    {
+      "src": "/Portfolio/Pod/Pod-08p.jpg"
+    }
+  ]
+}

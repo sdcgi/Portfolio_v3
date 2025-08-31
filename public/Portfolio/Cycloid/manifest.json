@@ -1,0 +1,18 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Cycloid/Cycloid_0013.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Cycloid/Cycloid_0013.jpg"
+    },
+    {
+      "src": "/Portfolio/Cycloid/Cycloid_0014-a.jpg"
+    },
+    {
+      "src": "/Portfolio/Cycloid/Cycloid_0014-b.jpg"
+    },
+    {
+      "src": "/Portfolio/Cycloid/Cycloid_0015.jpg"
+    }
+  ]
+}

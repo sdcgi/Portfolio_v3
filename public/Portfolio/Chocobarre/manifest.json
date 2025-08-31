@@ -1,0 +1,36 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Chocobarre/Blue-Pattern_0004-c-FLT.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Chocobarre/Pink-Scatter-Hex-3a.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/Pink-Scatter-Hex-3b.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/Pink-Scatter-Hex-3c.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/Blue-Pattern_0004-a-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/Blue-Pattern_0004-b-FLT-copy.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/Blue-Pattern_0004-c-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/CHOCOBARRE_30X40-Blue-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/CHOCOBARRE_30X40-Pink-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/CHOCOBARRE_4X3-BLEU-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Chocobarre/CHOCOBARRE_4X3-PINK-FLT.jpg"
+    }
+  ]
+}

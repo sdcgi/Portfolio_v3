@@ -1,0 +1,18 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Lines/Lines1.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Lines/Lines1.jpg"
+    },
+    {
+      "src": "/Portfolio/Lines/Lines1b-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Lines/Untitled-1-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Lines/Untitled-1.jpg"
+    }
+  ]
+}

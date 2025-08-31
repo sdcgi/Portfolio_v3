@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/TIDE/PG-Tide-X2-Ultra-Cannes-Footballers.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/TIDE/PG-Tide-X2-Ultra-Cannes-Footballers.jpg"
+    },
+    {
+      "src": "/Portfolio/TIDE/ret-Tide-Footballers.jpg"
+    },
+    {
+      "src": "/Portfolio/TIDE/TIDE-Footballers-big.jpg"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+
+.next
+out
+node_modules
+.env*
+public/_generated
+public/_covers

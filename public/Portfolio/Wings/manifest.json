@@ -1,0 +1,12 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Wings/ret-Wing-BLOOD-BLACK.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Wings/ret-Wing-BLOOD-BLACK.jpg"
+    },
+    {
+      "src": "/Portfolio/Wings/Wing-BLOOD-WHITE.jpg"
+    }
+  ]
+}

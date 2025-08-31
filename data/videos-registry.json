@@ -1,0 +1,15 @@
+
+[
+  {
+    "key": "bunny",
+    "displayName": "Big Buck Bunny",
+    "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "poster": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
+  },
+  {
+    "key": "elephants",
+    "displayName": "Elephants Dream",
+    "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "poster": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+  }
+]

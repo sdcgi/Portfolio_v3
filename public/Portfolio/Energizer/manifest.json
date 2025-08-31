@@ -1,0 +1,27 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Energizer/ret-Energizer_Candle_V1_rgb.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Energizer/ret-Energizer_Candle_V1_rgb.jpg"
+    },
+    {
+      "src": "/Portfolio/Energizer/ret-Energizer_MAX_V1_print_rgb.jpg"
+    },
+    {
+      "src": "/Portfolio/Energizer/ret-Energizer_Portable_V1_rgb-UNTAGGED.jpg"
+    },
+    {
+      "src": "/Portfolio/Energizer/ret-Energizer_Portable_V1_rgb-UNTAGGED2.jpg"
+    },
+    {
+      "src": "/Portfolio/Energizer/ret-Energizer_Portable_V1_rgb.jpg"
+    },
+    {
+      "src": "/Portfolio/Energizer/ret-Energizer_USB_V1_naked_rgb.jpg"
+    },
+    {
+      "src": "/Portfolio/Energizer/ret-Energizer_USB_V3_rgb.jpg"
+    }
+  ]
+}

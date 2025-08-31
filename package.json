@@ -1,0 +1,31 @@
+{
+  "name": "folder-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -c auto -n GEN,NEXT \"node scripts/gen-manifests.mjs --watch\" \"next dev -p 3002\"",
+    "build": "node scripts/gen-manifests.mjs && next build",
+    "start": "next start -p 3002",
+    "gen:manifests": "node scripts/gen-manifests.mjs",
+    "format": "prettier -w .",
+    "check:fs": "node scripts/check-no-fs.mjs",
+    "check:imports": "node scripts/check-no-media-imports.mjs",
+    "verify": "npm run gen:manifests && npm run check:imports && npm run check:fs && next build"
+  },
+  "dependencies": {
+    "next": "14.2.32",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^15.5.2",
+    "@types/node": "20.12.12",
+    "@types/react": "18.2.79",
+    "chokidar": "3.6.0",
+    "concurrently": "9.0.1",
+    "fast-glob": "3.3.2",
+    "prettier": "3.3.3",
+    "typescript": "5.5.4"
+  }
+}

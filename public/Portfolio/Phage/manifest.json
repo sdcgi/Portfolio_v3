@@ -1,0 +1,18 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Phage/Phage-08-2.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Phage/Phage-08-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Phage/Phage-08.jpg"
+    },
+    {
+      "src": "/Portfolio/Phage/Phage2-12-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Phage/Phage2-12.jpg"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Planets-White/PLA-Earth-004-A2.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Planets-White/PLA-Earth-004-A2.jpg"
+    },
+    {
+      "src": "/Portfolio/Planets-White/PLA-Saturn-005-A2-Print.jpg"
+    },
+    {
+      "src": "/Portfolio/Planets-White/ret-PLA-Saturn-005-A2-Print.jpg"
+    }
+  ]
+}

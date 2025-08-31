@@ -1,0 +1,26 @@
+{
+  "kind": "portfolio-folder",
+  "cover": null,
+  "folders": [
+    {
+      "name": "Glenmorangie",
+      "displayName": "Glenmorangie",
+      "path": "/Portfolio/Beverage/Glenmorangie",
+      "cover": "/Portfolio/Beverage/Glenmorangie/19YR_HEROLAYERS_psd%20Feb23rd%20R6Cropped%20Recolour-3.jpg",
+      "counts": {
+        "images": 6,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Jim Beam",
+      "displayName": "Jim Beam",
+      "path": "/Portfolio/Beverage/Jim%20Beam",
+      "cover": "/Portfolio/Beverage/Jim%20Beam/ret-JB-Bottle-Malin-Straight.jpg",
+      "counts": {
+        "images": 1,
+        "folders": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/ADP/ADP-Purfume-05-MAIN-sd.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/ADP/ADP-Purfume-05-MAIN-sd.jpg"
+    },
+    {
+      "src": "/Portfolio/ADP/ADP-Purfume-05-SD.jpg"
+    },
+    {
+      "src": "/Portfolio/ADP/ADP-Purfume-05-WINE-SD.jpg"
+    }
+  ]
+}

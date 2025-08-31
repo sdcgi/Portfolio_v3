@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Joypad/Joypad-3k-2008-Upsidedown.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Joypad/Joypad-3k-2008-Upsidedown.jpg"
+    },
+    {
+      "src": "/Portfolio/Joypad/ret-Joypad-3k-2008-Upsidedown.jpg"
+    },
+    {
+      "src": "/Portfolio/Joypad/ret-Joypad-3k-2008-Upsidedown1.jpg"
+    }
+  ]
+}

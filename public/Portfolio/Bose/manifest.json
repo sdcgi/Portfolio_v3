@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Bose/Bose-Wave-Black-Studio.jpg"
+    },
+    {
+      "src": "/Portfolio/Bose/ret-BOSE-Wave-vr034-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg"
+    }
+  ]
+}

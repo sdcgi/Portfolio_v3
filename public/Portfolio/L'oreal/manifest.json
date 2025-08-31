@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/L'oreal/Loreal-Infini-8-BG-19.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/L'oreal/Loreal-Infini-8-BG-19.jpg"
+    },
+    {
+      "src": "/Portfolio/L'oreal/Lorel-Lemniscate-16-BG-FLT2.1.jpg"
+    },
+    {
+      "src": "/Portfolio/L'oreal/Lorel-Lemniscate-18-streak-bumps.jpg"
+    }
+  ]
+}

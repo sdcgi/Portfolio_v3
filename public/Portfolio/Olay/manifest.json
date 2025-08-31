@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Olay/Olay-Stitching-1.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Olay/Olay-Stitching-1.jpg"
+    },
+    {
+      "src": "/Portfolio/Olay/ret-Olay-stippy-cropped-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Olay/ret-Olay-stippy-cropped.jpg"
+    }
+  ]
+}

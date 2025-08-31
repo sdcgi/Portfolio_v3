@@ -1,0 +1,15 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/Sphere-block/Cube-Box-Overlapped_0002.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/Sphere-block/Cube-Box-Overlapped_0002.jpg"
+    },
+    {
+      "src": "/Portfolio/Sphere-block/Cube-Box-Overlapped_0003.jpg"
+    },
+    {
+      "src": "/Portfolio/Sphere-block/Cube-Box-Overlapped_0004.jpg"
+    }
+  ]
+}
