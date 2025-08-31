@@ -79,7 +79,7 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
   return (
     <div>
       <Breadcrumbs baseLabel="Stills" />
-      {tiles === null ? null : <Grid items={tiles} ratio="1/1" desktopCols={4} onItemClick={onItemClick} />}
+      {tiles === null ? null : <Grid items={tiles} ratio={isLeaf ? '1 / 1' : 'var(--tile-aspect-sub)'} level={isLeaf ? 'leaf' : 'sub'} desktopCols={4} onItemClick={onItemClick} />}
 
       {openIndex != null && isLeaf && images[openIndex] && (
         <LightboxImage

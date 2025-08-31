@@ -1,11 +1,46 @@
 
+/* ===========================
+   Global UI Variables (ROOT)
+   =========================== */
 :root {
+  /* Fonts + colors */
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --bg: #fff;
   --text: #111;
   --muted: #666;
   --border: #e5e5e5;
   --accent-bg: #efefef;
   --placeholder: #f3f3f3;
-  --gap: 12px;
-  --show-counts: 1;
+
+  /* Header + crumbs */
+  --header-blur: 12px;
+  --header-bg: rgba(255,255,255,0.7);
+
+  /* Gaps */
+  --gap-comfy: 24px;
+  --gap-compact: 4px;
+
+  /* Aspect ratios for folder tiles */
+  --tile-aspect-top: 1 / 1;   /* Top-level folders */
+  --tile-aspect-sub: 1 / 1;   /* Subgallery folders */
+
+  /* Show/hide text labels per level (1=show, 0=hide) */
+  --show-top-titles: 1;
+  --show-top-counts: 1;
+  --show-sub-titles: 0;
+  --show-sub-counts: 0;
+
+  /* Mouseover hover zoom style */
+  --hover-zoom-scale: 1.03;     /* amount of zoom on hover */
+  --hover-zoom-duration: 300ms; /* animation time */
+  --hover-zoom-ease: ease-out;  /* easing curve */
+
+
+  /* Lightbox */
+  --lightbox-overlay: rgba(0,0,0,.9);
+  --lightbox-max-w: 98vw;
+  --lightbox-max-h: 96lvh;
+
+  /* Single image leaf size (desktop) */
+  --single-leaf-max-w: 600px;
 }

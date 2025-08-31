@@ -1,16 +1,25 @@
+@import './variables.css';
+
 /* Minimal, neutral; no shadows, no rounded corners */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); }
+body { font-family: var(--font-sans); color: var(--text); background: var(--bg); }
 
-.site-header { border-bottom: 1px solid var(--border); }
+/* Fixed/sticky header with blur */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(var(--header-blur));
+  -webkit-backdrop-filter: blur(var(--header-blur));
+  background: var(--header-bg);
+}
 .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 14px 20px; }
 .brand a { color: inherit; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; }
 .main-nav { display: flex; gap: 18px; }
 .main-nav a { color: inherit; text-decoration: none; }
 .main-nav a:hover { text-decoration: underline; }
 
-.site-main { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.site-main { max-width: 1200px; margin: 0 auto; padding: 24px; }
 
 .breadcrumbs { font-size: 13px; color: var(--muted); margin: 8px 0 16px; }
 .breadcrumbs a { color: inherit; text-decoration: none; }
@@ -21,30 +30,47 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial
 .grid-toolbar button { background: transparent; border: 1px solid var(--border); padding: 6px 10px; cursor: pointer; color: inherit; }
 .grid-toolbar button[aria-pressed="true"] { background: var(--accent-bg); }
 
-.grid { display: grid; gap: var(--gap, 12px); }
-/* Column rules: Desktop 3–6; Tablet 2; Mobile 1 full-bleed */
+/* Grid — gap controlled by variables */
+.grid { display: grid; gap: var(--gap, var(--gap-comfy)); }
+/* Columns: Desktop 3–6; Tablet 2; Mobile 1 full-bleed */
 @media (min-width: 1100px) { .grid { grid-template-columns: repeat(var(--cols, 4), 1fr); } }
 @media (min-width: 740px) and (max-width: 1099px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 739px) { .grid { grid-template-columns: 1fr; }
+@media (max-width: 739px) {
+  .grid { grid-template-columns: 1fr; }
   .site-main { padding: 0; } /* full-bleed mobile */
   .page-inner { padding: 12px; }
 }
 
-/* tiles */
-.tile { border: 1px solid var(--border); position: relative; display: flex; flex-direction: column; }
-.tile .media { position: relative; width: 100%; aspect-ratio: var(--ratio, 1/1); overflow: hidden; background: var(--placeholder); }
-/* make all tile media fill without distortion */
-.tile .media img,
-.tile .media video { object-fit: cover; }
-.tile .meta { padding: 10px; display: flex; justify-content: space-between; gap: 8px; }
+/* Tiles */
+.tile { border: 0; position: relative; display: flex; flex-direction: column; }
+.tile:focus, .tile.clickable:focus, a.tile:focus { outline: none; }
+.tile .media { position: relative; width: 100%; aspect-ratio: var(--ratio, 1 / 1); overflow: hidden; background: var(--placeholder); }
+/* Fill frame without distortion */
+.tile .media img, .tile .media video {
+  transition: transform var(--hover-zoom-duration) var(--hover-zoom-ease);
+  will-change: transform;
+}
+.tile .media img, .tile .media video { object-fit: cover; transition: transform var(--hover-zoom-duration) var(--hover-zoom-ease); will-change: transform; }
+/* Subtle hover zoom (disabled on touch) */
+@media (hover:hover){
+  .tile:hover .media img,
+  .tile:hover .media video { transform: scale(var(--hover-zoom-scale)); }
+}
+@media (hover:hover){ .tile:hover .media img, .tile:hover .media video { transform: scale(var(--hover-zoom-scale)); } }
+
+/* Meta text uses site font; never looks like a link */
+.tile .meta { padding: 8px 2px 0; display: flex; justify-content: space-between; gap: 8px; font-family: var(--font-sans); }
 .tile .label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tile .count { color: var(--muted); font-size: 12px; }
 
-/* single image grid: center and size like a 2-col tile */
+/* Only the image is a link on folder tiles (meta is not clickable) */
+.tile .meta a { pointer-events: none; }
+
+/* Single-image grid: center and keep width of one 2-col cell */
 .grid.single-one { display: flex; justify-content: center; }
 .grid.single-one .tile {
-  width: calc((100% - var(--gap, 12px)) / 2);
-  max-width: 600px;
+  width: calc((100% - var(--gap, var(--gap-comfy))) / 2);
+  max-width: var(--single-leaf-max-w);
 }
 @media (max-width: 739px) {
   .grid.single-one .tile { width: 100%; max-width: none; }
@@ -56,24 +82,13 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial
 }
 
 /* Lightbox */
-.lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: flex; align-items: center; justify-content: center; z-index: 1000; height: 100lvh; }
-.lb-content { max-width: 98vw; max-height: 96lvh; display: flex; align-items: center; justify-content: center; }
+.lb-overlay { position: fixed; inset: 0; background: var(--lightbox-overlay); display: flex; align-items: center; justify-content: center; z-index: 1000; height: 100lvh; }
+.lb-content { max-width: var(--lightbox-max-w); max-height: var(--lightbox-max-h); display: flex; align-items: center; justify-content: center; }
 .lb-content img, .lb-content video { max-width: 100%; max-height: 100%; object-fit: contain; }
 .lb-ui { position: fixed; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 20px; color: #fff; }
 .lb-btn { background: transparent; border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; }
 .lb-close { position: fixed; top: 12px; right: 12px; }
 
 /* Utilities */
-.page-inner { padding: 8px 0 20px; }
+.page-inner { padding: 8px 0 24px; }
 .hidden { display: none; }
-
-:root {
-  --bg: #fff;
-  --text: #111;
-  --muted: #666;
-  --border: #e5e5e5;
-  --accent-bg: #efefef;
-  --placeholder: #f3f3f3;
-  --gap: 12px;
-  --show-counts: 1; /* 1 = show enumeration labels; 0 = hide */
-}

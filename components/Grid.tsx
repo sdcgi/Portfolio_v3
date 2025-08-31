@@ -14,18 +14,22 @@ export type ImageTile  = { kind: 'image'; src: string; alt?: string };
 export type VideoTile  = { kind: 'video'; key: string; displayName: string; url: string; poster: string | null };
 export type Tile = FolderTile | ImageTile | VideoTile;
 
+type Level = 'top' | 'sub' | 'leaf' | 'motion-top';
+
 export default function Grid({
   items,
-  ratio = '1/1',
+  ratio = '1 / 1',
   desktopCols = 4,
   enableDensityToggle = true,
   onItemClick,
+  level = 'sub',
 }: {
   items: Tile[];
-  ratio?: string;               // CSS aspect-ratio
+  ratio?: string;               // CSS aspect-ratio (e.g., '1 / 1' or 'var(--tile-aspect-top)')
   desktopCols?: number;         // 3..6
   enableDensityToggle?: boolean;
   onItemClick?: (item: Tile, index: number) => void;
+  level?: Level;                // tells us which knobs to read
 }) {
   const [density, setDensity] = useState<'comfortable' | 'compact'>('comfortable');
   const cols = Math.max(3, Math.min(6, desktopCols));
@@ -39,15 +43,20 @@ export default function Grid({
     return cols;
   }, [items.length, cols, allImages]);
 
-  // flags for layout helpers
-  const isSingleImageGrid = useMemo(
-    () => allImages && items.length === 1,
-    [allImages, items]
-  );
-  const isThreeImageLeaf = useMemo(
-    () => allImages && items.length === 3,
-    [allImages, items]
-  );
+  const isSingleImageGrid = useMemo(() => allImages && items.length === 1, [allImages, items]);
+  const isThreeImageLeaf = useMemo(() => allImages && items.length === 3, [allImages, items]);
+
+  // read CSS variables for show/hide controls (per level)
+  const showFlags = useMemo(() => {
+    if (typeof window === 'undefined') {
+      return { titles: level === 'top' ? 0 : 0, counts: 1 };
+    }
+    const cs = getComputedStyle(document.documentElement);
+    const pick = (name: string, def = '1') => Number((cs.getPropertyValue(name).trim() || def)) > 0;
+    if (level === 'top') return { titles: pick('--show-top-titles','0'), counts: pick('--show-top-counts','1') };
+    if (level === 'sub') return { titles: pick('--show-sub-titles','0'), counts: pick('--show-sub-counts','1') };
+    return { titles: false, counts: false }; // leaf/images don't show labels below tiles
+  }, [level]);
 
   return (
     <div className="page-inner">
@@ -63,35 +72,47 @@ export default function Grid({
 
       <div
         className={`grid ${isSingleImageGrid ? 'single-one' : ''} ${isThreeImageLeaf ? 'cols-3' : ''}`}
-        style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? '8px' : '12px' }}
+        style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)' }}
       >
         {items.map((it, i) => (
-          <TileView key={i} item={it} ratio={ratio} onClick={() => onItemClick?.(it, i)} single={isSingleImageGrid} />
+          <TileView
+            key={i}
+            item={it}
+            ratio={ratio}
+            onClick={() => onItemClick?.(it, i)}
+            single={isSingleImageGrid}
+            showTitle={showFlags.titles}
+            showCount={showFlags.counts}
+          />
         ))}
       </div>
     </div>
   );
 }
 
-function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string; onClick?: () => void; single?: boolean }) {
+function TileView({
+  item, ratio, onClick, single, showTitle, showCount
+}: {
+  item: Tile; ratio: string; onClick?: () => void; single?: boolean;
+  showTitle?: boolean; showCount?: boolean;
+}) {
   if (item.kind === 'folder') {
+    const countText = getCount(item);
     return (
-      <Link className="tile" href={item.path} prefetch>
-        <div className="media" style={{ ['--ratio' as any]: ratio }}>
-          {item.cover && (
-            <Image
-              src={item.cover}
-              alt={item.displayName}
-              fill
-              sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
-            />
-          )}
-        </div>
+      <div className="tile">
+        {/* Only the image is a link */}
+        <Link href={item.path} prefetch className="block-link">
+          <div className="media" style={{ ['--ratio' as any]: ratio }}>
+            {item.cover && (
+              <Image src={item.cover} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
+            )}
+          </div>
+        </Link>
         <div className="meta">
-          <div className="label">{item.displayName}</div>
-          {Number(getCount(item)) > 0 && <div className="count" style={{ display: getShowCounts() ? 'block' : 'none' }}>{getCount(item)}</div>}
+          {showTitle && <div className="label">{item.displayName}</div>}
+          {showCount && countText && <div className="count">{countText}</div>}
         </div>
-      </Link>
+      </div>
     );
   }
 
@@ -105,18 +126,13 @@ function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string;
         onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
       >
         <div className="media" style={{ ['--ratio' as any]: ratio }}>
-          <Image
-            src={item.src}
-            alt={item.alt || ''}
-            fill
-            sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
-          />
+          <Image src={item.src} alt={item.alt || ''} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
         </div>
       </div>
     );
   }
 
-  // video tile
+  // video tile (keep short label under poster for Motion if desired)
   return (
     <div
       className="tile clickable"
@@ -125,26 +141,16 @@ function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string;
       onClick={onClick}
       onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
     >
-      <div className="media" style={{ ['--ratio' as any]: '16/9' }}>
-        {item.poster && (
-          <Image
-            src={item.poster}
-            alt={item.displayName}
-            fill
-            sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
-          />
-        )}
+      <div className="media" style={{ ['--ratio' as any]: '16 / 9' }}>
+        {item.poster && <Image src={item.poster} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />}
       </div>
-      <div className="meta"><div className="label">{item.displayName}</div></div>
+      <div className="meta">
+        <div className="label">{item.displayName}</div>
+      </div>
     </div>
   );
 }
 
-function getShowCounts(){
-  if (typeof window === 'undefined') return true;
-  const s = getComputedStyle(document.documentElement).getPropertyValue('--show-counts').trim();
-  return s !== '0';
-}
 function getCount(item: FolderTile){
   if (item.counts?.images) return `${item.counts.images} images`;
   if (item.counts?.videos) return `${item.counts.videos} videos`;
