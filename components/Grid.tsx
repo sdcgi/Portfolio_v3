@@ -1,10 +1,15 @@
-// components/Grid.tsx
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
-export type FolderTile = { kind: 'folder'; path: string; displayName: string; cover: string | null; counts?: { images?: number; folders?: number; videos?: number } };
+export type FolderTile = {
+  kind: 'folder';
+  path: string;
+  displayName: string;
+  cover: string | null;
+  counts?: { images?: number; folders?: number; videos?: number };
+};
 export type ImageTile  = { kind: 'image'; src: string; alt?: string };
 export type VideoTile  = { kind: 'video'; key: string; displayName: string; url: string; poster: string | null };
 export type Tile = FolderTile | ImageTile | VideoTile;
@@ -25,17 +30,24 @@ export default function Grid({
   const [density, setDensity] = useState<'comfortable' | 'compact'>('comfortable');
   const cols = Math.max(3, Math.min(6, desktopCols));
 
+  const allImages = useMemo(() => items.every(it => (it as any).kind === 'image'), [items]);
+
   const computedCols = useMemo(() => {
     if (items.length === 1) return 1;
     if (items.length === 2) return 2;
+    if (allImages && items.length === 3) return 3;
     return cols;
-  }, [items.length, cols]);
-    // single image -> use 2-col tile size but center the grid
-  const isSingleImageGrid = useMemo(
-    () => items.length === 1 && (items[0] as Tile).kind === 'image',
-    [items]
-  );
+  }, [items.length, cols, allImages]);
 
+  // flags for layout helpers
+  const isSingleImageGrid = useMemo(
+    () => allImages && items.length === 1,
+    [allImages, items]
+  );
+  const isThreeImageLeaf = useMemo(
+    () => allImages && items.length === 3,
+    [allImages, items]
+  );
 
   return (
     <div className="page-inner">
@@ -49,7 +61,10 @@ export default function Grid({
         )}
       </div>
 
-      <div className={`grid ${isSingleImageGrid ? "single-one" : ""}`} style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? '8px' : '12px' }}>
+      <div
+        className={`grid ${isSingleImageGrid ? 'single-one' : ''} ${isThreeImageLeaf ? 'cols-3' : ''}`}
+        style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? '8px' : '12px' }}
+      >
         {items.map((it, i) => (
           <TileView key={i} item={it} ratio={ratio} onClick={() => onItemClick?.(it, i)} single={isSingleImageGrid} />
         ))}
@@ -64,7 +79,12 @@ function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string;
       <Link className="tile" href={item.path} prefetch>
         <div className="media" style={{ ['--ratio' as any]: ratio }}>
           {item.cover && (
-            <Image src={item.cover} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
+            <Image
+              src={item.cover}
+              alt={item.displayName}
+              fill
+              sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
+            />
           )}
         </div>
         <div className="meta">
@@ -74,6 +94,7 @@ function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string;
       </Link>
     );
   }
+
   if (item.kind === 'image') {
     return (
       <div
@@ -84,11 +105,17 @@ function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string;
         onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
       >
         <div className="media" style={{ ['--ratio' as any]: ratio }}>
-          <Image src={item.src} alt={item.alt || ''} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
+          <Image
+            src={item.src}
+            alt={item.alt || ''}
+            fill
+            sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
+          />
         </div>
       </div>
     );
   }
+
   // video tile
   return (
     <div
@@ -99,7 +126,14 @@ function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string;
       onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
     >
       <div className="media" style={{ ['--ratio' as any]: '16/9' }}>
-        {item.poster && (<Image src={item.poster} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />)}
+        {item.poster && (
+          <Image
+            src={item.poster}
+            alt={item.displayName}
+            fill
+            sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
+          />
+        )}
       </div>
       <div className="meta"><div className="label">{item.displayName}</div></div>
     </div>
