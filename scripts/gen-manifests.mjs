@@ -102,6 +102,15 @@ async function buildPortfolioManifest(dir){
       if (ai !== bi) return ai - bi;
       return a.name.localeCompare(b.name, undefined, { numeric:true, sensitivity:'base' });
     });
+    
+// after we've built the `folders` array and computed coverUrl (may be null)...
+if (!coverUrl) {
+  // pick the first child that has a cover
+  const firstChildWithCover = folders.find(f => f.cover);
+  if (firstChildWithCover?.cover) coverUrl = firstChildWithCover.cover;
+}
+
+return { kind:'portfolio-folder', cover: coverUrl, folders };
 
     return { kind:'portfolio-folder', cover: coverUrl, folders };
   }

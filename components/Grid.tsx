@@ -20,7 +20,7 @@ export default function Grid({
   ratio?: string;               // CSS aspect-ratio
   desktopCols?: number;         // 3..6
   enableDensityToggle?: boolean;
-  onItemClick?: (item: Tile, index: number) => void;   // <-- NEW
+  onItemClick?: (item: Tile, index: number) => void;
 }) {
   const [density, setDensity] = useState<'comfortable' | 'compact'>('comfortable');
   const cols = Math.max(3, Math.min(6, desktopCols));
@@ -30,6 +30,12 @@ export default function Grid({
     if (items.length === 2) return 2;
     return cols;
   }, [items.length, cols]);
+    // single image -> use 2-col tile size but center the grid
+  const isSingleImageGrid = useMemo(
+    () => items.length === 1 && (items[0] as Tile).kind === 'image',
+    [items]
+  );
+
 
   return (
     <div className="page-inner">
@@ -43,16 +49,16 @@ export default function Grid({
         )}
       </div>
 
-      <div className="grid" style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? '8px' : '12px' }}>
+      <div className={`grid ${isSingleImageGrid ? "single-one" : ""}`} style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? '8px' : '12px' }}>
         {items.map((it, i) => (
-          <TileView key={i} item={it} ratio={ratio} onClick={() => onItemClick?.(it, i)} />
+          <TileView key={i} item={it} ratio={ratio} onClick={() => onItemClick?.(it, i)} single={isSingleImageGrid} />
         ))}
       </div>
     </div>
   );
 }
 
-function TileView({ item, ratio, onClick }: { item: Tile; ratio: string; onClick?: () => void }) {
+function TileView({ item, ratio, onClick, single }: { item: Tile; ratio: string; onClick?: () => void; single?: boolean }) {
   if (item.kind === 'folder') {
     return (
       <Link className="tile" href={item.path} prefetch>
@@ -71,7 +77,7 @@ function TileView({ item, ratio, onClick }: { item: Tile; ratio: string; onClick
   if (item.kind === 'image') {
     return (
       <div
-        className="tile clickable"
+        className={`tile clickable ${single ? 'single-leaf' : ''}`}
         role="button"
         tabIndex={0}
         onClick={onClick}

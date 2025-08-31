@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export default function MotionProject({ params }: { params: { project: string } }){
   const [tiles, setTiles] = useState<Tile[] | null>(null);
   useEffect(()=>{
-    const p = `/Motion/${encodeURIComponent(params.project)}/manifest.json`;
+    const p = `/Motion/${encodeURIComponent(decodeURIComponent(params.project))}/manifest.json`;
     fetch(p, { cache: 'force-cache' }).then(r=> r.ok ? r.json() : null).then((m)=>{
       const t: Tile[] = (m?.items||[]).map((it: any)=> ({ kind: 'video', key: it.key, displayName: it.displayName, url: it.url, poster: it.poster || null }));
       setTiles(t);

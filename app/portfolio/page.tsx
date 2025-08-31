@@ -15,7 +15,7 @@ export default function PortfolioTop(){
         const folders: Folder[] = (m?.folders) || [];
         const t: Tile[] = folders.map(f => ({
           kind: 'folder',
-          path: `/portfolio${f.path.replace('/Portfolio','')}`,
+          path: `/portfolio${decodeURI(f.path).replace('/Portfolio','')}`,
           displayName: f.displayName || f.name,
           cover: f.cover,
           counts: f.counts
