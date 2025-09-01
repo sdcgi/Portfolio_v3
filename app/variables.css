@@ -45,6 +45,37 @@
   --accent-bg: #efefef;
   --placeholder: #f3f3f3;
 
+   /* general interactive cursor (links, buttons) */
+  --cursor-interactive: pointer;
+
+  /* lightbox edge hotzones (left/right) */
+  --cursor-hot-left: w-resize;
+  --cursor-hot-right: e-resize;
+
+  /* leaf image zoom hint (optional) */
+  --cursor-zoom: zoom-in;
+
+  /* ========================================================= */
+/* ******** SITE-WIDE CURSOR FEEDBACK *********************** */
+/* ========================================================= */
+
+/* All anchor links and obvious interactive elements */
+a, button, [role="button"], .clickable {
+  cursor: var(--cursor-interactive, pointer);
+}
+
+/* Folder tiles: meta is not clickable but the cover link is; ensure feedback */
+.grid .tile .block-link { cursor: var(--cursor-interactive, pointer); }
+
+/* Leaf image tiles: show zoom-in to signal open/lightbox */
+.grid.level-leaf .tile.clickable .media {
+  cursor: var(--cursor-zoom, zoom-in);
+}
+
+/* Breadcrumb links: ensure pointer */
+.breadcrumbs a { cursor: var(--cursor-interactive, pointer); }
+
+
   /* -------- Header & breadcrumbs -------- */
   --header-blur: 12px;
   --header-bg: rgba(255, 255, 255, 0.7);

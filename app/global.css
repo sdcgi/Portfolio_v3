@@ -7,6 +7,22 @@ html { scrollbar-gutter: stable both-edges; }
 html, body { margin: 0; padding: 0; height: 100%; }
 body { font-family: var(--font-sans); color: var(--text); background: var(--bg); }
 
+/* ========================================================= */
+/* ******** CURSOR KNOBS — SITE-WIDE & LIGHTBOX ************ */
+/* ========================================================= */
+:root{
+  /* general interactive cursor (links, buttons) */
+  --cursor-interactive: pointer;
+
+  /* lightbox edge hotzones (left/right) */
+  --cursor-hot-left: w-resize;
+  --cursor-hot-right: e-resize;
+
+  /* leaf image zoom hint (optional) */
+  --cursor-zoom: zoom-in;
+}
+
+
 /* Fixed/sticky header with blur */
 .site-header {
   position: sticky; top: 0; z-index: 100;

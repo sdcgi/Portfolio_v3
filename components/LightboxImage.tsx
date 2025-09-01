@@ -25,6 +25,7 @@ export default function LightboxImage({
     const raw = cs.getPropertyValue('--lb-ui-hide-ms').trim();
     const n = parseInt(raw, 10);
     return Number.isFinite(n) ? n : 2000;
+    // You can tune this in CSS: :root { --lb-ui-hide-ms: 4000; }
   };
 
   // keyboard handler
@@ -48,9 +49,7 @@ export default function LightboxImage({
     const ms = getHideMs();
     if (hideTimer.current) window.clearTimeout(hideTimer.current);
     hideTimer.current = window.setTimeout(() => setUiVisible(false), ms);
-    return () => {
-      if (hideTimer.current) window.clearTimeout(hideTimer.current);
-    };
+    return () => { if (hideTimer.current) window.clearTimeout(hideTimer.current); };
   }, []);
 
   return (
@@ -60,11 +59,12 @@ export default function LightboxImage({
       role="dialog"
       aria-modal
     >
+      {/* KEEP: this preserves your "contain by longest edge" behavior */}
       <div className="lb-content" onClick={(e) => e.stopPropagation()}>
         <Image src={src} alt={alt || ''} fill sizes="100vw" />
       </div>
 
-      {/* Always-on hotzones. Visible arrows are children that fade away. */}
+      {/* Always-on hotzones. Arrows are always mounted and fade with a class. */}
       {onPrev && (
         <button
           className="lb-hotzone lb-left"
@@ -72,9 +72,13 @@ export default function LightboxImage({
           onClick={(e) => { e.stopPropagation(); onPrev(); }}
           type="button"
         >
-          {uiVisible && <span className="lb-arrow">‹</span>}
+          {/* ******** ICON: Prev ******** */}
+          <span className={`lb-arrow ${uiVisible ? '' : 'is-hidden'}`}>
+            <span className="material-symbols-outlined">arrow_back_ios_new</span>
+          </span>
         </button>
       )}
+
       {onNext && (
         <button
           className="lb-hotzone lb-right"
@@ -82,7 +86,10 @@ export default function LightboxImage({
           onClick={(e) => { e.stopPropagation(); onNext(); }}
           type="button"
         >
-          {uiVisible && <span className="lb-arrow">›</span>}
+          {/* ******** ICON: Next ******** */}
+          <span className={`lb-arrow ${uiVisible ? '' : 'is-hidden'}`}>
+            <span className="material-symbols-outlined">arrow_forward_ios</span>
+          </span>
         </button>
       )}
 
@@ -94,7 +101,8 @@ export default function LightboxImage({
         title="Close (Esc)"
         type="button"
       >
-        ✕
+        {/* ******** ICON: Close ******** */}
+        <span className="material-symbols-outlined">close</span>
       </button>
     </div>
   );
