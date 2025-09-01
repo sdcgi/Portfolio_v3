@@ -117,6 +117,60 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 .lb-btn { background: transparent; border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; }
 .lb-close { position: fixed; top: 12px; right: 12px; }
 
+/* Hotzones: still big invisible click areas */
+.lb-hotzone {
+  position: fixed;
+  top: 0;
+  width: 20vw;
+  height: 100lvh;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+}
+.lb-hotzone.lb-left  { left: 0; justify-content: flex-start; }
+.lb-hotzone.lb-right { right: 0; justify-content: flex-end; }
+
+/* Arrow buttons: flat, centered text, bigger, edge aligned */
+.lb-arrow {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 12px; /* padding from screen edge */
+  pointer-events: none; /* clicks handled by hotzone */
+}
+
+/* Permanent close button: flat, no corners, top-right */
+.lb-close-permanent {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.lb-close-permanent:hover {
+  background: #fff;
+}
+
+
 /* Utilities */
 .page-inner { padding: 8px 0 24px; }
 .hidden { display: none; }

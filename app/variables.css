@@ -54,7 +54,7 @@
   --gap-compact: 2px;
 
   /* -------- Lightbox -------- */
-  --lightbox-overlay: hsla(0, 0%, 100%, 0.9);
+  --lightbox-overlay: hsla(0, 0%, 100%, 1);
   --lightbox-max-w: 98vw;
   --lightbox-max-h: 96lvh;
 
