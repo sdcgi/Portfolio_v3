@@ -12,7 +12,7 @@ export default function MotionTop(){
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(()=>{
-    fetch('/Motion/manifest.json', { cache: 'force-cache' })
+    fetch('/Motion/manifest.json', { cache: 'no-store' })
       .then(r=> r.ok ? r.json() : null)
       .then((m)=>{
         const projects: Project[] = (m?.projects)||[];

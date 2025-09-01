@@ -9,7 +9,7 @@ export default function PortfolioTop(){
   const [tiles, setTiles] = useState<Tile[] | null>(null);
 
   useEffect(()=>{
-    fetch('/Portfolio/manifest.json', { cache: 'force-cache' })
+    fetch('/Portfolio/manifest.json', { cache: 'no-store' })
       .then(r => r.ok ? r.json() : null)
       .then((m)=>{
         const folders: Folder[] = (m?.folders) || [];
