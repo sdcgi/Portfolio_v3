@@ -1,5 +1,6 @@
 html { scrollbar-gutter: stable both-edges; }
 @import './variables.css';
+@import './lightbox.css';
 
 /* Minimal, neutral; no shadows, no rounded corners */
 * { box-sizing: border-box; }
@@ -108,68 +109,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 @media (min-width: 1100px) {
   .grid.cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
 }
-
-/* Lightbox */
-.lb-overlay { position: fixed; inset: 0; background: var(--lightbox-overlay); display: flex; align-items: center; justify-content: center; z-index: 1000; height: 100lvh; }
-.lb-content { max-width: var(--lightbox-max-w); max-height: var(--lightbox-max-h); display: flex; align-items: center; justify-content: center; }
-.lb-content img, .lb-content video { max-width: 100%; max-height: 100%; object-fit: contain; }
-.lb-ui { position: fixed; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 20px; color: #fff; }
-.lb-btn { background: transparent; border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; }
-.lb-close { position: fixed; top: 12px; right: 12px; }
-
-/* Hotzones: still big invisible click areas */
-.lb-hotzone {
-  position: fixed;
-  top: 0;
-  width: 20vw;
-  height: 100lvh;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: grab;
-  display: flex;
-  align-items: center;
-}
-.lb-hotzone.lb-left  { left: 0; justify-content: flex-start; }
-.lb-hotzone.lb-right { right: 0; justify-content: flex-end; }
-
-/* Arrow buttons: flat, centered text, bigger, edge aligned */
-.lb-arrow {
-  width: 56px;
-  height: 56px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  color: #000;
-  font-size: 32px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 12px; /* padding from screen edge */
-  pointer-events: none; /* clicks handled by hotzone */
-}
-
-/* Permanent close button: flat, no corners, top-right */
-.lb-close-permanent {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  width: 40px;
-  height: 40px;
-  background: rgb(255, 255, 255);
-  border: none;
-  color: #000;
-  font-size: 20px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.lb-close-permanent:hover {
-  background: #fff;
-}
-
 
 /* Utilities */
 .page-inner { padding: 8px 0 24px; }
