@@ -2,6 +2,16 @@
   "kind": "portfolio-root",
   "folders": [
     {
+      "name": "Sliced",
+      "displayName": "Sliced",
+      "path": "/Portfolio/Sliced",
+      "cover": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0001.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
       "name": "Fractured",
       "displayName": "Fractured",
       "path": "/Portfolio/Fractured",
@@ -15,9 +25,9 @@
       "name": "Head",
       "displayName": "Head",
       "path": "/Portfolio/Head",
-      "cover": "/Portfolio/Head/LED-Headlight_v01.Front_.0001-copy.jpg",
+      "cover": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg",
       "counts": {
-        "images": 2,
+        "images": 3,
         "folders": 0
       }
     },
