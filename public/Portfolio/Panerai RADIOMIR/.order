@@ -11,7 +11,10 @@
 # for your convenience.
 
 # Save the file and reload the page to see the result!
-max_columns = 6
+
+max_columns = 3
+aspect_ratio = 1/1
+---------------------------
 Layer 11.png
 Layer 12.png
 Layer 13.png
