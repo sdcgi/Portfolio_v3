@@ -1,10 +1,8 @@
-
+max_columns = 3
 Zep_ecom_Production1_v03.18.BLACK_.01.jpg
 Zep_ecom_Production1_v03.18.BLACK_.02.jpg
 Zep_ecom_Production1_v03.18.BLACK_.03.jpg
 Zep_ecom_Production1_v03.18.BLACK_.05.jpg
-
-
 
 Zep_ecom_Production1_v03.18.WHITE_.01.jpg
 Zep_ecom_Production1_v03.18.WHITE_.02.jpg
@@ -18,13 +16,14 @@ Zep_MACRO_v03.17_07.ICON_BLACK_lessShadow-noDOF.jpg
 
 .Zep_ecom_Production1_v03.18.WHITE_.05.jpg
 .Zep_ecom_Production1_v03.18.WHITE_.06.jpg
+
 Zep_ECOMCLOSEUPS_v03.17_05.ButtonsBLACK.jpg
 Zep_ECOMCLOSEUPS_v03.17_05.ButtonsWHITE.jpg
 Zep_ECOMCLOSEUPS_v03.17_05.ECOMtech_BLACK-FLT.jpg
 Zep_ECOMCLOSEUPS_v03.17_05.ECOMtech_WHITE-FLT.jpg
 Zep_ECOMCLOSEUPS_v03.17_05.MaterialBLACK.jpg
 Zep_ECOMCLOSEUPS_v03.17_05.MaterialWHITE.jpg
-Drivers_v3_1-FIN.jpg
+.Drivers_v3_1-FIN.jpg
 
 Zep_MACRO_v03.17_06.BadgeLow.BLACK_.jpg
 Zep_MACRO_v03.17_06.BadgeLow.WHITE_.jpg

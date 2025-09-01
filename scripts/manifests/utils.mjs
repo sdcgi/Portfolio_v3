@@ -7,6 +7,7 @@ export function isCoverFilename(name){ return name.toLowerCase().endsWith('.cove
 export function stripCover(name){ return name.replace(/\.cover$/i,''); }
 export function pretty(name){ return name.replace(/[-_]+/g,' ').replace(/\b\w/g, s=>s.toUpperCase()); }
 export function clamp(n, lo, hi){ return Math.max(lo, Math.min(hi, n)); }
+export function stripLeadingDot(s){ return s?.startsWith('.') ? s.slice(1) : s; }
 
 export function urlFromAbs(PUB, abs){
   const rel = '/' + path.relative(PUB, abs).split(path.sep).join('/');
@@ -34,6 +35,14 @@ export async function readLines(file){
 export async function writeJSON(file, data){
   await ensureDir(path.dirname(file));
   await fs.writeFile(file, JSON.stringify(data, null, 2) + '\n');
+}
+
+export async function writeHelperFile(file, headerLines, bodyLines){
+  // Always overwrite. Strip leading dots from names.
+  await ensureDir(path.dirname(file));
+  const header = (headerLines || []).join('\n') + (headerLines?.length ? '\n\n' : '');
+  const body = (bodyLines || []).map(stripLeadingDot).join('\n') + (bodyLines?.length ? '\n' : '');
+  await fs.writeFile(file, header + body, 'utf8');
 }
 
 // Stills covers (*.cover image copied to /public/_covers)

@@ -1,3 +1,8 @@
+// Optional directives for this folder (.order supports these at the top):
+// max_columns = 3   // overrides the maximum columns for this gallery (1–8)
+// aspect_ratio = 0  // 0 = respect each image’s original aspect; or use 4/5, 1/1, 3/2, etc
+// title_display = 0 // 0 = hide titles, 1 = show titles
+
 Collectible_Bottle_sd_WIP7_25_Print_2_0088-v2.jpg
 S4_Glorifier_Sculpture_10_PRINT_PRINT_0001-copy-2.jpg
 A_Collectible_White_02_3Quarter_v2_.jpg

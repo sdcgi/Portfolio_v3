@@ -25,9 +25,9 @@
       "name": "Head",
       "displayName": "Head",
       "path": "/Portfolio/Head",
-      "cover": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg",
+      "cover": "/Portfolio/Head/LED-Headlight_v01.Front_.0001-copy.jpg",
       "counts": {
-        "images": 3,
+        "images": 2,
         "folders": 0
       }
     },
@@ -1107,7 +1107,7 @@
       "path": "/Portfolio/Zeppelin",
       "cover": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.BLACK_.01.jpg",
       "counts": {
-        "images": 25,
+        "images": 22,
         "folders": 0
       }
     }

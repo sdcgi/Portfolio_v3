@@ -1,6 +1,13 @@
 import path from 'node:path';
-import { ensureDir, isHidden, pretty, writeJSON, readLines } from './utils.mjs';
+import { ensureDir, isHidden, pretty, writeJSON, readLines, writeHelperFile } from './utils.mjs';
 import { readOrderWithDirectives } from './directives.mjs';
+
+const VIDEOS_HEADER = [
+  '// Optional directives (put at the top of the project’s .order):',
+  '// max_columns = 3   // overrides the maximum columns for this project (1–8)',
+  '// aspect_ratio = 0  // 0 = respect video poster’s aspect; or use 4/5, 1/1, 16/9, etc',
+  '// title_display = 0 // 0 = hide titles, 1 = show titles',
+];
 
 export async function scanMotion({ MOTION, REGISTRY }){
   await ensureDir(MOTION);
@@ -17,9 +24,11 @@ export async function scanMotion({ MOTION, REGISTRY }){
 
   for (const p of projects){
     const pdir = path.join(MOTION, p.name);
-    const { order, directives } = await readOrderWithDirectives(pdir);
+    const { order, directives, hiddenFromOrder } = await readOrderWithDirectives(pdir);
 
-    const clips = order.map(k => registry.find(r=> r.key === k)).filter(Boolean);
+    const clips = order
+    .map(k => registry.find(r => r.key.toLowerCase() === String(k).toLowerCase()))
+    .filter(Boolean);
     clips.forEach(c=> inAny.add(c.key));
 
     let coverPoster = null;
@@ -33,6 +42,13 @@ export async function scanMotion({ MOTION, REGISTRY }){
       url: c.url,
       poster: c.poster || null
     }));
+
+    // convenience .videos (always overwrite)
+    await writeHelperFile(
+      path.join(pdir, '.videos'),
+      VIDEOS_HEADER,
+      clips.map(c => c.key)
+    );
 
     await writeJSON(path.join(pdir,'manifest.json'), {
       kind:'motion-project',

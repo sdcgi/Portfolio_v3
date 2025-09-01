@@ -21,6 +21,9 @@ export async function run() {
 }
 
 if (WATCH) {
+  // initial build once
+  run().catch(e => { console.error(e); });
+  // then watch inputs only
   createWatchers({ PORTFOLIO, MOTION, REGISTRY, run });
 } else {
   run().catch(e => { console.error(e); process.exit(1); });
