@@ -12,6 +12,16 @@
       }
     },
     {
+      "name": "Fractured",
+      "displayName": "Fractured",
+      "path": "/Portfolio/Fractured",
+      "cover": "/Portfolio/Fractured/Chanel-no.5_w11_v03.Close_A.STILL_.0074-copy.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
       "name": "Head",
       "displayName": "Head",
       "path": "/Portfolio/Head",
@@ -48,6 +58,16 @@
       "cover": "/Portfolio/Panerai_x10/Panerai_x10_10Front245mm_Simple.jpg",
       "counts": {
         "images": 4,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Panerai Luna Rossa",
+      "displayName": "Panerai Luna Rossa",
+      "path": "/Portfolio/Panerai%20Luna%20Rossa",
+      "cover": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB-2.jpg",
+      "counts": {
+        "images": 2,
         "folders": 0
       }
     },
@@ -868,16 +888,6 @@
       "cover": "/Portfolio/Olay/Olay-Stitching-1.jpg",
       "counts": {
         "images": 3,
-        "folders": 0
-      }
-    },
-    {
-      "name": "Panerai Luna Rossa",
-      "displayName": "Panerai Luna Rossa",
-      "path": "/Portfolio/Panerai%20Luna%20Rossa",
-      "cover": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB-2.jpg",
-      "counts": {
-        "images": 2,
         "folders": 0
       }
     },
