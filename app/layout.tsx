@@ -4,7 +4,7 @@ import "./variables.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Simon Danaher",
+  title: "Portfolio",
   description: "Folder-based photography/CGI portfolio"
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="site-header">
           <div className="header-inner">
-            <div className="brand"><Link href="/portfolio">Simon Danaher</Link></div>
+            <div className="brand"><Link href="/portfolio">Brand Name</Link></div>
             <nav className="main-nav">
               <Link href="/portfolio">Stills</Link>
               <Link href="/motion">Motion</Link>

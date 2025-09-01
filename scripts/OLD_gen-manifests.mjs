@@ -19,11 +19,11 @@ function isHidden(name){ return name.startsWith('.'); }
 function isCoverFilename(name){ return name.toLowerCase().endsWith('.cover'); }
 function stripCover(name){ return name.replace(/\.cover$/i,''); }
 function pretty(name){ return name.replace(/[-_]+/g,' ').replace(/\b\w/g, s=>s.toUpperCase()); }
+function clamp(n, lo, hi){ return Math.max(lo, Math.min(hi, n)); }
 
 // encode URL path from an absolute file path under /public
 function urlFromAbs(abs) {
   const rel = '/' + path.relative(PUB, abs).split(path.sep).join('/');
-  // encode spaces and other reserved chars but leave slashes
   return encodeURI(rel);
 }
 
@@ -31,16 +31,59 @@ function urlFromAbs(abs) {
 async function resolveCaseInsensitive(dir, requested) {
   const base = path.basename(requested);
   const entries = await fs.readdir(dir, { withFileTypes: true });
-  // exact match first
   for (const e of entries) if (e.name === base) return path.join(dir, e.name);
-  // case-insensitive fallback
   const lower = base.toLowerCase();
   for (const e of entries) if (e.name.toLowerCase() === lower) return path.join(dir, e.name);
-  return null; // not found
+  return null;
 }
 
 async function readLines(file){
-  try { const txt = await fs.readFile(file,'utf8'); return txt.split(/\r?\n/).map(s=>s.trim()).filter(Boolean); } catch { return []; }
+  try {
+    const txt = await fs.readFile(file,'utf8');
+    return txt.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
+/* ---------- directive parsing ---------- */
+function parseDirectives(firstLine){
+  const out = { maxColumns: undefined, aspectRatio: undefined, titleDisplay: undefined };
+  if (!firstLine) return out;
+  const s = firstLine.trim();
+  let m;
+  if ((m = s.match(/^max_columns\s*=\s*(\d+)\s*$/i))) {
+    out.maxColumns = clamp(parseInt(m[1], 10), 1, 8);
+  } else if ((m = s.match(/^aspect_ratio\s*=\s*(0|(\d+)\s*\/\s*(\d+))\s*$/i))) {
+    out.aspectRatio = m[1] === '0' ? '0' : `${parseInt(m[2],10)}/${parseInt(m[3],10)}`;
+  } else if ((m = s.match(/^title_display\s*=\s*(0|1|true|false)\s*$/i))) {
+    const v = m[1].toLowerCase();
+    out.titleDisplay = (v === '1' || v === 'true') ? 1 : 0;
+  }
+  return out;
+}
+
+async function readOrderWithDirectives(dir){
+  const lines = await readLines(path.join(dir, '.order'));
+  let directives = { maxColumns: undefined, aspectRatio: undefined, titleDisplay: undefined };
+  // first meaningful line may be a directive
+  for (const raw of lines){
+    const line = raw.trim();
+    if (!line || line.startsWith('#')) continue;
+    directives = parseDirectives(line);
+    break;
+  }
+  // Remove directive lines; hide entries starting with a dot
+  const order = lines
+    .filter(l => !/^\s*(max_columns|aspect_ratio|title_display)\s*=/.test(l))
+    .filter(l => !/^\s*\./.test(l));
+  // Also record dotted names so parents can hide subfolders by name if they want
+  const hiddenFromOrder = new Set(
+    lines
+      .filter(l => /^\s*\./.test(l))
+      .map(l => l.replace(/^\s*\./,'').toLowerCase())
+  );
+  return { order, directives, hiddenFromOrder };
 }
 
 /* ---------- covers ---------- */
@@ -51,7 +94,7 @@ async function copyCoverFile(srcAbs){
   const finalName = `${hash}-${base}`;
   const outAbs = path.join(COVERS_OUT, finalName);
   await fs.copyFile(srcAbs, outAbs);
-  return `/_covers/${finalName}`; // already a web path; no encode needed
+  return `/_covers/${finalName}`;
 }
 
 /* ---------- stills (portfolio) ---------- */
@@ -74,49 +117,54 @@ async function buildPortfolioManifest(dir){
   }
 
   if (subdirs.length){
-    // folder index
-    // Optional ordering for subfolders via .order (one folder name per line)
-    const order = await readLines(path.join(dir,'.order'));
+    // subgallery index (list child folders)
+    const { order, directives, hiddenFromOrder } = await readOrderWithDirectives(dir);
     const orderLower = new Map(order.map((n,i)=>[n.toLowerCase(), i]));
 
-    // filter (no dot folders) – already done
-    let folders = await Promise.all(subdirs.map(async s => {
-      const sm = await buildPortfolioManifest(path.join(dir,s.name));
-      await writeJSON(path.join(dir,s.name,'manifest.json'), sm);
-      const counts = { images: (sm.items?.length)||0, folders: (sm.folders?.length)||0 };
-      const cov = sm.cover || null;
-      const abs = path.join(dir, s.name);
-      return {
-        name: s.name,
-        displayName: pretty(s.name),
-        path: encodeURI('/' + path.relative(PUB, abs).split(path.sep).join('/')),
-        cover: cov,
-        counts
-      };
-    }));
+    let folders = await Promise.all(subdirs
+      .filter(s => !hiddenFromOrder.has(s.name.toLowerCase()))
+      .map(async s => {
+        const sm = await buildPortfolioManifest(path.join(dir,s.name));
+        await writeJSON(path.join(dir,s.name,'manifest.json'), sm);
+        const counts = { images: (sm.items?.length)||0, folders: (sm.folders?.length)||0 };
+        const cov = sm.cover || null;
+        const abs = path.join(dir, s.name);
+        return {
+          name: s.name,
+          displayName: pretty(s.name),
+          path: encodeURI('/' + path.relative(PUB, abs).split(path.sep).join('/')),
+          cover: cov,
+          counts
+        };
+      })
+    );
 
-    // order: .order first (case-insensitive), then cii alphabetical
+    // sort: .order first (case-insensitive), then CII alphabetical
     folders.sort((a,b)=>{
       const ai = orderLower.has(a.name.toLowerCase()) ? orderLower.get(a.name.toLowerCase()) : 1e9;
       const bi = orderLower.has(b.name.toLowerCase()) ? orderLower.get(b.name.toLowerCase()) : 1e9;
       if (ai !== bi) return ai - bi;
       return a.name.localeCompare(b.name, undefined, { numeric:true, sensitivity:'base' });
     });
-    
-// after we've built the `folders` array and computed coverUrl (may be null)...
-if (!coverUrl) {
-  // pick the first child that has a cover
-  const firstChildWithCover = folders.find(f => f.cover);
-  if (firstChildWithCover?.cover) coverUrl = firstChildWithCover.cover;
-}
 
-return { kind:'portfolio-folder', cover: coverUrl, folders };
+    // Fallback cover from first child with cover
+    if (!coverUrl) {
+      const firstChildWithCover = folders.find(f => f.cover);
+      if (firstChildWithCover?.cover) coverUrl = firstChildWithCover.cover;
+    }
 
-    return { kind:'portfolio-folder', cover: coverUrl, folders };
+    return {
+      kind: 'portfolio-folder',
+      cover: coverUrl,
+      folders,
+      ...(directives.maxColumns !== undefined ? { maxColumns: directives.maxColumns } : {}),
+      ...(directives.aspectRatio !== undefined ? { aspectRatio: directives.aspectRatio } : {}),
+      ...(directives.titleDisplay !== undefined ? { titleDisplay: directives.titleDisplay } : {}),
+    };
   }
 
   // leaf images
-  const order = await readLines(path.join(dir,'.order'));
+  const { order, directives } = await readOrderWithDirectives(dir);
   const imagesOnDisk = files
     .filter(f=> !isCoverFilename(f.name))
     .filter(f=> IMG_EXT.has(path.extname(f.name).toLowerCase()))
@@ -128,14 +176,21 @@ return { kind:'portfolio-folder', cover: coverUrl, folders };
     const abs = await resolveCaseInsensitive(dir, line);
     if (abs && path.dirname(abs) === dir) resolvedOrder.push(path.basename(abs));
   }
-  const setOrdered = new Set(resolvedOrder.map(x=>x));
+  const setOrdered = new Set(resolvedOrder);
   const tail = imagesOnDisk
     .filter(n=> !setOrdered.has(n))
     .sort((a,b)=> a.localeCompare(b, undefined, { numeric:true, sensitivity:'base' }));
   const finalList = resolvedOrder.concat(tail);
 
   const items = finalList.map(name => ({ src: urlFromAbs(path.join(dir, name)) }));
-  return { kind:'stills-gallery', cover: coverUrl || (items[0]?.src || null), items };
+  return {
+    kind: 'stills-gallery',
+    cover: coverUrl || (items[0]?.src || null),
+    items,
+    ...(directives.maxColumns !== undefined ? { maxColumns: directives.maxColumns } : {}),
+    ...(directives.aspectRatio !== undefined ? { aspectRatio: directives.aspectRatio } : {}),
+    ...(directives.titleDisplay !== undefined ? { titleDisplay: directives.titleDisplay } : {}),
+  };
 }
 
 async function scanPortfolio(){
@@ -156,9 +211,10 @@ async function scanPortfolio(){
       counts
     });
   }
-  // .order for top-level folders
-  const topOrder = await readLines(path.join(PORTFOLIO,'.order'));
-  const idx = new Map(topOrder.map((n,i)=>[n.toLowerCase(), i]));
+  // .order for top-level folders (also allow hiding via dot line)
+  const { order, hiddenFromOrder } = await readOrderWithDirectives(PORTFOLIO);
+  const idx = new Map(order.map((n,i)=>[n.toLowerCase(), i]));
+  folders = folders.filter(f => !hiddenFromOrder.has(f.name.toLowerCase()));
   folders.sort((a,b)=>{
     const ai = idx.has(a.name.toLowerCase()) ? idx.get(a.name.toLowerCase()) : 1e9;
     const bi = idx.has(b.name.toLowerCase()) ? idx.get(b.name.toLowerCase()) : 1e9;
@@ -169,7 +225,7 @@ async function scanPortfolio(){
   await writeJSON(path.join(PORTFOLIO,'manifest.json'), { kind:'portfolio-root', folders });
 }
 
-/* ---------- motion (unchanged behavior + URL encoding) ---------- */
+/* ---------- motion ---------- */
 async function scanMotion(){
   await ensureDir(MOTION);
   let registry = [];
@@ -183,36 +239,62 @@ async function scanMotion(){
 
   for (const p of projects){
     const pdir = path.join(MOTION, p.name);
-    const order = await readLines(path.join(pdir,'.order'));
+    const { order, directives, hiddenFromOrder } = await readOrderWithDirectives(pdir);
+
+    // Build items from registry keys (ignore dotted keys in .order via readOrderWithDirectives)
     const clips = order.map(k => registry.find(r=> r.key === k)).filter(Boolean);
     clips.forEach(c=> inAny.add(c.key));
 
+    // cover: .cover text (poster URL) or first clip poster
     let coverPoster = null;
     const coverTxt = await readLines(path.join(pdir,'.cover'));
     if (coverTxt[0]) coverPoster = coverTxt[0];
     if (!coverPoster && clips[0]?.poster) coverPoster = clips[0].poster;
 
-    const items = clips.map(c=> ({ key: c.key, displayName: c.displayName || c.key, url: c.url, poster: c.poster || null }));
-    await writeJSON(path.join(pdir,'manifest.json'), { kind:'motion-project', name: p.name, displayName: pretty(p.name), items });
+    const items = clips.map(c=> ({
+      key: c.key,
+      displayName: c.displayName || c.key,
+      url: c.url,
+      poster: c.poster || null
+    }));
 
-    projectCards.push({ name: p.name, displayName: pretty(p.name), path: '/Motion/' + p.name, coverPoster, count: { videos: items.length } });
+    await writeJSON(path.join(pdir,'manifest.json'), {
+      kind:'motion-project',
+      name: p.name,
+      displayName: pretty(p.name),
+      items,
+      ...(directives.maxColumns !== undefined ? { maxColumns: directives.maxColumns } : {}),
+      ...(directives.aspectRatio !== undefined ? { aspectRatio: directives.aspectRatio } : {}),
+      ...(directives.titleDisplay !== undefined ? { titleDisplay: directives.titleDisplay } : {}),
+    });
+
+    projectCards.push({
+      name: p.name,
+      displayName: pretty(p.name),
+      path: '/Motion/' + encodeURIComponent(p.name),
+      coverPoster,
+      count: { videos: items.length }
+    });
   }
 
-  const topOrder = await readLines(path.join(MOTION,'.order'));
-  const idx = new Map(topOrder.map((k,i)=>[k,i]));
+  const { order: topOrder, hiddenFromOrder: hiddenProjects } = await readOrderWithDirectives(MOTION);
+  const idx = new Map(topOrder.map((k,i)=>[k.toLowerCase(),i]));
 
   // leaf videos are registry entries not present in any project
-  const leafVideos = registry.filter(r=> !inAny.has(r.key))
+  const leafVideos = registry
+    .filter(r=> !inAny.has(r.key))
     .map(r=> ({ key: r.key, displayName: r.displayName || r.key, url: r.url, poster: r.poster || null }));
 
   function orderBy(list, pick){
     if (!topOrder.length) return list.slice().sort((a,b)=> String(pick(a)).localeCompare(String(pick(b)), undefined, { numeric:true, sensitivity:'base' }));
-    return list.slice().sort((a,b)=> (idx.get(pick(a)) ?? 1e9) - (idx.get(pick(b)) ?? 1e9));
-    }
+    return list.slice().sort((a,b)=> (idx.get(String(pick(a)).toLowerCase()) ?? 1e9) - (idx.get(String(pick(b)).toLowerCase()) ?? 1e9));
+  }
+
+  const projectsOut = orderBy(projectCards, p=> p.name).filter(p => !hiddenProjects.has(p.name.toLowerCase()));
 
   await writeJSON(path.join(MOTION,'manifest.json'), {
     kind:'motion-root',
-    projects: orderBy(projectCards, p=> p.name),
+    projects: projectsOut,
     leafVideos: orderBy(leafVideos, v=> v.key)
   });
 }
@@ -232,38 +314,38 @@ async function run(){
 }
 
 if (WATCH){
-  // Watch only **inputs**; ignore generated artifacts (manifest.json, _covers) to avoid self-trigger loops
-  const globs = [
-    // Stills inputs
-    path.join(PORTFOLIO, '**/.order'),
-    path.join(PORTFOLIO, '**/.cover'),
-    path.join(PORTFOLIO, '**/*.cover'),
-    path.join(PORTFOLIO, '**/*.{jpg,jpeg,png,webp,avif,gif,svg}'),
-    // Motion inputs
-    path.join(MOTION, '.order'),
-    path.join(MOTION, '**/.order'),
-    path.join(MOTION, '**/.cover'),
-    path.join(MOTION, '.covers/*.cover'),
-    // Registry
-    REGISTRY
-  ];
-
-  const watcher = chokidar.watch(globs, {
-    ignoreInitial: false,
-    ignored: (p) => {
-      const b = path.basename(p);
-      return (
-        b === 'manifest.json' ||
-        p.includes(`${path.sep}_covers${path.sep}`) ||
-        b.startsWith('.git') ||
-        b === '.DS_Store'
-      );
-    }
-  });
+  // Robust watchers: base dirs + directories, include dot renames; ignore generated artifacts
+  const ignored = (p) => {
+    const b = path.basename(p);
+    return (
+      b === 'manifest.json' ||
+      p.includes(`${path.sep}_covers${path.sep}`) ||
+      p.includes(`${path.sep}.next${path.sep}`) ||
+      p.includes(`${path.sep}node_modules${path.sep}`) ||
+      b.startsWith('.git') ||
+      b === '.DS_Store'
+    );
+  };
 
   const debounce = (fn, ms)=> { let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a), ms); }; };
   const go = debounce(run, 150);
-  watcher.on('add', go).on('change', go).on('unlink', go).on('ready', go);
+
+  // Deep watch everything under Portfolio/Motion (no dot ignore); also watch registry
+  const deep = chokidar.watch([PORTFOLIO, MOTION, REGISTRY], {
+    ignoreInitial: true,
+    alwaysStat: true,
+    awaitWriteFinish: { stabilityThreshold: 200, pollInterval: 50 },
+    ignored
+  });
+
+  deep
+    .on('add', go)
+    .on('change', go)
+    .on('unlink', go)
+    .on('addDir', go)
+    .on('unlinkDir', go)
+    .on('ready', go);
+
 } else {
   run().catch(e=>{ console.error(e); process.exit(1); });
 }

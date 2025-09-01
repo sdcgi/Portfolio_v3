@@ -1,3 +1,5 @@
+//app/motion/page.tsx
+
 'use client';
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import Grid, { type Tile } from '@/components/Grid';
@@ -12,7 +14,7 @@ export default function MotionTop(){
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(()=>{
-    fetch('/Motion/manifest.json', { cache: 'force-cache' })
+    fetch('/Motion/manifest.json', { cache: 'no-store' })
       .then(r=> r.ok ? r.json() : null)
       .then((m)=>{
         const projects: Project[] = (m?.projects)||[];

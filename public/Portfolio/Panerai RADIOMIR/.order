@@ -1,26 +1,16 @@
-# The gallery grid will display images in the order of image names you list below.
-
-# A .images file is provided listing the image names for you to paste in here!
-
-# If an image filename is repeated in the list, that image will apear twice (or more)!
-
-# This feature can be used creatively.
-
-# This logic also works for image directory order. A .folder files is also prodided
-
-# for your convenience.
-
-# Save the file and reload the page to see the result!
-
+max_columns = 3
+---------------------------
 Layer 11.png
 Layer 12.png
 Layer 13.png
+
 Layer 7.png
 Layer 8.png
 Layer 9.png
+
 Panerai_Rad_BROWN_0007_5_SD_array_ROCK.jpg
 Panerai_Rad_Blue_0007_5_SD_array_ROCK.jpg
-
 Panerai_Rad_WHITE_0007_5_SD_array_ROCK.jpg
+
 Panerai_Rad_WHITE_0007_5_SD_array_GOLD.jpg
 Panerai_Rad_White_0005_5_AOV_MOre_BUMP_Beauty-SD.jpg

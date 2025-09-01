@@ -29,5 +29,8 @@
     {
       "src": "/Portfolio/Imaginary%20Watches/Louvre_watch_0004_SQ_C3.jpg"
     }
-  ]
+  ],
+  "maxColumns": 3,
+  "aspectRatio": "1 / 1",
+  "titleDisplay": 1
 }

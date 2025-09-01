@@ -1,14 +1,42 @@
-
 /* ===========================
    Global UI Variables (ROOT)
    =========================== */
 :root {
+  /* -------- Sitewide layout -------- */
 
-  /*Sitewide */
---leaf-native-aspect: 1;      /* 1 = leaf grids use native aspect per image */
---leaf-native-fit: contain;   /* contain|cover when native aspect is on */
+  /* Global desktop max columns when no per-folder override is provided (1–6 recommended) */
+  --grid-max-default: 4;
 
-  /* Fonts + colors */
+  /* Tile sizing guardrails (for future use / JS sizing paths) */
+  --tile-min: 280px;   /* minimum comfortable tile width */
+  --tile-max: 600px;   /* cap so tiles don't get huge */
+
+  /* Leaf image aspect behavior */
+  --leaf-native-aspect: 1;      /* 1 = leaf grids use native aspect per image, 0 = disabled */
+  --leaf-native-fit: contain;   /* contain | cover when native aspect is on */
+
+
+/* -------- Folder tile aspect ratios -------- */
+--tile-aspect-top: 1 / 1;   /* Top-level folders */
+--tile-aspect-sub: 1 / 1;   /* Subgallery folders */
+--tile-aspect-leaf: 3 / 2;  /* Leaf images (optional) */
+
+
+  /* -------- Title/count visibility per level (1=show, 0=hide) -------- */
+  --show-top-titles: 1;
+  --show-top-counts: 1;
+  --show-sub-titles: 1;
+  --show-sub-counts: 1;
+
+  /* -------- Hover zoom controls -------- */
+  --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
+  --hover-zoom-duration: 150ms; /* animation time */
+  --hover-zoom-ease: ease-out;  /* easing curve */
+  --hover-zoom-top: 1;          /* zoom on hover for TOP gallery */
+  --hover-zoom-sub: 1;          /* zoom on hover for nested (project) gallery */
+  --hover-zoom-leaf: 0;         /* zoom on hover for leaf images */
+
+    /* -------- Typography & colors -------- */
   --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --bg: #fff;
   --text: #757575;
@@ -17,38 +45,47 @@
   --accent-bg: #efefef;
   --placeholder: #f3f3f3;
 
-  /* Header + crumbs */
+  /* -------- Header & breadcrumbs -------- */
   --header-blur: 12px;
-  --header-bg: rgba(255,255,255,0.7);
+  --header-bg: rgba(255, 255, 255, 0.7);
 
-  /* Gaps */
+  /* -------- Spacing -------- */
   --gap-comfy: 24px;
-  --gap-compact: 4px;
+  --gap-compact: 2px;
 
-  /* Aspect ratios for folder tiles */
-  --tile-aspect-top: 1 / 1;   /* Top-level folders */
-  --tile-aspect-sub: 1 / 1;   /* Subgallery folders */
-
-  /* Show/hide text labels per level (1=show, 0=hide) */
-  --show-top-titles: 1;
-  --show-top-counts: 1;
-  --show-sub-titles: 0;
-  --show-sub-counts: 0;
-
-  /* Mouseover hover zoom style */
-  --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
-  --hover-zoom-duration: 150ms; /* animation time */
-  --hover-zoom-ease: ease-out;  /* easing curve */
-  --hover-zoom-top: 1; /* if zoom on hover for TOP gallery */
-  --hover-zoom-sub: 1; /* if zoom on hover for a Project (neseted) gallery */
-  --hover-zoom-leaf: 0; /* if zoom on hover for gallery images */
-
-
-  /* Lightbox */
-  --lightbox-overlay: hsla(0, 0%, 100%, 0.901);
+  /* -------- Lightbox -------- */
+  --lightbox-overlay: hsla(0, 0%, 100%, 0.9);
   --lightbox-max-w: 98vw;
   --lightbox-max-h: 96lvh;
 
-  /* Single image leaf size (desktop) */
+  /* -------- Single-image leaf size (desktop) -------- */
   --single-leaf-max-w: 600px;
+}
+
+/* ===========================================
+   Grid: global defaults & responsive step-downs
+   =========================================== */
+
+/* Base: compute starting column count.
+   Priority: inline --cols (special/override) → JS-set --cols-active (optional) → global default. */
+.grid {
+  --cols-base: var(--cols, var(--cols-active, var(--grid-max-default)));
+  --cols: var(--cols-base);
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+}
+
+/* Step-downs:
+   6 → 4 → 2 → 1 (if --grid-max-default is 6)
+   4 → 2 → 1 (if default/override is 4)
+   3 → 2 → 1 (if override is 3)
+   2 → 1 (if default/override is 2)
+   These cap the active base using min(). */
+@media (max-width: 1280px) {
+  .grid { --cols: min(var(--cols-base), 4); }
+}
+@media (max-width: 900px) {
+  .grid { --cols: min(var(--cols-base), 2); }
+}
+@media (max-width: 640px) {
+  .grid { --cols: 1; }
 }

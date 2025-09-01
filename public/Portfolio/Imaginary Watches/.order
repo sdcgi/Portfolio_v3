@@ -1,3 +1,7 @@
+max_columns = 3
+aspect_ratio = 1/1
+title_display = 1
+------------ Overrides above --------------
 
 Louvre_watch_0005_SQ_C3.jpg
 Meteor_03b_SQ_FNT.jpg
