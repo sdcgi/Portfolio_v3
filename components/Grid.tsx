@@ -19,8 +19,8 @@ type Level = 'top' | 'sub' | 'leaf' | 'motion-top';
 
 export default function Grid({
   items,
-  ratio = '1 / 1',
-  desktopCols = 4,
+  ratio, // no default → CSS var can take over
+  desktopCols,
   enableDensityToggle = true,
   onItemClick,
   level = 'sub',
@@ -34,53 +34,57 @@ export default function Grid({
 }) {
   const [density, setDensity] = useState<'comfortable' | 'compact'>('comfortable');
 
-  // Normalize an override to 1..8 (no implicit 3..6 clamp)
   function normalizeCols(v?: number) {
-    if (typeof v === 'number' && Number.isFinite(v)) {
-      return Math.max(1, Math.min(v, 8));
-    }
+    if (typeof v === 'number' && Number.isFinite(v)) return Math.max(1, Math.min(v, 8));
     return undefined;
   }
-  // Use the provided prop as our base cols when not in the special small-image cases below
-  const colsBase = normalizeCols(desktopCols) ?? 4;
+  const colsOverride = normalizeCols(desktopCols);
 
   const allImages = useMemo(() => items.every(it => (it as any).kind === 'image'), [items]);
 
-  // Preserve the special small-image rules; otherwise use the base cols
-  const computedCols = useMemo(() => {
+  const specialCols: number | null = useMemo(() => {
     if (items.length === 1) return 1;
     if (items.length === 2) return 2;
     if (allImages && items.length === 3) return 3;
-    return colsBase;
-  }, [items.length, colsBase, allImages]);
+    return null;
+  }, [items.length, allImages]);
 
   const isSingleImageGrid = useMemo(() => allImages && items.length === 1, [allImages, items]);
-  const isThreeImageLeaf = useMemo(() => allImages && items.length === 3, [allImages, items]);
+  const isThreeImageLeaf  = useMemo(() => allImages && items.length === 3, [allImages, items]);
 
-  // read CSS variables for show/hide controls (per level)
-  const showFlags = useMemo<{ titles: boolean; counts: boolean }>(() => {
-    if (typeof window === 'undefined') {
-      return { titles: false, counts: true };
-    }
+  // Show/hide flags from CSS vars
+  const showFlags = useMemo<{ titles?: boolean; counts?: boolean }>(() => {
+    if (typeof window === 'undefined') return {};
     const cs = getComputedStyle(document.documentElement);
     const pick = (name: string, def = '1') => Number((cs.getPropertyValue(name).trim() || def)) > 0;
-    if (level === 'top') return { titles: pick('--show-top-titles','0'), counts: pick('--show-top-counts','1') };
-    if (level === 'sub') return { titles: pick('--show-sub-titles','0'), counts: pick('--show-sub-counts','1') };
-    return { titles: false, counts: false };
+    if (level === 'top')  return { titles: pick('--show-top-titles','0'),  counts: pick('--show-top-counts','1') };
+    if (level === 'sub')  return { titles: pick('--show-sub-titles','0'),  counts: pick('--show-sub-counts','1') };
+    if (level === 'leaf') return { titles: pick('--show-leaf-titles','1'), counts: pick('--show-leaf-counts','0') };
+    return {};
   }, [level]);
 
-  // ✅ Client-driven flag: leaf grids use each image's native aspect when enabled via CSS var
   const [leafNative, setLeafNative] = useState(false);
   useEffect(() => {
-    // only relevant for leaf grids (all images)
-    if (!(items.length > 0 && items.every(it => (it as any).kind === 'image'))) {
-      setLeafNative(false);
-      return;
-    }
+    if (!(items.length > 0 && items.every(it => (it as any).kind === 'image'))) { setLeafNative(false); return; }
     const cs = getComputedStyle(document.documentElement);
     const v = cs.getPropertyValue('--leaf-native-aspect').trim();
     setLeafNative(Number(v || '0') > 0);
   }, [items]);
+
+  const globalDefaultCols = useMemo(() => {
+    if (typeof window === 'undefined') return 4;
+    const cs = getComputedStyle(document.documentElement);
+    const raw = cs.getPropertyValue('--grid-max-default').trim();
+    const n = Number(raw);
+    if (Number.isFinite(n) && n >= 1 && n <= 8) return n;
+    const parsed = parseInt(raw, 10);
+    return Number.isFinite(parsed) && parsed >= 1 && parsed <= 8 ? parsed : 4;
+  }, []);
+
+  const styleVars: Record<string, string | number> = {
+    ['--gap' as any]: density === 'compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)',
+    ['--cols' as any]: (specialCols ?? colsOverride ?? globalDefaultCols),
+  };
 
   return (
     <div className="page-inner">
@@ -97,7 +101,7 @@ export default function Grid({
       <div
         className={`grid ${isSingleImageGrid ? 'single-one' : ''} ${isThreeImageLeaf ? 'cols-3' : ''} level-${level} ${leafNative ? 'leaf-native' : ''}`}
         data-level={level}
-        style={{ ['--cols' as any]: computedCols, ['--gap' as any]: density==='compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)' }}
+        style={styleVars}
       >
         {items.map((it, i) => (
           <TileView
@@ -119,7 +123,7 @@ export default function Grid({
 function TileView({
   item, ratio, onClick, single, showTitle, showCount, nativeAspect
 }: {
-  item: Tile; ratio: string; onClick?: () => void; single?: boolean;
+  item: Tile; ratio?: string; onClick?: () => void; single?: boolean;
   showTitle?: boolean; showCount?: boolean; nativeAspect?: boolean;
 }) {
   if (item.kind === 'folder') {
@@ -127,7 +131,7 @@ function TileView({
     return (
       <div className="tile">
         <Link href={item.path} prefetch className="block-link">
-          <div className="media" style={{ ['--ratio' as any]: ratio }}>
+          <div className="media" style={ratio ? { ['--ratio' as any]: ratio } : {}}>
             {item.cover && (
               <Image src={item.cover} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
             )}
@@ -150,7 +154,7 @@ function TileView({
         onClick={onClick}
         onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
       >
-        <div className="media" style={{ ['--ratio' as any]: ratio }}>
+        <div className="media" style={ratio ? { ['--ratio' as any]: ratio } : {}}>
           <Image
             src={item.src}
             alt={item.alt || ''}
@@ -167,7 +171,6 @@ function TileView({
     );
   }
 
-  // video tile
   return (
     <div
       className="tile clickable"

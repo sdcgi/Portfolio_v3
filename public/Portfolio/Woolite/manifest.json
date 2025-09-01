@@ -6,13 +6,14 @@
       "src": "/Portfolio/Woolite/ret-WOOLITE-Hands.jpg"
     },
     {
-      "src": "/Portfolio/Woolite/ret-WOOLITE-Legs.jpg"
+      "src": "/Portfolio/Woolite/Woolite-Kiss.jpg"
     },
     {
-      "src": "/Portfolio/Woolite/Woolite-Kiss.jpg"
+      "src": "/Portfolio/Woolite/ret-WOOLITE-Legs.jpg"
     },
     {
       "src": "/Portfolio/Woolite/03zWoolite-A4-HandsWire.jpg"
     }
-  ]
+  ],
+  "maxColumns": 3
 }

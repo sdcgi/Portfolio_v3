@@ -33,6 +33,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 
 /* Grid — gap controlled by variables */
 .grid { display: grid; gap: var(--gap, var(--gap-comfy)); }
+
 /* Columns: Desktop 3–6; Tablet 2; Mobile 1 full-bleed */
 @media (min-width: 1100px) { .grid { grid-template-columns: repeat(var(--cols, 4), 1fr); } }
 @media (min-width: 740px) and (max-width: 1099px) { .grid { grid-template-columns: repeat(2, 1fr); } }
@@ -42,16 +43,34 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .page-inner { padding: 12px; }
 }
 
+/* ===== Aspect ratio plumbing ============================================= */
+/* Per-level default: prefers explicit per-level knobs, then per-folder/page
+   override (--grid-ratio), then a sensible fallback (1/1; 16/9 for motion top). */
+.grid.level-top        { --ratio: var(--tile-aspect-top,        var(--grid-ratio, 1 / 1)); }
+.grid.level-sub        { --ratio: var(--tile-aspect-sub,        var(--grid-ratio, 1 / 1)); }
+.grid.level-leaf       { --ratio: var(--tile-aspect-leaf,       var(--grid-ratio, 1 / 1)); }
+.grid.level-motion-top { --ratio: var(--tile-aspect-motion-top, var(--grid-ratio, 16 / 9)); }
+
 /* Tiles */
 .tile { border: 0; position: relative; display: flex; flex-direction: column; }
 .tile:focus, .tile.clickable:focus, a.tile:focus { outline: none; }
-.tile .media { position: relative; width: 100%; aspect-ratio: var(--ratio, 1 / 1); overflow: hidden; background: var(--placeholder); }
+
+/* The actual aspect enforcement. Next/Image fill works fine with aspect-ratio. */
+.tile .media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ratio, 1 / 1);
+  overflow: hidden;
+  background: var(--placeholder);
+}
+
 /* Fill frame without distortion */
 .tile .media img, .tile .media video {
   transition: transform var(--hover-zoom-duration) var(--hover-zoom-ease);
   will-change: transform;
+  object-fit: cover;
 }
-.tile .media img, .tile .media video { object-fit: cover; transition: transform var(--hover-zoom-duration) var(--hover-zoom-ease); will-change: transform; }
+
 /* Subtle hover zoom (disabled on touch) */
 @media (hover:hover){
   .tile:hover .media img,
@@ -79,7 +98,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 /* Leaf-native mode: use chosen object-fit for images/videos in leaf grids */
 .grid.leaf-native .tile .media img,
 .grid.leaf-native .tile .media video { object-fit: var(--leaf-native-fit); }
-
 
 /* 3-image leaves: force 3 columns on desktop */
 @media (min-width: 1100px) {
