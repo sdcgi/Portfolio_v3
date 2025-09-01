@@ -5,6 +5,15 @@
 :root {
 
   /*Sitewide */
+
+  /* global desktop max columns (1–6) */
+  --grid-max-default: 6;
+
+  /* tile sizing guardrails (used when cols small or max=2) */
+  --tile-min: 280px;   /* min comfortable width */
+  --tile-max: 600px;   /* cap so tiles don't get huge */
+
+
 --leaf-native-aspect: 1;      /* 1 = leaf grids use native aspect per image */
 --leaf-native-fit: contain;   /* contain|cover when native aspect is on */
 

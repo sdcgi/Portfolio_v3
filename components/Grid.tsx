@@ -1,3 +1,4 @@
+// components/Grid.tsx
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,16 +33,26 @@ export default function Grid({
   level?: Level;
 }) {
   const [density, setDensity] = useState<'comfortable' | 'compact'>('comfortable');
-  const cols = Math.max(3, Math.min(6, desktopCols));
+
+  // Normalize an override to 1..8 (no implicit 3..6 clamp)
+  function normalizeCols(v?: number) {
+    if (typeof v === 'number' && Number.isFinite(v)) {
+      return Math.max(1, Math.min(v, 8));
+    }
+    return undefined;
+  }
+  // Use the provided prop as our base cols when not in the special small-image cases below
+  const colsBase = normalizeCols(desktopCols) ?? 4;
 
   const allImages = useMemo(() => items.every(it => (it as any).kind === 'image'), [items]);
 
+  // Preserve the special small-image rules; otherwise use the base cols
   const computedCols = useMemo(() => {
     if (items.length === 1) return 1;
     if (items.length === 2) return 2;
     if (allImages && items.length === 3) return 3;
-    return cols;
-  }, [items.length, cols, allImages]);
+    return colsBase;
+  }, [items.length, colsBase, allImages]);
 
   const isSingleImageGrid = useMemo(() => allImages && items.length === 1, [allImages, items]);
   const isThreeImageLeaf = useMemo(() => allImages && items.length === 3, [allImages, items]);
