@@ -1,3 +1,5 @@
+//app/portfolio/[...slug]/page.tsx
+
 'use client';
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
@@ -17,7 +19,7 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
 
   useEffect(()=>{
     const p = `/Portfolio${slugPath}/manifest.json`;
-    fetch(p, { cache: 'force-cache' }).then(r=> r.ok ? r.json() : null).then((m)=>{
+    fetch(p, { cache: 'no-store' }).then(r=> r.ok ? r.json() : null).then((m)=>{
       if(!m) { setTiles([]); return; }
       if (Array.isArray(m.folders) && m.folders.length) {
         const t: Tile[] = m.folders.map((f: any) => ({

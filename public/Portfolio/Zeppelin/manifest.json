@@ -1,10 +1,7 @@
 {
   "kind": "stills-gallery",
-  "cover": "/Portfolio/Zeppelin/Drivers_v3_1-FIN.jpg",
+  "cover": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.BLACK_.01.jpg",
   "items": [
-    {
-      "src": "/Portfolio/Zeppelin/Drivers_v3_1-FIN.jpg"
-    },
     {
       "src": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.BLACK_.01.jpg"
     },
@@ -30,10 +27,16 @@
       "src": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.WHITE_.04.jpg"
     },
     {
-      "src": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.WHITE_.05.jpg"
+      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.ICON_WHITE.jpg"
     },
     {
-      "src": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.WHITE_.06.jpg"
+      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.MatLow.WHITE_.jpg"
+    },
+    {
+      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.MatLow.BLACK_.jpg"
+    },
+    {
+      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_07.ICON_BLACK_lessShadow-noDOF.jpg"
     },
     {
       "src": "/Portfolio/Zeppelin/Zep_ECOMCLOSEUPS_v03.17_05.ButtonsBLACK.jpg"
@@ -54,6 +57,9 @@
       "src": "/Portfolio/Zeppelin/Zep_ECOMCLOSEUPS_v03.17_05.MaterialWHITE.jpg"
     },
     {
+      "src": "/Portfolio/Zeppelin/Drivers_v3_1-FIN.jpg"
+    },
+    {
       "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.BadgeLow.BLACK_.jpg"
     },
     {
@@ -66,16 +72,10 @@
       "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.ButtonsWHITE.jpg"
     },
     {
-      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.ICON_WHITE.jpg"
+      "src": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.WHITE_.05.jpg"
     },
     {
-      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.MatLow.BLACK_.jpg"
-    },
-    {
-      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.MatLow.WHITE_.jpg"
-    },
-    {
-      "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_07.ICON_BLACK_lessShadow-noDOF.jpg"
+      "src": "/Portfolio/Zeppelin/Zep_ecom_Production1_v03.18.WHITE_.06.jpg"
     }
   ]
 }

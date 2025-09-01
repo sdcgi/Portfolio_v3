@@ -1,3 +1,5 @@
+//app/motion/page.tsx
+
 'use client';
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import Grid, { type Tile } from '@/components/Grid';
