@@ -1,23 +1,26 @@
 import path from 'node:path';
-import { ensureDir, isHidden, pretty, writeJSON, readLines, writeHelperFile } from './utils.mjs';
+import { ensureDir, isHidden, pretty, writeJSON, readLines } from './utils.mjs';
 import { readOrderWithDirectives } from './directives.mjs';
-
-const VIDEOS_HEADER = [
-  '// Optional directives (put at the top of the project’s .order):',
-  '// max_columns = 3   // overrides the maximum columns for this project (1–8)',
-  '// aspect_ratio = 0  // 0 = respect video poster’s aspect; or use 4/5, 1/1, 16/9, etc',
-  '// title_display = 0 // 0 = hide titles, 1 = show titles',
-];
 
 export async function scanMotion({ MOTION, REGISTRY }){
   await ensureDir(MOTION);
 
   const fs = await import('node:fs/promises');
+
+  // Load registry
   let registry = [];
   try { registry = JSON.parse(await fs.readFile(REGISTRY,'utf8')); } catch { registry = []; }
 
-  const projects = (await fs.readdir(MOTION, { withFileTypes:true }))
-    .filter(e=> e.isDirectory() && !isHidden(e.name) && e.name !== '_covers');
+  // Root .order controls BOTH:
+  // - project visibility/order (by folder name)
+  // - leaf video visibility/order (by registry key)
+  const { order: rootOrder, hiddenFromOrder: rootHidden } = await readOrderWithDirectives(MOTION);
+  const rootIdx = new Map(rootOrder.map((v,i)=>[String(v).toLowerCase(), i]));
+
+  // Projects on disk (skip actual dot-dirs), then hide via .order dotted names
+  let projects = (await fs.readdir(MOTION, { withFileTypes:true }))
+    .filter(e=> e.isDirectory() && !isHidden(e.name) && e.name !== '_covers')
+    .filter(p => !rootHidden.has(p.name.toLowerCase()));
 
   const inAny = new Set();
   const projectCards = [];
@@ -26,11 +29,17 @@ export async function scanMotion({ MOTION, REGISTRY }){
     const pdir = path.join(MOTION, p.name);
     const { order, directives, hiddenFromOrder } = await readOrderWithDirectives(pdir);
 
+    // Per-project clips:
+    // - hide dotted keys in this project's .order
+    // - case-insensitive key match
     const clips = order
-    .map(k => registry.find(r => r.key.toLowerCase() === String(k).toLowerCase()))
-    .filter(Boolean);
+      .filter(k => !hiddenFromOrder.has(String(k).toLowerCase()))
+      .map(k => registry.find(r => r.key.toLowerCase() === String(k).toLowerCase()))
+      .filter(Boolean);
+
     clips.forEach(c=> inAny.add(c.key));
 
+    // Cover poster: .cover text > first clip poster
     let coverPoster = null;
     const coverTxt = await readLines(path.join(pdir,'.cover'));
     if (coverTxt[0]) coverPoster = coverTxt[0];
@@ -42,13 +51,6 @@ export async function scanMotion({ MOTION, REGISTRY }){
       url: c.url,
       poster: c.poster || null
     }));
-
-    // convenience .videos (always overwrite)
-    await writeHelperFile(
-      path.join(pdir, '.videos'),
-      VIDEOS_HEADER,
-      clips.map(c => c.key)
-    );
 
     await writeJSON(path.join(pdir,'manifest.json'), {
       kind:'motion-project',
@@ -69,23 +71,28 @@ export async function scanMotion({ MOTION, REGISTRY }){
     });
   }
 
-  const { order: topOrder, hiddenFromOrder: hiddenProjects } = await readOrderWithDirectives(MOTION);
-  const idx = new Map(topOrder.map((k,i)=>[k.toLowerCase(),i]));
+  // Order projects by root .order if present
+  const projectsOut = projectCards.slice().sort((a,b)=>{
+    const ai = rootIdx.get(a.name.toLowerCase()); const bi = rootIdx.get(b.name.toLowerCase());
+    if (ai !== undefined || bi !== undefined) return (ai ?? 1e9) - (bi ?? 1e9);
+    return a.name.localeCompare(b.name, undefined, { numeric:true, sensitivity:'base' });
+  });
 
-  const leafVideos = registry
+  // Leaf videos = registry not used in any project AND not dotted in root .order
+  let leafVideos = registry
     .filter(r=> !inAny.has(r.key))
-    .map(r=> ({ key: r.key, displayName: r.displayName || r.key, url: r.url, poster: r.poster || null }));
+    .filter(r=> !rootHidden.has(r.key.toLowerCase()));
 
-  function orderBy(list, pick){
-    if (!topOrder.length) return list.slice().sort((a,b)=> String(pick(a)).localeCompare(String(pick(b)), undefined, { numeric:true, sensitivity:'base' }));
-    return list.slice().sort((a,b)=> (idx.get(String(pick(a)).toLowerCase()) ?? 1e9) - (idx.get(String(pick(b)).toLowerCase()) ?? 1e9));
-  }
-
-  const projectsOut = orderBy(projectCards, p=> p.name).filter(p => !hiddenProjects.has(p.name.toLowerCase()));
+  // Order leaf videos by root .order if keys are listed there
+  leafVideos = leafVideos.slice().sort((a,b)=>{
+    const ai = rootIdx.get(a.key.toLowerCase()); const bi = rootIdx.get(b.key.toLowerCase());
+    if (ai !== undefined || bi !== undefined) return (ai ?? 1e9) - (bi ?? 1e9);
+    return String(a.displayName || a.key).localeCompare(String(b.displayName || b.key), undefined, { numeric:true, sensitivity:'base' });
+  });
 
   await writeJSON(path.join(MOTION,'manifest.json'), {
     kind:'motion-root',
     projects: projectsOut,
-    leafVideos: orderBy(leafVideos, v=> v.key)
+    leafVideos
   });
 }
