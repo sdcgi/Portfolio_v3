@@ -1,19 +1,4 @@
-# The gallery grid will display images in the order of image names you list below.
-
-# A .images file is provided listing the image names for you to paste in here!
-
-# If an image filename is repeated in the list, that image will apear twice (or more)!
-
-# This feature can be used creatively.
-
-# This logic also works for image directory order. A .folder files is also prodided
-
-# for your convenience.
-
-# Save the file and reload the page to see the result!
-
 max_columns = 3
-aspect_ratio = 1/2
 ---------------------------
 Layer 11.png
 Layer 12.png

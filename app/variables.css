@@ -15,7 +15,28 @@
   --leaf-native-aspect: 1;      /* 1 = leaf grids use native aspect per image, 0 = disabled */
   --leaf-native-fit: contain;   /* contain | cover when native aspect is on */
 
-  /* -------- Typography & colors -------- */
+
+/* -------- Folder tile aspect ratios -------- */
+--tile-aspect-top: 1 / 1;   /* Top-level folders */
+--tile-aspect-sub: 1 / 1;   /* Subgallery folders */
+--tile-aspect-leaf: 3 / 2;  /* Leaf images (optional) */
+
+
+  /* -------- Title/count visibility per level (1=show, 0=hide) -------- */
+  --show-top-titles: 1;
+  --show-top-counts: 1;
+  --show-sub-titles: 1;
+  --show-sub-counts: 1;
+
+  /* -------- Hover zoom controls -------- */
+  --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
+  --hover-zoom-duration: 150ms; /* animation time */
+  --hover-zoom-ease: ease-out;  /* easing curve */
+  --hover-zoom-top: 1;          /* zoom on hover for TOP gallery */
+  --hover-zoom-sub: 1;          /* zoom on hover for nested (project) gallery */
+  --hover-zoom-leaf: 0;         /* zoom on hover for leaf images */
+
+    /* -------- Typography & colors -------- */
   --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --bg: #fff;
   --text: #757575;
@@ -31,26 +52,6 @@
   /* -------- Spacing -------- */
   --gap-comfy: 24px;
   --gap-compact: 2px;
-
-/* -------- Folder tile aspect ratios -------- */
---tile-aspect-top: 1 / 1;   /* Top-level folders */
---tile-aspect-sub: 1 / 1;   /* Subgallery folders */
---tile-aspect-leaf: 3 / 2;  /* Leaf images (optional) */
-
-
-  /* -------- Title/count visibility per level (1=show, 0=hide) -------- */
-  --show-top-titles: 0;
-  --show-top-counts: 1;
-  --show-sub-titles: 1;
-  --show-sub-counts: 1;
-
-  /* -------- Hover zoom controls -------- */
-  --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
-  --hover-zoom-duration: 150ms; /* animation time */
-  --hover-zoom-ease: ease-out;  /* easing curve */
-  --hover-zoom-top: 1;          /* zoom on hover for TOP gallery */
-  --hover-zoom-sub: 1;          /* zoom on hover for nested (project) gallery */
-  --hover-zoom-leaf: 0;         /* zoom on hover for leaf images */
 
   /* -------- Lightbox -------- */
   --lightbox-overlay: hsla(0, 0%, 100%, 0.9);

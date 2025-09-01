@@ -1,4 +1,4 @@
-// app/portfolio/[...slug]/page.tsx
+/* app/portfolio/[...slug]/page.tsx */
 'use client';
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
@@ -6,32 +6,36 @@ import Grid, { type Tile } from '@/components/Grid';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LightboxImage from '@/components/LightboxImage';
 
-type Counts = { images?: number; folders?: number };
-type Folder = { name: string; displayName: string; path: string; cover: string | null; counts?: Counts };
+type Counts = { images?: number; folders?: number; videos?: number };
+type Folder = { name: string; displayName?: string; path: string; cover: string | null; counts?: Counts };
 type LeafItem = { src: string; alt?: string };
-type FolderManifest =
-  | {
-      kind: 'portfolio-folder';
-      cover?: string | null;
-      folders: Folder[];
-      maxColumns?: number;
-      aspectRatio?: string; // "0" | "x/y"
-      titleDisplay?: 0 | 1;
-    }
-  | {
-      kind: 'stills-gallery';
-      cover?: string | null;
-      items: LeafItem[];
-      maxColumns?: number;
-      aspectRatio?: string; // "0" | "x/y"
-      titleDisplay?: 0 | 1;
-    };
+
+// Be permissive with shapes/keys coming from different generators
+type FolderManifestLoose = {
+  kind?: string;
+  cover?: string | null;
+
+  // content
+  folders?: Folder[];
+  items?: LeafItem[];
+  images?: LeafItem[]; // (.images style)
+
+  // overrides (snake_case preferred; camel tolerated)
+  max_columns?: number;
+  maxColumns?: number;
+
+  aspect_ratio?: string;
+  aspectRatio?: string;
+
+  title_display?: 0 | 1;
+  titleDisplay?: 0 | 1;
+} | null;
 
 export default function GalleryPage({ params }: { params: { slug: string[] } }){
   const [tiles, setTiles] = useState<Tile[] | null>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // overrides from manifest
+  // Manifest-driven overrides (all optional)
   const [maxColumns, setMaxColumns] = useState<number | null>(null);
   const [ratioOverride, setRatioOverride] = useState<string | null>(null);
   const [showTitles, setShowTitles] = useState<boolean | undefined>(undefined);
@@ -46,11 +50,11 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
     const p = `/Portfolio${slugPath}/manifest.json`;
     fetch(p, { cache: 'no-store' })
       .then(r=> r.ok ? r.json() : null)
-      .then((m: FolderManifest | null)=>{
-        if(!m) { setTiles([]); return; }
+      .then((m: FolderManifestLoose)=>{
+        if(!m) { setTiles([]); setMaxColumns(null); setRatioOverride(null); setShowTitles(undefined); return; }
 
-        // map to tiles
-        if ('folders' in m && Array.isArray(m.folders) && m.folders.length) {
+        // CONTENT
+        if (Array.isArray(m.folders) && m.folders.length) {
           const t: Tile[] = m.folders.map((f) => ({
             kind: 'folder' as const,
             path: `/portfolio${decodeURI(f.path).replace('/Portfolio','')}`,
@@ -60,19 +64,29 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
           }));
           setTiles(t);
         } else {
-          const t: Tile[] = ('items' in m ? m.items : []).map((it)=> ({
-            kind: 'image' as const, src: it.src, alt: it.alt || ''
-          }));
+          // accept items OR images (cheat-sheet style)
+          const arr = (Array.isArray(m.items) ? m.items : (Array.isArray(m.images) ? m.images : []));
+          const t: Tile[] = arr.map((it)=> ({ kind: 'image' as const, src: it.src, alt: it.alt || '' }));
           setTiles(t);
         }
 
-        // capture overrides (present on both folder+leaf manifests)
-        const mc = typeof m.maxColumns === 'number' && m.maxColumns >= 1 && m.maxColumns <= 8 ? m.maxColumns : null;
-        setMaxColumns(mc);
-        const ar = m.aspectRatio === '0' ? null : (typeof m.aspectRatio === 'string' ? m.aspectRatio : null);
-        setRatioOverride(ar);
-        const td = m.titleDisplay === 0 ? false : (m.titleDisplay === 1 ? true : undefined);
-        setShowTitles(td);
+        // OVERRIDES — prefer snake_case keys
+        const mc = (typeof m.max_columns === 'number' ? m.max_columns
+                 : typeof m.maxColumns  === 'number' ? m.maxColumns
+                 : null);
+        setMaxColumns((mc != null && mc >= 1 && mc <= 8) ? mc : null);
+
+        const arRaw = (typeof m.aspect_ratio === 'string' && m.aspect_ratio.trim())
+                   ? m.aspect_ratio
+                   : (typeof m.aspectRatio === 'string' && m.aspectRatio.trim())
+                   ? m.aspectRatio
+                   : null;
+        setRatioOverride(arRaw);
+
+        const tdRaw = (m.title_display === 0 || m.title_display === 1) ? m.title_display
+                   : (m.titleDisplay === 0 || m.titleDisplay === 1) ? m.titleDisplay
+                   : undefined;
+        setShowTitles(tdRaw === 0 ? false : (tdRaw === 1 ? true : undefined));
       });
   }, [slugPath]);
 
@@ -82,7 +96,7 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
   );
   const isLeaf = images.length > 0;
 
-  // Sync URL ?i= to lightbox ONLY on leaf pages; clear it otherwise.
+  // Sync ?i= with lightbox on leaves
   useEffect(()=>{
     if (!isLeaf) {
       if (paramsHook.get('i') !== null) router.replace(pathname, { scroll: false });
@@ -96,7 +110,7 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
     else setOpenIndex(null);
   }, [isLeaf, images.length, paramsHook, pathname, router]);
 
-  // Preload next image for smoother next/advance
+  // Preload next image
   useEffect(()=>{
     if (openIndex == null || images.length < 2) return;
     const nxt = images[(openIndex + 1) % images.length]?.src;
@@ -109,34 +123,27 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
     if (idx >= 0) router.replace(`${pathname}?i=${idx}`, { scroll: false });
   }, [images, pathname, router]);
 
-  const close = () => {
-    setOpenIndex(null);
-    router.replace(pathname, { scroll: false });
-  };
-  const prev  = () => setOpenIndex(i => (i==null?null : (i + images.length - 1) % images.length));
-  const next  = () => setOpenIndex(i => (i==null?null : (i + 1) % images.length));
-
-  // CSS vars so overrides work even if Grid ignores props
-  const cssVars = useMemo(() => {
-    const vars: Record<string, string | number> = {};
-    if (maxColumns != null) vars['--grid-max-cols' as any] = String(maxColumns);
-    if (ratioOverride)      vars['--grid-ratio'    as any] = ratioOverride; // e.g. "3/2"
-    if (showTitles !== undefined) vars['--show-titles' as any] = showTitles ? 1 : 0;
-    return vars;
-  }, [maxColumns, ratioOverride, showTitles]);
+  // Inline CSS vars container for per-folder overrides:
+  // Only set --grid-ratio if an aspect override exists.
+const wrapperStyle = ratioOverride
+  ? ({
+      '--grid-ratio': ratioOverride,      // enforce folder aspect
+      '--leaf-native-aspect': 0           // disable native so it can't overwrite it
+    } as React.CSSProperties)
+  : undefined;
 
   return (
     <div>
       <Breadcrumbs baseLabel="Stills" />
+
       {tiles === null ? null : (
-        <div style={cssVars}>
+        <div style={wrapperStyle}>
           <Grid
             items={tiles}
-            ratio={ratioOverride ?? (isLeaf ? '1 / 1' : 'var(--tile-aspect-sub)')}
             level={isLeaf ? 'leaf' : 'sub'}
-            desktopCols={maxColumns ?? 4}
-            onItemClick={onItemClick}
+            {...(maxColumns != null ? { desktopCols: maxColumns } : {})}
             {...(showTitles !== undefined ? { showTitles } : {})}
+            onItemClick={onItemClick}
           />
         </div>
       )}
@@ -145,9 +152,9 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
         <LightboxImage
           src={images[openIndex].src}
           alt={images[openIndex].alt}
-          onClose={close}
-          onPrev={images.length > 1 ? prev : undefined}
-          onNext={images.length > 1 ? next : undefined}
+          onClose={() => { setOpenIndex(null); router.replace(pathname, { scroll: false }); }}
+          onPrev={images.length > 1 ? () => setOpenIndex(i => (i==null?null : (i + images.length - 1) % images.length)) : undefined}
+          onNext={images.length > 1 ? () => setOpenIndex(i => (i==null?null : (i + 1) % images.length)) : undefined}
         />
       )}
     </div>

@@ -2,7 +2,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 export type FolderTile = {
   kind: 'folder';
@@ -19,7 +19,7 @@ type Level = 'top' | 'sub' | 'leaf' | 'motion-top';
 
 export default function Grid({
   items,
-  ratio, // no default → CSS var can take over
+  ratio,                // no default — CSS governs unless explicitly passed
   desktopCols,
   enableDensityToggle = true,
   onItemClick,
@@ -34,10 +34,8 @@ export default function Grid({
 }) {
   const [density, setDensity] = useState<'comfortable' | 'compact'>('comfortable');
 
-  function normalizeCols(v?: number) {
-    if (typeof v === 'number' && Number.isFinite(v)) return Math.max(1, Math.min(v, 8));
-    return undefined;
-  }
+  const normalizeCols = (v?: number) =>
+    typeof v === 'number' && Number.isFinite(v) ? Math.max(1, Math.min(v, 8)) : undefined;
   const colsOverride = normalizeCols(desktopCols);
 
   const allImages = useMemo(() => items.every(it => (it as any).kind === 'image'), [items]);
@@ -52,25 +50,50 @@ export default function Grid({
   const isSingleImageGrid = useMemo(() => allImages && items.length === 1, [allImages, items]);
   const isThreeImageLeaf  = useMemo(() => allImages && items.length === 3, [allImages, items]);
 
-  // Show/hide flags from CSS vars
-  const showFlags = useMemo<{ titles?: boolean; counts?: boolean }>(() => {
-    if (typeof window === 'undefined') return {};
-    const cs = getComputedStyle(document.documentElement);
-    const pick = (name: string, def = '1') => Number((cs.getPropertyValue(name).trim() || def)) > 0;
-    if (level === 'top')  return { titles: pick('--show-top-titles','0'),  counts: pick('--show-top-counts','1') };
-    if (level === 'sub')  return { titles: pick('--show-sub-titles','0'),  counts: pick('--show-sub-counts','1') };
-    if (level === 'leaf') return { titles: pick('--show-leaf-titles','1'), counts: pick('--show-leaf-counts','0') };
-    return {};
-  }, [level]);
+  // Read title/count flags from the grid element (so wrapper CSS vars work)
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const [showFlags, setShowFlags] = useState<{ titles: boolean; counts: boolean }>({ titles: false, counts: false });
 
-  const [leafNative, setLeafNative] = useState(false);
   useEffect(() => {
-    if (!(items.length > 0 && items.every(it => (it as any).kind === 'image'))) { setLeafNative(false); return; }
-    const cs = getComputedStyle(document.documentElement);
-    const v = cs.getPropertyValue('--leaf-native-aspect').trim();
-    setLeafNative(Number(v || '0') > 0);
-  }, [items]);
+    if (!gridRef.current) return;
+    const cs = getComputedStyle(gridRef.current);
+    const pick = (name: string, def = '1') => Number((cs.getPropertyValue(name).trim() || def)) > 0;
 
+    if (level === 'top') {
+      setShowFlags({ titles: pick('--show-top-titles','0'), counts: pick('--show-top-counts','1') });
+    } else if (level === 'sub') {
+      setShowFlags({ titles: pick('--show-sub-titles','0'), counts: pick('--show-sub-counts','1') });
+    } else if (level === 'leaf') {
+      setShowFlags({ titles: pick('--show-leaf-titles','0'), counts: pick('--show-leaf-counts','0') });
+    } else {
+      setShowFlags({ titles: false, counts: false });
+    }
+  }, [items.length, level, density]);
+
+  // Native aspect toggle — read from :root
+  const [leafNativeOnRoot, setLeafNativeOnRoot] = useState(false);
+  useEffect(() => {
+    const root = document.documentElement;
+    const cs = getComputedStyle(root);
+    const v = cs.getPropertyValue('--leaf-native-aspect').trim();
+    setLeafNativeOnRoot(Number(v || '0') > 0);
+  }, [items.length]);
+
+  // If this grid has an explicit --grid-ratio, disable native here
+  const [hasGridRatio, setHasGridRatio] = useState(false);
+  useEffect(() => {
+    if (!gridRef.current) return;
+    const cs = getComputedStyle(gridRef.current);
+    const v = cs.getPropertyValue('--grid-ratio').trim();
+    setHasGridRatio(Boolean(v));
+  }, [items.length, level]);
+
+  const enableLeafNativeHere =
+    level === 'leaf' &&
+    allImages &&
+    leafNativeOnRoot &&
+    !hasGridRatio; // override present → native OFF
+  // Global default columns from CSS
   const globalDefaultCols = useMemo(() => {
     if (typeof window === 'undefined') return 4;
     const cs = getComputedStyle(document.documentElement);
@@ -81,9 +104,10 @@ export default function Grid({
     return Number.isFinite(parsed) && parsed >= 1 && parsed <= 8 ? parsed : 4;
   }, []);
 
+  // Columns: override wins → special cases → global default
   const styleVars: Record<string, string | number> = {
     ['--gap' as any]: density === 'compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)',
-    ['--cols' as any]: (specialCols ?? colsOverride ?? globalDefaultCols),
+    ['--cols' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
   };
 
   return (
@@ -99,7 +123,8 @@ export default function Grid({
       </div>
 
       <div
-        className={`grid ${isSingleImageGrid ? 'single-one' : ''} ${isThreeImageLeaf ? 'cols-3' : ''} level-${level} ${leafNative ? 'leaf-native' : ''}`}
+        ref={gridRef}
+        className={`grid ${isSingleImageGrid ? 'single-one' : ''} ${isThreeImageLeaf ? 'cols-3' : ''} level-${level} ${enableLeafNativeHere ? 'leaf-native' : ''}`}
         data-level={level}
         style={styleVars}
       >
@@ -112,7 +137,7 @@ export default function Grid({
             single={isSingleImageGrid}
             showTitle={showFlags.titles}
             showCount={showFlags.counts}
-            nativeAspect={leafNative}
+            nativeAspect={enableLeafNativeHere}
           />
         ))}
       </div>
@@ -171,6 +196,7 @@ function TileView({
     );
   }
 
+  // video tile
   return (
     <div
       className="tile clickable"

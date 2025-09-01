@@ -69,5 +69,7 @@
       "src": "/Portfolio/Zeppelin/Zep_MACRO_v03.17_06.BadgeLow.WHITE_.jpg"
     }
   ],
-  "maxColumns": 2
+  "maxColumns": 2,
+  "aspectRatio": "1 / 1",
+  "titleDisplay": 1
 }
