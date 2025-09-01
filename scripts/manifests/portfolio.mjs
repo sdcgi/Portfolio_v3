@@ -24,7 +24,9 @@ export async function buildPortfolioManifest(ctx, dir){
   const subdirs = entries.filter(e=>e.isDirectory() && !isHidden(e.name));
 
   // cover: prefer *.cover file, else .cover text (name), else first image
-  const fileCovers = files.filter(f=> isCoverFilename(f.name) && IMG_EXT.has(path.extname(stripCover(f.name)).toLowerCase()));
+  const fileCovers = files.filter(
+    f=> isCoverFilename(f.name) && IMG_EXT.has(path.extname(stripCover(f.name)).toLowerCase())
+  );
   let coverUrl = null;
   if (fileCovers.length){
     coverUrl = await copyCoverFile(COVERS_OUT, path.join(dir, fileCovers[0].name));
@@ -37,42 +39,44 @@ export async function buildPortfolioManifest(ctx, dir){
   }
 
   if (subdirs.length){
+    // Subgallery index (list child folders)
     const { order, directives, hiddenFromOrder } = await readOrderWithDirectives(dir);
     const orderLower = new Map(order.map((n,i)=>[n.toLowerCase(), i]));
 
-    let folders = await Promise.all(subdirs
-      .filter(s => !hiddenFromOrder.has(s.name.toLowerCase()))
-      .map(async s => {
-        const sm = await buildPortfolioManifest(ctx, path.join(dir,s.name));
-        await writeJSON(path.join(dir,s.name,'manifest.json'), sm);
-        const counts = { images: (sm.items?.length)||0, folders: (sm.folders?.length)||0 };
-        const abs = path.join(dir, s.name);
-        return {
-          name: s.name,
-          displayName: pretty(s.name),
-          path: encodeURI('/' + path.relative(PUB, abs).split(path.sep).join('/')),
-          cover: sm.cover || null,
-          counts
-        };
-      })
+    let folders = await Promise.all(
+      subdirs
+        // Hide-by-dot via .order (in addition to actual dot-dirs filtered above)
+        .filter(s => !hiddenFromOrder.has(s.name.toLowerCase()))
+        .map(async s => {
+          const sm = await buildPortfolioManifest(ctx, path.join(dir,s.name));
+          await writeJSON(path.join(dir,s.name,'manifest.json'), sm);
+          const counts = { images: (sm.items?.length)||0, folders: (sm.folders?.length)||0 };
+          const abs = path.join(dir, s.name);
+          return {
+            name: s.name,
+            displayName: pretty(s.name),
+            path: encodeURI('/' + path.relative(PUB, abs).split(path.sep).join('/')),
+            cover: sm.cover || null,
+            counts
+          };
+        })
     );
 
-    // convenience .folders (top or any folder that has subfolders)
+    // Convenience .folders (no header, per your request)
     await writeHelperFile(
       path.join(dir, '.folders'),
-      [],
+      [],                                    // no directive header here
       folders.map(f => f.name)
     );
 
-    // sort: .order first (case-insensitive), then CII alphabetical
+    // Sort: .order first (case-insensitive), then CII alphabetical
     folders.sort((a,b)=>{
-      const ai = orderLower.has(a.name.toLowerCase()) ? orderLower.get(a.name.toLowerCase()) : 1e9;
-      const bi = orderLower.has(b.name.toLowerCase()) ? orderLower.get(b.name.toLowerCase()) : 1e9;
-      if (ai !== bi) return ai - bi;
-      return a.name.localeCompare(b.name, undefined, { numeric:true, sensitivity:'base' });
+      const ai = orderLower.get(a.name.toLowerCase()) ?? 1e9;
+      const bi = orderLower.get(b.name.toLowerCase()) ?? 1e9;
+      return ai !== bi ? ai - bi : a.name.localeCompare(b.name, undefined, { numeric:true, sensitivity:'base' });
     });
 
-    // fallback cover from first child with cover
+    // Fallback cover from first child with cover
     if (!coverUrl) {
       const firstChildWithCover = folders.find(f => f.cover);
       if (firstChildWithCover?.cover) coverUrl = firstChildWithCover.cover;
@@ -88,14 +92,16 @@ export async function buildPortfolioManifest(ctx, dir){
     };
   }
 
-  // leaf images — IMPORTANT: filter to images only
+  // Leaf images
   const { order, directives, hiddenFromOrder } = await readOrderWithDirectives(dir);
   const imagesOnDisk = files
     .filter(f=> !isCoverFilename(f.name))
     .filter(f=> IMG_EXT.has(path.extname(f.name).toLowerCase()))
+    // hide-by-dot via .order
     .filter(f=> !hiddenFromOrder.has(f.name.toLowerCase()))
     .map(f=> f.name);
 
+  // Resolve .order entries to on-disk case and within the folder only
   const resolvedOrder = [];
   for (const line of order){
     const abs = await resolveCaseInsensitive(dir, line);
@@ -104,13 +110,14 @@ export async function buildPortfolioManifest(ctx, dir){
   const setOrdered = new Set(resolvedOrder);
   const tail = imagesOnDisk
     .filter(n=> !setOrdered.has(n))
+    // ensure hidden entries never leak back in via tail
     .filter(n=> !hiddenFromOrder.has(n.toLowerCase()))
     .sort((a,b)=> a.localeCompare(b, undefined, { numeric:true, sensitivity:'base' }));
   const finalList = resolvedOrder.concat(tail);
 
   const items = finalList.map(name => ({ src: urlFromAbs(PUB, path.join(dir, name)) }));
 
-  // convenience .images (always overwrite)
+  // Convenience .images (always overwrite; keep header)
   await writeHelperFile(
     path.join(dir, '.images'),
     IMAGES_HEADER,
@@ -147,16 +154,20 @@ export async function scanPortfolio({ PUB, PORTFOLIO, COVERS_OUT }){
     });
   }
 
+  // Apply top-level .order: sort + hide-by-dot
   const { order, hiddenFromOrder } = await readOrderWithDirectives(PORTFOLIO);
   const idx = new Map(order.map((n,i)=>[n.toLowerCase(), i]));
+
+  // hide-by-dot from .order at the root
   folders = folders.filter(f => !hiddenFromOrder.has(f.name.toLowerCase()));
+
   folders.sort((a,b)=>{
     const ai = idx.get(a.name.toLowerCase()) ?? 1e9;
     const bi = idx.get(b.name.toLowerCase()) ?? 1e9;
     return ai !== bi ? ai - bi : a.name.localeCompare(b.name, undefined, { numeric:true, sensitivity:'base' });
   });
 
-  // convenience .folders at root
+  // Convenience .folders at root (no header)
   await writeHelperFile(
     path.join(PORTFOLIO, '.folders'),
     [],
