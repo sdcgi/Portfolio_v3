@@ -29,7 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             <nav className="main-nav">
               <Link href="/portfolio">Stills</Link>
-              <Link href="/motion">Motion</Link>
+
+              {/*edit thius motion link back to motion when self-hosted videos is done */}
+              <Link href="/motion/motion-vimeo">Motion</Link>
+
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
             </nav>
