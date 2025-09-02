@@ -18,14 +18,14 @@ export type Tile = FolderTile | ImageTile | VideoTile;
 type Level = 'top' | 'sub' | 'leaf' | 'motion-top';
 
 export default function Grid({
-  items,
-  ratio,                // no default — CSS governs unless explicitly passed
+  items = [],               // harden: never undefined
+  ratio,                    // no default — CSS governs unless explicitly passed
   desktopCols,
   enableDensityToggle = true,
   onItemClick,
   level = 'sub',
 }: {
-  items: Tile[];
+  items?: Tile[];           // harden: optional in the type, defaulted above
   ratio?: string;
   desktopCols?: number;
   enableDensityToggle?: boolean;
@@ -38,7 +38,10 @@ export default function Grid({
     typeof v === 'number' && Number.isFinite(v) ? Math.max(1, Math.min(v, 8)) : undefined;
   const colsOverride = normalizeCols(desktopCols);
 
-  const allImages = useMemo(() => items.every(it => (it as any).kind === 'image'), [items]);
+  const allImages = useMemo(() => Array.isArray(items) && items.length > 0
+    ? items.every(it => (it as any).kind === 'image')
+    : false
+  , [items]);
 
   const specialCols: number | null = useMemo(() => {
     if (items.length === 1) return 1;
@@ -93,6 +96,7 @@ export default function Grid({
     allImages &&
     leafNativeOnRoot &&
     !hasGridRatio; // override present → native OFF
+
   // Global default columns from CSS
   const globalDefaultCols = useMemo(() => {
     if (typeof window === 'undefined') return 4;
@@ -158,7 +162,12 @@ function TileView({
         <Link href={item.path} prefetch className="block-link">
           <div className="media" style={ratio ? { ['--ratio' as any]: ratio } : {}}>
             {item.cover && (
-              <Image src={item.cover} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
+              <Image
+                src={item.cover}
+                alt={item.displayName}
+                fill
+                sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
+              />
             )}
           </div>
         </Link>
@@ -207,7 +216,12 @@ function TileView({
     >
       <div className="media" style={{ ['--ratio' as any]: '16 / 9' }}>
         {item.poster && (
-          <Image src={item.poster} alt={item.displayName} fill sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw" />
+          <Image
+            src={item.poster}
+            alt={item.displayName}
+            fill
+            sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
+          />
         )}
       </div>
       <div className="meta"><div className="label">{item.displayName}</div></div>

@@ -21,6 +21,17 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   --cursor-zoom: zoom-in;
 }
 
+:root{
+  /* Containers */
+  --frame-inline: 24px;      /* header + crumbs inset (brand line) */
+  --content-inline: 24px;    /* page-content inset; set smaller if you want an inner rhythm */
+
+  /* Breakpoints */
+  --bp-grid-1col: 640px;     /* grid becomes 1 column */
+  --bp-bleed: var(--bp-grid-1col);  /* when grid should go full-bleed (keep equal unless you want stagger) */
+  --bp-header-wrap: 600px;   /* when nav moves under brand (independent) */
+}
+
 
 /* Fixed/sticky header with blur */
 .site-header {
@@ -56,13 +67,20 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 /* Grid — gap controlled by variables */
 .grid { display: grid; gap: var(--gap, var(--gap-comfy)); }
 
-/* Columns: Desktop 3–6; Tablet 2; Mobile 1 full-bleed */
-@media (min-width: 1100px) { .grid { grid-template-columns: repeat(var(--cols, 4), 1fr); } }
-@media (min-width: 740px) and (max-width: 1099px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 739px) {
+/* Columns (harmonized with variables.css):
+   ≥1280px → up to var(--cols)
+   ≤900px  → cap at 2 cols
+   ≤640px  → 1 col
+   variables.css already applies these step-downs using CSS variables,
+   this block is kept consistent for now, and can be removed later. */
+@media (min-width: 1280px) {
+  .grid { grid-template-columns: repeat(var(--cols, var(--grid-max-default, 4)), 1fr); }
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
-  .site-main { padding: 0; } /* full-bleed mobile */
-  .page-inner { padding: 12px; }
 }
 
 /* ===== Aspect ratio plumbing (folder override wins) ====================== */
@@ -144,7 +162,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .grid .tile:hover .media img,
   .grid .tile:hover .media video{transform:scale(calc(1 + (var(--hover-enabled) * (var(--hover-zoom-scale) - 1))));}
 }
-
 /* ======================================================
               2.0   [ LAYOUT HELPERS ]
    ====================================================== */
@@ -153,7 +170,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 /* Padded container for text UI (breadcrumbs, toggles, etc.). 
    Anything inside here keeps page padding at all widths. */
 .page-content {
-  padding-inline: var(--page-padding, 24px);
+  padding-inline: var(--content-inline, 24px);
 }
 
 /* ---------------- 2.2 Mobile Bleed -------------------- */
@@ -163,9 +180,9 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   margin-inline: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: var(--bp-bleed, 640px)) {
   .bleed-mobile {
-    margin-inline: calc(-1 * var(--page-padding, 24px));
+    margin-inline: calc(-1 * var(--content-inline, 24px));
   }
 }
 
