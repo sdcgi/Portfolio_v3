@@ -1,3 +1,4 @@
+/* path: app/portfolio/page.tsx */
 // app/portfolio/page.tsx
 'use client';
 import Grid, { type Tile } from '@/components/Grid';
@@ -27,13 +28,17 @@ export default function PortfolioTop(){
       .catch(()=> setTiles([]));
   },[]);
 
-  return (
-    <div>
-      <Breadcrumbs baseLabel="Stills" />
-      {tiles === null ? null : (
-        // No desktopCols prop here → Grid will use --grid-max-default
-        <Grid items={tiles} level="top" />
-      )}
+return (
+  <>
+    <div className="crumbs-row">
+      <Breadcrumbs />
     </div>
-  );
+
+    <div className="page-content">
+      <section className="bleed-mobile">
+        <Grid items={tiles ?? []} />
+      </section>
+    </div>
+  </>
+);
 }
