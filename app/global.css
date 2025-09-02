@@ -1,4 +1,4 @@
-html { scrollbar-gutter: stable both-edges; }
+html { scrollbar-gutter: stable; } /* reserve only on the scrollbar side (right in LTR) */
 
 /* Minimal, neutral; no shadows, no rounded corners */
 * { box-sizing: border-box; }
@@ -184,4 +184,15 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 @media (hover:hover){
   .grid .tile:hover .media img,
   .grid .tile:hover .media video{transform:scale(calc(1 + (var(--hover-enabled) * (var(--hover-zoom-scale) - 1))));}
+}
+
+/* ======================================================
+   1-COL GRID FULL-BLEED INSIDE .site-main
+   ====================================================== */
+
+@media (max-width: 640px) {
+  .site-main .bleed-mobile {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
 }
