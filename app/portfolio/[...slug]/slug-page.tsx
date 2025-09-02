@@ -76,10 +76,24 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
   const prev  = () => setOpenIndex(i => (i==null?null : (i + images.length - 1) % images.length));
   const next  = () => setOpenIndex(i => (i==null?null : (i + 1) % images.length));
 
-  return (
-    <div>
-      <Breadcrumbs baseLabel="Stills" />
-      {tiles === null ? null : <Grid items={tiles} ratio={isLeaf ? '1 / 1' : 'var(--tile-aspect-sub)'} level={isLeaf ? 'leaf' : 'sub'} desktopCols={4} onItemClick={onItemClick} />}
+return (
+  <>
+    <div className="crumbs-row">
+      <Breadcrumbs />
+    </div>
+
+    <div className="page-content">
+      <section className="bleed-mobile">
+        {tiles === null ? null : (
+          <Grid
+            items={tiles ?? []}
+            ratio={isLeaf ? 'leaf' : 'sub'}
+            desktopCols={4}
+            onItemClick={onItemClick}
+            level={level}
+          />
+        )}
+      </section>
 
       {openIndex != null && isLeaf && images[openIndex] && (
         <LightboxImage
@@ -91,5 +105,6 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
         />
       )}
     </div>
-  );
+  </>
+);
 }

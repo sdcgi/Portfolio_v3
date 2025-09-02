@@ -1,6 +1,5 @@
 html { scrollbar-gutter: stable both-edges; }
 
-
 /* Minimal, neutral; no shadows, no rounded corners */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
@@ -23,8 +22,10 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 
 :root{
   /* Containers */
-  --frame-inline: 24px;      /* header + crumbs inset (brand line) */
-  --content-inline: 24px;    /* page-content inset; set smaller if you want an inner rhythm */
+  --frame-inline: 20px;              /* same horizontal inset as your header */
+  --content-inline: var(--frame-inline);
+  --bp-grid-1col: 640px;
+  --bp-bleed: var(--bp-grid-1col);
 
   /* Breakpoints */
   --bp-grid-1col: 640px;     /* grid becomes 1 column */
@@ -32,8 +33,9 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   --bp-header-wrap: 600px;   /* when nav moves under brand (independent) */
 }
 
-
-/* Fixed/sticky header with blur */
+/* ========================================================= */
+/* HEADER */
+/* ========================================================= */
 .site-header {
   position: sticky; top: 0; z-index: 100;
   border-bottom: 1px solid var(--border);
@@ -41,27 +43,52 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   -webkit-backdrop-filter: blur(var(--header-blur));
   background: var(--header-bg);
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 14px 20px; }
-.brand a { color: inherit; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; }
-.main-nav { display: flex; gap: 1em; font-size: 14px; font-weight: 400; letter-spacing: 0.2px;}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px; margin: 0 auto; padding: 14px 20px;
+}
+.brand a {
+  color: inherit; text-decoration: none; font-weight: 600; letter-spacing: 0.5px;
+}
+.main-nav {
+  display: flex; gap: 1em;
+  font-size: 14px; font-weight: 400; letter-spacing: 0.2px;
+}
 .main-nav a { color: inherit; text-decoration: none; }
 .main-nav a:hover { text-decoration: underline; }
 
+/* ========================================================= */
+/* LAYOUT STRUCTURE */
+/* ========================================================= */
 .site-main { max-width: 1200px; margin: 0 auto; padding: 24px; }
 
-.crumbs-row {
-  padding-inline: var(--frame-inline, 24px);
-  margin-block-start: var(--section-gap, 12px);
+
+.bleed-mobile { margin-inline: 0; }
+@media (max-width: var(--bp-bleed)) {
+  .bleed-mobile { margin-inline: calc(-1 * var(--content-inline)); }
 }
 
-
-.breadcrumbs { font-size: 13px; color: var(--muted); margin: 8px 0 16px; }
+/* ========================================================= */
+/* BREADCRUMBS */
+/* ========================================================= */
+.breadcrumbs {
+  font-size: 13px; color: var(--muted); margin: 8px 0 16px;
+}
 .breadcrumbs a { color: inherit; text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 
-.grid-toolbar { display: flex; align-items: center; justify-content: space-between; margin: 6px 0 14px; }
+/* ========================================================= */
+/* GRID & TOOLBAR */
+/* ========================================================= */
+.grid-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 6px 0 14px;
+}
 .grid-toolbar .density { display: inline-flex; gap: 8px; }
-.grid-toolbar button { background: transparent; border: 0px solid var(--border); padding: 6px 10px; cursor: pointer; color: inherit; }
+.grid-toolbar button {
+  background: transparent; border: 0; padding: 6px 10px;
+  cursor: pointer; color: inherit;
+}
 .grid-toolbar button[aria-pressed="true"] { background: var(--accent-bg); }
 
 /* Grid — gap controlled by variables */
@@ -70,9 +97,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 /* Columns (harmonized with variables.css):
    ≥1280px → up to var(--cols)
    ≤900px  → cap at 2 cols
-   ≤640px  → 1 col
-   variables.css already applies these step-downs using CSS variables,
-   this block is kept consistent for now, and can be removed later. */
+   ≤640px  → 1 col */
 @media (min-width: 1280px) {
   .grid { grid-template-columns: repeat(var(--cols, var(--grid-max-default, 4)), 1fr); }
 }
@@ -83,7 +108,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .grid { grid-template-columns: 1fr; }
 }
 
-/* ===== Aspect ratio plumbing (folder override wins) ====================== */
+/* Aspect ratio plumbing */
 .grid.level-top        { --ratio: var(--grid-ratio, var(--tile-aspect-top,        1 / 1)); }
 .grid.level-sub        { --ratio: var(--grid-ratio, var(--tile-aspect-sub,        1 / 1)); }
 .grid.level-leaf       { --ratio: var(--grid-ratio, var(--tile-aspect-leaf,       1 / 1)); }
@@ -93,7 +118,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 .tile { border: 0; position: relative; display: flex; flex-direction: column; }
 .tile:focus, .tile.clickable:focus, a.tile:focus { outline: none; }
 
-/* The actual aspect enforcement. Next/Image fill works fine with aspect-ratio. */
+/* Aspect enforcement */
 .tile .media {
   position: relative;
   width: 100%;
@@ -109,18 +134,20 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   object-fit: cover;
 }
 
-/* Subtle hover zoom (disabled on touch) */
+/* Hover zoom (disabled on touch) */
 @media (hover:hover){
   .tile:hover .media img,
   .tile:hover .media video { transform: scale(var(--hover-zoom-scale)); }
 }
 
-/* Meta text uses site font; never looks like a link */
-.tile .meta { padding: 8px 2px 0; display: flex; justify-content: space-between; gap: 8px; font-family: var(--font-sans); }
+/* Meta text */
+.tile .meta {
+  padding: 8px 2px 0;
+  display: flex; justify-content: space-between; gap: 8px;
+  font-family: var(--font-sans);
+}
 .tile .label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tile .count { color: var(--muted); font-size: 12px; }
-
-/* Only the image is a link on folder tiles (meta is not clickable) */
 .tile .meta a { pointer-events: none; }
 
 /* Single-image grid: center and keep width of one 2-col cell */
@@ -133,8 +160,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .grid.single-one .tile { width: 100%; max-width: none; }
 }
 
-/* Leaf-native mode: use chosen object-fit for images/videos in leaf grids */
-/* Leaf-native mode applies ONLY to leaf image grids (class added by Grid.tsx) */
+/* Leaf-native mode */
 .grid.leaf-native .tile .media img,
 .grid.leaf-native .tile .media video { object-fit: var(--leaf-native-fit); }
 
@@ -150,7 +176,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 }
 
 /* Utilities */
-.page-inner { padding: 8px 0 24px; }
 .hidden { display: none; }
 
 /* Hover zoom conditioned by level knobs */
@@ -162,28 +187,3 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .grid .tile:hover .media img,
   .grid .tile:hover .media video{transform:scale(calc(1 + (var(--hover-enabled) * (var(--hover-zoom-scale) - 1))));}
 }
-/* ======================================================
-              2.0   [ LAYOUT HELPERS ]
-   ====================================================== */
-
-/* ---------------- 2.1 Page Content -------------------- */
-/* Padded container for text UI (breadcrumbs, toggles, etc.). 
-   Anything inside here keeps page padding at all widths. */
-.page-content {
-  padding-inline: var(--content-inline, 24px);
-}
-
-/* ---------------- 2.2 Mobile Bleed -------------------- */
-/* Lets a child (the media grid) bleed to edges on narrow viewports
-   without using 100vw. Breadcrumbs remain inside .page-content. */
-.bleed-mobile {
-  margin-inline: 0;
-}
-
-@media (max-width: var(--bp-bleed, 640px)) {
-  .bleed-mobile {
-    margin-inline: calc(-1 * var(--content-inline, 24px));
-  }
-}
-
-/* ============== END 2.0  LAYOUT HELPERS ================ */
