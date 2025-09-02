@@ -1,9 +1,37 @@
 {
-  "kind": "stills-gallery",
-  "cover": "/Portfolio/AAAA_test/tudor-black-bay-heritage-41mm-red-bezel-79230R-zaeger-1.jpeg",
-  "items": [
+  "kind": "portfolio-folder",
+  "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+  "folders": [
     {
-      "src": "/Portfolio/AAAA_test/tudor-black-bay-heritage-41mm-red-bezel-79230R-zaeger-1.jpeg"
+      "name": "Bose",
+      "displayName": "Bose",
+      "path": "/Portfolio/AAAA_test/Bose",
+      "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+      "counts": {
+        "images": 3,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Chair",
+      "displayName": "Chair",
+      "path": "/Portfolio/AAAA_test/Chair",
+      "cover": "/Portfolio/AAAA_test/Chair/CHAIR-School-seat-Cube-04.jpg",
+      "counts": {
+        "images": 5,
+        "folders": 0
+      }
+    },
+    {
+      "name": "Clay",
+      "displayName": "Clay",
+      "path": "/Portfolio/AAAA_test/Clay",
+      "cover": "/Portfolio/AAAA_test/Clay/Black-and-Yellow-Lights-03.jpg",
+      "counts": {
+        "images": 2,
+        "folders": 0
+      }
     }
-  ]
+  ],
+  "maxColumns": 3
 }

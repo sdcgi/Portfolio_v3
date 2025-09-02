@@ -1,6 +1,7 @@
 // app/layout.tsx
-import "./global.css";     // ✅ singular filename
 import "./variables.css";
+
+import "./global.css";     // ✅ singular filename
 import "./lightbox.css";   // ✅ include the lightbox styles at root
 import Link from "next/link";
 

@@ -53,7 +53,7 @@
   --cursor-hot-right: e-resize;
 
   /* leaf image zoom hint (optional) */
-  --cursor-zoom: zoom-in;
+  /*--cursor-zoom: zoom-in;
 
   /* ========================================================= */
 /* ******** SITE-WIDE CURSOR FEEDBACK *********************** */
@@ -80,7 +80,7 @@ a, button, [role="button"], .clickable {
   --header-blur: 12px;
   --header-bg: rgba(255, 255, 255, 0.7);
 
-  /* -------- Spacing -------- */
+  /* -------- Grid Spacing -------- */
   --gap-comfy: 24px;
   --gap-compact: 2px;
 

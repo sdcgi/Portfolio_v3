@@ -2,6 +2,16 @@
   "kind": "portfolio-root",
   "folders": [
     {
+      "name": "AAAA_test",
+      "displayName": "AAAA Test",
+      "path": "/Portfolio/AAAA_test",
+      "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+      "counts": {
+        "images": 0,
+        "folders": 3
+      }
+    },
+    {
       "name": "Sliced",
       "displayName": "Sliced",
       "path": "/Portfolio/Sliced",
