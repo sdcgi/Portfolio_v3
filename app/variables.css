@@ -5,7 +5,7 @@
   /* -------- Sitewide layout -------- */
 
   /* Global desktop max columns when no per-folder override is provided (1–6 recommended) */
-  --grid-max-default: 4;
+  --grid-max-default: 6;
 
   /* Tile sizing guardrails (for future use / JS sizing paths) */
   --tile-min: 280px;   /* minimum comfortable tile width */

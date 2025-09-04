@@ -86,7 +86,7 @@ return (
           items={tiles}
           ratio={isLeaf ? '1 / 1' : 'var(--tile-aspect-sub)'}
           level={isLeaf ? 'leaf' : 'sub'}
-          desktopCols={4}
+         // desktopCols={4}
           onItemClick={onItemClick}
         />
       )}
