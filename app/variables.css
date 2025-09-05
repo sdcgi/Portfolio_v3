@@ -33,9 +33,10 @@
   --meta-offset: 0.2rem;  
 
   /* continuous sizing knobs for meta text */
-  --meta-min: 0.78rem;   /* smallest label/count size on tiny tiles */
-  --meta-max: 1rem;      /* largest label/count size on wide tiles */
-  --meta-scale: 2.2cqw;  /* growth rate tied to tile width (container width %) */
+--meta-min: 0.6rem;   /* small-screen floor */
+--meta-max: 0.75rem;   /* comfortable cap on wide tiles */
+--meta-scale: 5.5cqw;  /* 5.5% of tile width → ~12–26px before clamping */
+
 
   /* -------- Hover zoom controls -------- */
   --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
@@ -171,10 +172,11 @@ a, button, [role="button"], .clickable {
          2.5   [ BLEED HELPERS (SAFETY) ]
    ====================================================== */
 
-/* Core helpers (idempotent if already present elsewhere) */
+:root {
+  /* Core helpers (idempotent if already present elsewhere) */
   --bleed-gap:    var(--bleed-gap, 0px);
   --bleed-offset: calc(var(--site-pad-x) - var(--bleed-gap));
-
+}
 
 /* Full viewport span while keeping content alignment */
 .full-bleed{
