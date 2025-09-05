@@ -1,9 +1,10 @@
-// app/layout.tsx
+/* /app/layout.tsx */
 import "./variables.css";
-
 import "./global.css";     // ✅ singular filename
 import "./lightbox.css";   // ✅ include the lightbox styles at root
+
 import Link from "next/link";
+import ThemeInit from "./ThemeInit";
 
 export const metadata = {
   title: "Portfolio",
@@ -11,8 +12,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // temporary fallback until we wire /public/.theme
+  const theme = "light";
+
   return (
-    <html lang="en">
+    <html lang="en" data-theme={theme}>
       <head>
         {/* Material Symbols (Outlined) — official variable font URL */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        {/* Client-side: set data-theme from /.theme or localStorage */}
+        <ThemeInit />
+
         <header className="site-header">
           <div className="header-inner">
             <div className="brand">
@@ -30,15 +37,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             <nav className="main-nav">
               <Link href="/portfolio">Stills</Link>
-
-              {/*edit thius motion link back to motion when self-hosted videos is done */}
+              {/* edit this motion link back to /motion when self-hosted videos is done */}
               <Link href="/motion/motion-vimeo">Motion</Link>
-
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
             </nav>
           </div>
         </header>
+
         <main className="site-main">{children}</main>
       </body>
     </html>
