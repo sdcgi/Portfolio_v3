@@ -1,3 +1,4 @@
+//------------------------// scripts/manifests/watcher.mjs
 import chokidar from 'chokidar';
 import path from 'node:path';
 

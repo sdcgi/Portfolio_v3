@@ -1,3 +1,4 @@
+//------------------------// scripts/manifests/portfolio.mjs
 import path from 'node:path';
 import {
   ensureDir, isHidden, isCoverFilename, stripCover, pretty,
@@ -7,12 +8,12 @@ import {
 import { readOrderWithDirectives } from './directives.mjs';
 
 const IMAGES_HEADER = [
-  '// Optional directives for this folder (.order supports these at the top):',
-  '// max_columns = 3   // overrides the maximum columns for this gallery (1–8)',
-  '// aspect_ratio = 0  // 0 = respect each image’s original aspect; or use 4/5, 1/1, 3/2, etc',
-  '// title_display = 0 // 0 = hide titles, 1 = show titles',
+  'max_columns = 3   # overrides the maximum columns for this gallery (1–8)',
+  'aspect_ratio = 0  # 0 = respect each image’s original aspect; or use 4/5, 1/1, 3/2, etc',
+  'title_display = 0 # 0 = hide titles, 1 = show titles',
+  
+  '------------ Overrides above --------------',
 ];
-
 const IMG_EXT = new Set(['.jpg','.jpeg','.png','.webp','.avif','.gif','.svg']);
 
 export async function buildPortfolioManifest(ctx, dir){

@@ -7,6 +7,8 @@ import Grid, { type Tile } from '@/components/Grid';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LightboxImage from '@/components/LightboxImage';
 
+
+
 export default function GalleryPage({ params }: { params: { slug: string[] } }) {
   const [tiles, setTiles] = useState<Tile[] | null>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -20,64 +22,72 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }) 
     '/' + ((params.slug ?? []).map((s) => encodeURIComponent(decodeURIComponent(s))).join('/') || '');
 
   // Fetch manifest for this folder (sub-gallery or leaf)
-  useEffect(() => {
-    const p = `/Portfolio${slugPath}/manifest.json`;
-loadManifest<any>(p).then((m) => {
-  if (!m) { setTiles([]); setCols(undefined); return; }
-  // …existing mapping to tiles…
 
-  // read manifest overrides (camelCase primary; snake_case fallback)
-  const raw = Number(
-    m?.maxColumns ??
-    m?.overrides?.maxColumns ??
-    m?.max_columns ??
-    m?.overrides?.max_columns
-  );
-  const computed = Number.isFinite(raw) ? Math.max(1, Math.min(raw, 8)) : undefined;
-  setCols(computed);
-}).catch(() => { setTiles([]); setCols(undefined); });          return;
-        }
+useEffect(() => {
+  const p = `/Portfolio${slugPath}/manifest.json`;
+  let cancelled = false;
 
-        if (Array.isArray(m.folders) && m.folders.length) {
-          // sub-gallery listing
-          const t: Tile[] = m.folders.map((f: any) => ({
-            kind: 'folder' as const,
-            path: `/portfolio${decodeURI(f.path).replace('/Portfolio', '')}`,
-            displayName: f.displayName || f.name,
-            cover: f.cover,
-            counts: f.counts,
-          }));
-          setTiles(t);
-        } else {
-          // leaf images listing
-          const t: Tile[] = (m.items || []).map((it: any) => ({
-            kind: 'image' as const,
-            src: it.src,
-            alt: it.alt || '',
-          }));
-          setTiles(t);
-        }
+  fetch(p, { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((m) => {
+      if (cancelled) return;
 
-        // read max columns (supports camelCase or snake_case)
-        const raw = Number(
-          m?.maxColumns ??
+      if (!m) {
+        setTiles([]);
+        setCols(undefined);
+        return;
+      }
+
+      if (Array.isArray(m.folders) && m.folders.length) {
+        // sub-gallery listing
+        const t: Tile[] = m.folders.map((f: any) => ({
+          kind: 'folder' as const,
+          path: `/portfolio${decodeURI(f.path).replace('/Portfolio', '')}`,
+          displayName: f.displayName || f.name,
+          cover: f.cover,
+          counts: f.counts,
+        }));
+        setTiles(t);
+      } else {
+        // leaf images listing
+        const t: Tile[] = (m.items || []).map((it: any) => ({
+          kind: 'image' as const,
+          src: it.src,
+          alt: it.alt || '',
+        }));
+        setTiles(t);
+      }
+
+      // read max columns (camelCase primary; snake_case fallback)
+      const raw = Number(
+        m?.maxColumns ??
           m?.overrides?.maxColumns ??
           m?.max_columns ??
           m?.overrides?.max_columns
-        );
-        const computed = Number.isFinite(raw) ? Math.max(1, Math.min(raw, 8)) : undefined;
-        setCols(computed);
-      })
-      .catch(() => {
-        setTiles([]);
-        setCols(undefined);
-      });
-  }, [slugPath]);
+      );
+      const computed = Number.isFinite(raw) ? Math.max(1, Math.min(raw, 8)) : undefined;
+      setCols(computed);
+    })
+    .catch(() => {
+      if (cancelled) return;
+      setTiles([]);
+      setCols(undefined);
+    });
 
-const images: ImageTile[] = useMemo(
-    () => ((tiles || []).filter((t) => t.kind === 'image') as ImageTile[]),
-    [tiles]
-  );
+  return () => {
+    cancelled = true;
+  };
+}, [slugPath]);
+
+
+const images = useMemo(
+  () =>
+    (tiles || []).filter((t) => t.kind === 'image') as Extract<
+      Tile,
+      { kind: 'image' }
+    >[],
+  [tiles]
+);
   
   const isLeaf = images.length > 0;
 

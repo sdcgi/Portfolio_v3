@@ -232,3 +232,8 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 }
 
 /* ============ END 9.0  MOBILE BLEED GUARD ============ */
+
+
+
+/* Leaves never show counts (defensive) */
+.grid.level-leaf .meta .count { display: none !important; }

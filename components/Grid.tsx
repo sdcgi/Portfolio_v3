@@ -66,9 +66,10 @@ export default function Grid({
       setShowFlags({ titles: pick('--show-top-titles','0'), counts: pick('--show-top-counts','1') });
     } else if (level === 'sub') {
       setShowFlags({ titles: pick('--show-sub-titles','0'), counts: pick('--show-sub-counts','1') });
-    } else if (level === 'leaf') {
-      setShowFlags({ titles: pick('--show-leaf-titles','0'), counts: pick('--show-leaf-counts','0') });
-    } else {
+   } else if (level === 'leaf') {
+  // Leaf pages are images only — never show counts.
+  setShowFlags({ titles: pick('--show-leaf-titles','0'), counts: false });
+  } else {
       setShowFlags({ titles: false, counts: false });
     }
   }, [items.length, level, density]);

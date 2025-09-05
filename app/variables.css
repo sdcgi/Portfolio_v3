@@ -25,8 +25,9 @@
   /* -------- Title/count visibility per level (1=show, 0=hide) -------- */
   --show-top-titles: 1;
   --show-top-counts: 1;
-  --show-sub-titles: 1;
+  --show-sub-titles: 0;
   --show-sub-counts: 1;
+  --show-leaf-titles: 1;
 
   /* -------- Hover zoom controls -------- */
   --hover-zoom-scale: 1.02;     /* amount of zoom on hover */

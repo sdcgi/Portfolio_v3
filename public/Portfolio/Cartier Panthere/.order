@@ -1,12 +1,19 @@
-Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV.jpg
-Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-3.jpg
-Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-2.jpg
+max_columns = 4   # overrides the maximum columns for this gallery (1–8)
+aspect_ratio = 0  # 0 = respect each image’s original aspect; or use 4/5, 1/1, 3/2, etc
+title_display = 0 # 0 = hide titles, 1 = show titles
+------------ Overrides above --------------
 
-CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV.jpg
-Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV.jpg
+
+
+
 CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV-2.jpg
 
-
-CartierIndiaLake_A_CLIENT_Vis1_FINAL_AvecBijoux_PLV.jpg
+.Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV.jpg
+Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV.jpg
+CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV.jpg
+Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-3.jpg
 CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV-3.jpg
 CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV-4.jpg
+Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-4.jpg
+Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-2.jpg
+CartierIndiaLake_A_CLIENT_Vis1_FINAL_AvecBijoux_PLV.jpg
