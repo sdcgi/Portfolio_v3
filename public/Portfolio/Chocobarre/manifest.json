@@ -32,5 +32,7 @@
     {
       "src": "/Portfolio/Chocobarre/CHOCOBARRE_4X3-PINK-FLT.jpg"
     }
-  ]
+  ],
+  "maxColumns": 3,
+  "aspectRatio": "4 / 5"
 }

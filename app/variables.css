@@ -12,14 +12,14 @@
   --tile-max: 600px;   /* cap so tiles don't get huge */
 
   /* Leaf image aspect behavior */
-  --leaf-native-aspect: 1;      /* 1 = leaf grids use native aspect per image, 0 = disabled */
+  --leaf-native-aspect: 01;      /* 1 = leaf grids use native aspect per image, 0 = disabled */
   --leaf-native-fit: contain;   /* contain | cover when native aspect is on */
 
 
 /* -------- Folder tile aspect ratios -------- */
---tile-aspect-top: 1 / 1;   /* Top-level folders */
+--tile-aspect-top: 8 / 10;   /* Top-level folders */
 --tile-aspect-sub: 1 / 1;   /* Subgallery folders */
---tile-aspect-leaf: 3 / 2;  /* Leaf images (optional) */
+--tile-aspect-leaf: 3/2;  /* Leaf images (optional) */
 
 
   /* -------- Title/count visibility per level (1=show, 0=hide) -------- */
@@ -27,7 +27,7 @@
   --show-top-counts: 1;
   --show-sub-titles: 1;
   --show-sub-counts: 1;
-  --show-leaf-titles: 1;
+  --show-leaf-titles: 0;
 
    /* vertical distance from tile to meta row */
   --meta-offset: 0.2rem;  

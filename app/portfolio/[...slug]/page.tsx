@@ -14,6 +14,8 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }) 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [cols, setCols] = useState<number | undefined>(undefined); // per-folder maxColumns
 
+  const [aspect, setAspect] = useState<string | undefined>(undefined);
+
   const paramsHook = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -67,13 +69,21 @@ useEffect(() => {
       );
       const computed = Number.isFinite(raw) ? Math.max(1, Math.min(raw, 8)) : undefined;
       setCols(computed);
+
+      // NEW: read aspect override (camelCase or snake_case; overrides.* supported)
+      const a =
+        m?.aspectRatio ??
+        m?.overrides?.aspectRatio ??
+        m?.aspect_ratio ??
+        m?.overrides?.aspect_ratio;
+      setAspect(typeof a === 'string' && a.trim() ? a.trim() : undefined);
     })
     .catch(() => {
       if (cancelled) return;
       setTiles([]);
       setCols(undefined);
     });
-
+    
   return () => {
     cancelled = true;
   };
@@ -141,14 +151,13 @@ const images = useMemo(
       <Breadcrumbs baseLabel="Stills" />
       <section className="bleed-mobile">
         {tiles === null ? null : (
-          <Grid
-            items={tiles}
-            ratio={isLeaf ? '1 / 1' : 'var(--tile-aspect-sub)'}
-            level={isLeaf ? 'leaf' : 'sub'}
-            desktopCols={cols}   // per-folder maxColumns → CSS (--cols-active)
-            onItemClick={onItemClick}
-          />
-        )}
+<Grid
+  items={tiles}
+  level={isLeaf ? 'leaf' : 'sub'}
+  desktopCols={cols}
+  {...(isLeaf && aspect ? { ratio: aspect } : {})}
+  onItemClick={onItemClick}
+/>        )}
       </section>
 
       {openIndex != null && isLeaf && images[openIndex] && (
