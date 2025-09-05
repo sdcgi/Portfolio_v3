@@ -98,26 +98,18 @@ export default function Grid({
     leafNativeOnRoot &&
     !hasGridRatio; // override present → native OFF
 
-  // Global default columns from CSS
-  const globalDefaultCols = useMemo(() => {
-    if (typeof window === 'undefined') return 4;
-    const cs = getComputedStyle(document.documentElement);
-    const raw = cs.getPropertyValue('--grid-max-default').trim();
-    const n = Number(raw);
-    if (Number.isFinite(n) && n >= 1 && n <= 8) return n;
-    const parsed = parseInt(raw, 10);
-    return Number.isFinite(parsed) && parsed >= 1 && parsed <= 8 ? parsed : 4;
-  }, []);
-
   // Columns: override wins → special cases → global default
-  const styleVars: Record<string, string | number> = {
+  const activeCols = (colsOverride ?? specialCols); // only explicit override or special 1/2/3
+const styleVars: Record<string, string | number> = {
   ['--gap' as any]: density === 'compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)',
-  ['--cols-active' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
-  ['--cols' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
-  // if a ratio prop is provided, advertise it at grid level to disable native-aspect
+  ...(typeof activeCols === 'number'
+    ? {
+        ['--cols-active' as any]: activeCols,
+        ['--cols' as any]: activeCols, // legacy readers (harmless)
+      }
+    : {}),
   ...(ratio ? { ['--grid-ratio' as any]: ratio } : {}),
 };
-
   return (
     <div className="page-inner">
       <div className="grid-toolbar">
