@@ -225,3 +225,30 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 .grid > * { min-width: 0; }
 .tile { min-width: 0; }
 .tile .meta, .tile .label { min-width: 0; }
+
+
+
+
+
+
+/* ======================================================
+          9.0   [ MOBILE BLEED GUARD ]
+   ====================================================== */
+
+/* Only the section marked .bleed-mobile should bleed on narrow viewports.
+   Breadcrumbs (and other content) remain within the .content width. */
+
+@media (max-width: 640px) {
+  section.bleed-mobile {
+    /* Cancel the .content horizontal padding to touch viewport edges */
+    margin-inline: calc(-1 * var(--bleed-offset));
+  }
+
+  /* Ensure crumbs never bleed */
+  .content > nav.breadcrumbs,
+  .content .breadcrumbs {
+    margin-inline: 0;
+  }
+}
+
+/* ============ END 9.0  MOBILE BLEED GUARD ============ */

@@ -120,3 +120,29 @@ a, button, [role="button"], .clickable {
 @media (max-width: 640px) {
   .grid { --cols: 1; }
 }
+
+
+
+
+/* ======================================================
+         2.5   [ BLEED HELPERS (SAFETY) ]
+   ====================================================== */
+
+/* Core helpers (idempotent if already present elsewhere) */
+:root{
+  --bleed-gap:    var(--bleed-gap, 0px);
+  --bleed-offset: calc(var(--site-pad-x) - var(--bleed-gap));
+}
+
+/* Full viewport span while keeping content alignment */
+.full-bleed{
+  width: 100vw; position: relative; left: 50%; right: 50%;
+  margin-left:  calc(-50vw + var(--site-pad-x));
+  margin-right: calc(-50vw + var(--site-pad-x));
+}
+
+/* Simple horizontal bleed utility (uses computed offset) */
+.bleed-x{ margin-inline: calc(-1 * var(--bleed-offset)); }
+
+/* ========== END 2.5  BLEED HELPERS (SAFETY) ========== */
+

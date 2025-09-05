@@ -77,21 +77,19 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }){
   const next  = () => setOpenIndex(i => (i==null?null : (i + 1) % images.length));
 
 return (
-  <div>
+  <div className="content">
     <Breadcrumbs baseLabel="Stills" />
-
+    {/* grid-only mobile bleed */}
     <section className="bleed-mobile">
       {tiles === null ? null : (
         <Grid
           items={tiles}
           ratio={isLeaf ? '1 / 1' : 'var(--tile-aspect-sub)'}
           level={isLeaf ? 'leaf' : 'sub'}
-         // desktopCols={4}
           onItemClick={onItemClick}
         />
       )}
     </section>
-
     {openIndex != null && isLeaf && images[openIndex] && (
       <LightboxImage
         src={images[openIndex].src}
@@ -102,5 +100,4 @@ return (
       />
     )}
   </div>
-);
-}
+);}

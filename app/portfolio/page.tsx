@@ -29,16 +29,11 @@ export default function PortfolioTop(){
   },[]);
 
 return (
-  <>
-    <div className="crumbs-row">
-      <Breadcrumbs baseLabel="Stills" />
-    </div>
-
-    <div className="page-content">
-      <section className="bleed-mobile">
-        <Grid items={tiles ?? []} level="top" />
-      </section>
-    </div>
-  </>
-);
-}
+  <div className="content">
+    <Breadcrumbs baseLabel="Stills" />
+    {/* Only this section bleeds on mobile; crumbs remain contained */}
+    <section className="bleed-mobile">
+      <Grid items={tiles ?? []} level="top" />
+    </section>
+  </div>
+);}
