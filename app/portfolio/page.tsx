@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 type Counts = { images?: number; folders?: number };
 type Folder = { name: string; displayName: string; path: string; cover: string | null; counts?: Counts };
 
+// new code  (TOP stays override-free)
 export default function PortfolioTop(){
   const [tiles, setTiles] = useState<Tile[] | null>(null);
 
@@ -28,12 +29,12 @@ export default function PortfolioTop(){
       .catch(()=> setTiles([]));
   },[]);
 
-return (
-  <div className="content">
-    <Breadcrumbs baseLabel="Stills" />
-    {/* Only this section bleeds on mobile; crumbs remain contained */}
-    <section className="bleed-mobile">
-      <Grid items={tiles ?? []} level="top" />
-    </section>
-  </div>
-);}
+  return (
+    <div className="content">
+      <Breadcrumbs baseLabel="Stills" />
+      <section className="bleed-mobile">
+        <Grid items={tiles ?? []} level="top" />
+      </section>
+    </div>
+  );
+}

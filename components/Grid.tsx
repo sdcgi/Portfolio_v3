@@ -110,9 +110,12 @@ export default function Grid({
 
   // Columns: override wins → special cases → global default
   const styleVars: Record<string, string | number> = {
-    ['--gap' as any]: density === 'compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)',
-    ['--cols' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
-  };
+  ['--gap' as any]: density === 'compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)',
+  // expose the active desktop max for the CSS controller
+  ['--cols-active' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
+  // keep --cols for legacy rules that may still read it
+  ['--cols' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
+};
 
   return (
     <div className="page-inner">

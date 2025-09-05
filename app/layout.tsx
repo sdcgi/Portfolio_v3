@@ -39,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/portfolio">Stills</Link>
               {/* edit this motion link back to /motion when self-hosted videos is done */}
               <Link href="/motion/motion-vimeo">Motion</Link>
+              <Link href="/motion">Motion (test)</Link>
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
             </nav>

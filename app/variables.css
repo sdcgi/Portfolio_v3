@@ -93,33 +93,37 @@ a, button, [role="button"], .clickable {
   --single-leaf-max-w: 600px;
 }
 
-/* ===========================================
-   Grid: global defaults & responsive step-downs
-   =========================================== */
+/* ======================================================
+           4.0   [ GRID COLUMNS CONTROLLER ]
+   ====================================================== */
 
-/* Base: compute starting column count.
-   Priority: inline --cols (special/override) → JS-set --cols-active (optional) → global default. */
+/* Active max columns:
+   - Prefer per-folder override set inline:  --cols-active
+   - Else fallback to global knob:           --grid-max-default (e.g., 6)
+*/
 .grid {
-  --cols-base: var(--cols, var(--cols-active, var(--grid-max-default)));
-  --cols: var(--cols-base);
-  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  /* Base max from inline override or global default */
+--cols-base: var(--cols-active, var(--cols, var(--grid-max-default, 6)));
+  /* Current columns (will be clamped by breakpoints below) */
+  --cols-current: var(--cols-base);
+
+  /* Apply to layout */
+  grid-template-columns: repeat(var(--cols-current), minmax(0, 1fr));
+  gap: var(--gap, var(--gap-base));
 }
 
-/* Step-downs:
-   6 → 4 → 2 → 1 (if --grid-max-default is 6)
-   4 → 2 → 1 (if default/override is 4)
-   3 → 2 → 1 (if override is 3)
-   2 → 1 (if default/override is 2)
-   These cap the active base using min(). */
+/* Step-downs (max-width → never step up) */
 @media (max-width: 1280px) {
-  .grid { --cols: min(var(--cols-base), 4); }
+  .grid { --cols-current: min(var(--cols-base), 4); }
 }
 @media (max-width: 900px) {
-  .grid { --cols: min(var(--cols-base), 2); }
+  .grid { --cols-current: min(var(--cols-base), 2); }
 }
 @media (max-width: 640px) {
-  .grid { --cols: 1; }
+  .grid { --cols-current: 1; }
 }
+
+/* ============== END 4.0  GRID COLUMNS CONTROLLER ====== */
 
 
 
