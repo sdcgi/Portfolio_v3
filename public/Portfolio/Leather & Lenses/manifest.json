@@ -23,5 +23,8 @@
     {
       "src": "/Portfolio/Leather%20&%20Lenses/Channel-Bag-on-Block-fix-05-2.jpg"
     }
-  ]
+  ],
+  "maxColumns": 4,
+  "aspectRatio": "0",
+  "titleDisplay": 0
 }

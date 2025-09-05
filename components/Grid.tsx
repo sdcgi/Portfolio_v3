@@ -112,10 +112,10 @@ export default function Grid({
   // Columns: override wins → special cases → global default
   const styleVars: Record<string, string | number> = {
   ['--gap' as any]: density === 'compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)',
-  // expose the active desktop max for the CSS controller
   ['--cols-active' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
-  // keep --cols for legacy rules that may still read it
   ['--cols' as any]: (colsOverride ?? specialCols ?? globalDefaultCols),
+  // if a ratio prop is provided, advertise it at grid level to disable native-aspect
+  ...(ratio ? { ['--grid-ratio' as any]: ratio } : {}),
 };
 
   return (
@@ -184,30 +184,41 @@ function TileView({
   }
 
   if (item.kind === 'image') {
-    return (
-      <div
-        className={`tile clickable ${single ? 'single-leaf' : ''}`}
-        role="button"
-        tabIndex={0}
-        onClick={onClick}
-        onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
-      >
-        <div className="media" style={ratio ? { ['--ratio' as any]: ratio } : {}}>
-          <Image
-            src={item.src}
-            alt={item.alt || ''}
-            fill
-            sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
-            onLoadingComplete={nativeAspect ? (img) => {
-              const w = img.naturalWidth || 1, h = img.naturalHeight || 1;
-              const media = img.closest('.media');
-              if (media) (media as HTMLElement).style.setProperty('--ratio', `${w}/${h}`);
-            } : undefined}
-          />
-        </div>
+  // prefer alt; fallback to filename (no extension), prettified
+  const file = item.src.split('/').pop() || '';
+  const fallback = file.replace(/\.[^/.]+$/, '').replace(/[-_]+/g, ' ').trim();
+  const label = (item.alt && item.alt.trim()) || fallback;
+
+  return (
+    <div
+      className={`tile clickable ${single ? 'single-leaf' : ''}`}
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={(e) => ((e.key === 'Enter' || e.key === ' ') && onClick?.())}
+    >
+      <div className="media" style={ratio ? { ['--ratio' as any]: ratio } : {}}>
+        <Image
+          src={item.src}
+          alt={item.alt || ''}
+          fill
+          sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
+          onLoadingComplete={nativeAspect ? (img) => {
+            const w = img.naturalWidth || 1, h = img.naturalHeight || 1;
+            const media = img.closest('.media');
+            if (media) (media as HTMLElement).style.setProperty('--ratio', `${w}/${h}`);
+          } : undefined}
+        />
       </div>
-    );
-  }
+      {showTitle && (
+        <div className="meta">
+          <div className="label">{label}</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 
   // video tile
   return (

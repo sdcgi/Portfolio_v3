@@ -5,7 +5,7 @@
   /* -------- Sitewide layout -------- */
 
   /* Global desktop max columns when no per-folder override is provided (1–6 recommended) */
-  --grid-max-default: 6;
+  --grid-max-default: 5;
 
   /* Tile sizing guardrails (for future use / JS sizing paths) */
   --tile-min: 280px;   /* minimum comfortable tile width */
@@ -27,7 +27,7 @@
   --show-top-counts: 1;
   --show-sub-titles: 0;
   --show-sub-counts: 1;
-  --show-leaf-titles: 1;
+  --show-leaf-titles: 0;
 
   /* -------- Hover zoom controls -------- */
   --hover-zoom-scale: 1.02;     /* amount of zoom on hover */

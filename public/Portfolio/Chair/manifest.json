@@ -17,5 +17,8 @@
     {
       "src": "/Portfolio/Chair/CHAIR-Chairwall.jpg"
     }
-  ]
+  ],
+  "maxColumns": 3,
+  "aspectRatio": "0",
+  "titleDisplay": 0
 }
