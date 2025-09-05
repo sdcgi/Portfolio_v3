@@ -29,7 +29,7 @@
   --show-sub-counts: 1;
   --show-leaf-titles: 1;
 
-  
+  --meta-offset: 0.2rem;   /* vertical distance from tile to meta row */
 
   /* -------- Hover zoom controls -------- */
   --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
@@ -47,6 +47,37 @@
   --border: #e5e5e5;
   --accent-bg: #efefef;
   --placeholder: #f3f3f3;
+
+  /* code to change — append near your other :root knobs */
+
+/* =========================
+   Type tokens (title / count)
+   - Designed to slot into a wider type scale later.
+   - Sizes default to follow a meta-level size so they can scale with grid.
+   ========================= */
+:root{
+ /* meta row size controller (we’ll tie this to stepdowns later) */
+  --meta-size-current: 1rem;
+  --meta-line: 1.2;
+
+  /* title tokens */
+  --type-title-font: var(--font-sans);
+  --type-title-scale: 1;          /* × --meta-size-current */
+  --type-title-weight: 200;
+  --type-title-tracking: 0.1px;
+  --type-title-transform: none;
+  --type-title-color: var(--text);
+
+  /* count tokens */
+  --type-count-font: var(--font-sans);
+  --type-count-scale: 0.95;       /* × --meta-size-current */
+  --type-count-weight: 400;
+  --type-count-tracking: 0.1px;
+  --type-count-transform: none;
+  --type-count-color: var(--muted);
+  --type-count-opacity: 0.8;
+}
+
 
    /* general interactive cursor (links, buttons) */
   --cursor-interactive: pointer;
@@ -152,4 +183,7 @@ a, button, [role="button"], .clickable {
 .bleed-x{ margin-inline: calc(-1 * var(--bleed-offset)); }
 
 /* ========== END 2.5  BLEED HELPERS (SAFETY) ========== */
+
+
+
 
