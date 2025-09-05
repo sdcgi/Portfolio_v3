@@ -25,11 +25,17 @@
   /* -------- Title/count visibility per level (1=show, 0=hide) -------- */
   --show-top-titles: 1;
   --show-top-counts: 1;
-  --show-sub-titles: 0;
+  --show-sub-titles: 1;
   --show-sub-counts: 1;
   --show-leaf-titles: 1;
 
-  --meta-offset: 0.2rem;   /* vertical distance from tile to meta row */
+   /* vertical distance from tile to meta row */
+  --meta-offset: 0.2rem;  
+
+  /* continuous sizing knobs for meta text */
+  --meta-min: 0.78rem;   /* smallest label/count size on tiny tiles */
+  --meta-max: 1rem;      /* largest label/count size on wide tiles */
+  --meta-scale: 2.2cqw;  /* growth rate tied to tile width (container width %) */
 
   /* -------- Hover zoom controls -------- */
   --hover-zoom-scale: 1.02;     /* amount of zoom on hover */
@@ -39,23 +45,12 @@
   --hover-zoom-sub: 1;          /* zoom on hover for nested (project) gallery */
   --hover-zoom-leaf: 0;         /* zoom on hover for leaf images */
 
-    /* -------- Typography & colors -------- */
-  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  --bg: #fff;
-  --text: #757575;
-  --muted: #a9a9a9;
-  --border: #e5e5e5;
-  --accent-bg: #efefef;
-  --placeholder: #f3f3f3;
-
-  /* code to change — append near your other :root knobs */
-
-/* =========================
+  /* =========================
    Type tokens (title / count)
    - Designed to slot into a wider type scale later.
    - Sizes default to follow a meta-level size so they can scale with grid.
    ========================= */
-:root{
+
  /* meta row size controller (we’ll tie this to stepdowns later) */
   --meta-size-current: 1rem;
   --meta-line: 1.2;
@@ -75,8 +70,18 @@
   --type-count-tracking: 0.1px;
   --type-count-transform: none;
   --type-count-color: var(--muted);
-  --type-count-opacity: 0.8;
-}
+  --type-count-opacity: 0.7;
+
+
+    /* -------- Typography & colors -------- */
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --bg: #fff;
+  --text: #757575;
+  --muted: #a9a9a9;
+  --border: #e5e5e5;
+  --accent-bg: #efefef;
+  --placeholder: #f3f3f3;
+
 
 
    /* general interactive cursor (links, buttons) */
@@ -167,10 +172,9 @@ a, button, [role="button"], .clickable {
    ====================================================== */
 
 /* Core helpers (idempotent if already present elsewhere) */
-:root{
   --bleed-gap:    var(--bleed-gap, 0px);
   --bleed-offset: calc(var(--site-pad-x) - var(--bleed-gap));
-}
+
 
 /* Full viewport span while keeping content alignment */
 .full-bleed{

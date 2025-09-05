@@ -118,8 +118,13 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 .grid.level-motion-top { --ratio: var(--grid-ratio, var(--tile-aspect-motion-top, 16 / 9)); }
 
 /* Tiles */
-.tile { border: 0; position: relative; display: flex; flex-direction: column; }
-.tile:focus, .tile.clickable:focus, a.tile:focus { outline: none; }
+.tile {
+  border: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  container-type: inline-size;   /* enables cqw (container query width units) */
+}
 
 /* Aspect enforcement */
 .tile .media {
@@ -148,9 +153,12 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   display: flex;
   align-items: baseline;                 /* same baseline */
   justify-content: space-between;        /* title left, count right */
-  margin-top: var(--meta-offset, 0.5rem);/* distance from image box */
-  padding: 0 2px 0;                      /* remove old top padding */
+  margin-top: var(--meta-offset, 0.5rem);
+  padding: 0 2px 0;
   font-family: var(--font-sans);
+  /* continuous sizing: clamp( min , scale by tile width , max ) */
+  font-size: clamp(var(--meta-min, 0.78rem), var(--meta-scale, 2.2cqw), var(--meta-max, 1rem));
+  line-height: var(--meta-line, 1.2);
 }
 .tile .label{
   flex: 1 1 auto;
@@ -161,7 +169,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 
   /* type tokens */
   font-family: var(--type-title-font, var(--font-sans));
-  font-size: calc(var(--meta-size-current, 1rem) * var(--type-title-scale, 1));
+  font-size: calc(1em * var(--type-title-scale, 1));  /* inherits from .meta */
   line-height: var(--meta-line, 1.2);
   font-weight: var(--type-title-weight, 600);
   letter-spacing: var(--type-title-tracking, 0.2px);
@@ -171,13 +179,13 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 
 .tile .count{
   flex: 0 0 auto;
-  margin-left: 1ch;                      /* small gutter from truncated title */
+  margin-left: 1ch;
   text-align: right;
   white-space: nowrap;
 
   /* type tokens */
   font-family: var(--type-count-font, var(--font-sans));
-  font-size: calc(var(--meta-size-current, 1rem) * var(--type-count-scale, 0.95));
+  font-size: calc(1em * var(--type-count-scale, 0.95)); /* inherits from .meta */
   line-height: var(--meta-line, 1.2);
   font-weight: var(--type-count-weight, 400);
   letter-spacing: var(--type-count-tracking, 0.1px);
@@ -185,7 +193,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   color: var(--type-count-color, var(--muted));
   opacity: var(--type-count-opacity, 0.8);
 }
-
 .tile .meta a { pointer-events: none; }.tile .meta a { pointer-events: none; }
 
 /* Single-image grid: center and keep width of one 2-col cell */
