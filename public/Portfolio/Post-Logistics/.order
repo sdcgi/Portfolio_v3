@@ -1,6 +1,3 @@
-// Optional directives for this folder (.order supports these at the top):
-// aspect_ratio = 0  // 0 = respect each image’s original aspect; or use 4/5, 1/1, 3/2, etc
-// title_display = 0 // 0 = hide titles, 1 = show titles
 
 max_columns = 1 
 

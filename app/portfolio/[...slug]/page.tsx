@@ -22,13 +22,20 @@ export default function GalleryPage({ params }: { params: { slug: string[] } }) 
   // Fetch manifest for this folder (sub-gallery or leaf)
   useEffect(() => {
     const p = `/Portfolio${slugPath}/manifest.json`;
-    fetch(p, { cache: 'force-cache' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((m) => {
-        if (!m) {
-          setTiles([]);
-          setCols(undefined);
-          return;
+loadManifest<any>(p).then((m) => {
+  if (!m) { setTiles([]); setCols(undefined); return; }
+  // …existing mapping to tiles…
+
+  // read manifest overrides (camelCase primary; snake_case fallback)
+  const raw = Number(
+    m?.maxColumns ??
+    m?.overrides?.maxColumns ??
+    m?.max_columns ??
+    m?.overrides?.max_columns
+  );
+  const computed = Number.isFinite(raw) ? Math.max(1, Math.min(raw, 8)) : undefined;
+  setCols(computed);
+}).catch(() => { setTiles([]); setCols(undefined); });          return;
         }
 
         if (Array.isArray(m.folders) && m.folders.length) {
