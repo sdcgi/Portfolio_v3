@@ -12,12 +12,18 @@ export default function Breadcrumbs({ baseLabel }: { baseLabel: string }) {
     href += '/' + p;
     crumbs.push({ href, label: decodeURIComponent(p) });
   }
-  return (
-    <div className="breadcrumbs">
-      <Link href="/">Home</Link>
-      {crumbs.map((c, i) => (
-        <span key={c.href}> / {i === 0 ? <Link href={c.href}>{baseLabel}</Link> : <Link href={c.href}>{c.label}</Link>}</span>
-      ))}
-    </div>
-  );
-}
+return (
+  <nav className="breadcrumbs" aria-label="Breadcrumb">
+    <Link href="/">Home</Link>
+    {crumbs.map((c, i) => (
+      <span key={c.href}>
+        <span aria-hidden="true"> / </span>
+        {i === 0 ? (
+          <Link href={c.href}>{baseLabel}</Link>
+        ) : (
+          <Link href={c.href}>{c.label}</Link>
+        )}
+      </span>
+    ))}
+  </nav>
+);}

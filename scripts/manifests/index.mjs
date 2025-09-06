@@ -1,3 +1,4 @@
+//------------------------// scripts/manifests/index.mjs
 import path from 'node:path';
 import { ensureDir } from './utils.mjs';
 import { scanPortfolio } from './portfolio.mjs';

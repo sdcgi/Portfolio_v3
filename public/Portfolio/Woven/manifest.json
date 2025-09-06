@@ -6,28 +6,16 @@
       "src": "/Portfolio/Woven/Money%20Weave%207%20Adobe%20copy-2.jpg"
     },
     {
-      "src": "/Portfolio/Woven/Money%20Weave%207%20Adobe%20copy.jpg"
-    },
-    {
       "src": "/Portfolio/Woven/Money%20Weave%2020+20-2.jpg"
-    },
-    {
-      "src": "/Portfolio/Woven/Money%20Weave%2020+20.jpg"
-    },
-    {
-      "src": "/Portfolio/Woven/Money-Weave-7-Adobe-copy.jpg"
-    },
-    {
-      "src": "/Portfolio/Woven/Money-Weave-20+20.jpg"
     },
     {
       "src": "/Portfolio/Woven/ret-Money-Weave-7-Adobe-copy-2.jpg"
     },
     {
       "src": "/Portfolio/Woven/ret-Money-Weave-20+20-2.jpg"
-    },
-    {
-      "src": "/Portfolio/Woven/ret-Money-Weave-20+20.jpg"
     }
-  ]
+  ],
+  "maxColumns": 2,
+  "aspectRatio": "0",
+  "titleDisplay": 0
 }

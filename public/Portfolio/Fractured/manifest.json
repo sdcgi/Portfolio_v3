@@ -11,5 +11,8 @@
     {
       "src": "/Portfolio/Fractured/Chanel-no.5-Solo_v02.Redshift_ROP1.0001-copy.jpg"
     }
-  ]
+  ],
+  "maxColumns": 3,
+  "aspectRatio": "4 / 5",
+  "titleDisplay": 0
 }

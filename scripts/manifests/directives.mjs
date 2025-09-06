@@ -1,3 +1,4 @@
+//------------------------// scripts/manifests/directives.mjs
 import path from 'node:path';
 import { readLines, clamp } from './utils.mjs';
 

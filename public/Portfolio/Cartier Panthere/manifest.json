@@ -3,25 +3,16 @@
   "cover": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV.jpg",
   "items": [
     {
+      "src": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV-2.jpg"
+    },
+    {
       "src": "/Portfolio/Cartier%20Panthere/Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV.jpg"
-    },
-    {
-      "src": "/Portfolio/Cartier%20Panthere/Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-3.jpg"
-    },
-    {
-      "src": "/Portfolio/Cartier%20Panthere/Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-2.jpg"
     },
     {
       "src": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV.jpg"
     },
     {
-      "src": "/Portfolio/Cartier%20Panthere/Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV.jpg"
-    },
-    {
-      "src": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV-2.jpg"
-    },
-    {
-      "src": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis1_FINAL_AvecBijoux_PLV.jpg"
+      "src": "/Portfolio/Cartier%20Panthere/Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-3.jpg"
     },
     {
       "src": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV-3.jpg"
@@ -31,6 +22,15 @@
     },
     {
       "src": "/Portfolio/Cartier%20Panthere/Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-4.jpg"
+    },
+    {
+      "src": "/Portfolio/Cartier%20Panthere/Cartier_Salt_Lake_BG-Simp-F1_V10_CMJN_PLV-2.jpg"
+    },
+    {
+      "src": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis1_FINAL_AvecBijoux_PLV.jpg"
     }
-  ]
+  ],
+  "maxColumns": 3,
+  "aspectRatio": "3 / 2",
+  "titleDisplay": 0
 }

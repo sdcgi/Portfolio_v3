@@ -1,3 +1,7 @@
+max_columns = 3 
+aspect_ratio = 4/5  
+------------ Overrides above --------------
+
 Pink-Scatter-Hex-3a.jpg
 Pink-Scatter-Hex-3b.jpg
 Pink-Scatter-Hex-3c.jpg

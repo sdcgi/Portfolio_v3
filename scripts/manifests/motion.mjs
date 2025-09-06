@@ -1,3 +1,4 @@
+//------------------------// scripts/manifests/motion.mjs
 import path from 'node:path';
 import { ensureDir, isHidden, pretty, writeJSON, readLines } from './utils.mjs';
 import { readOrderWithDirectives } from './directives.mjs';

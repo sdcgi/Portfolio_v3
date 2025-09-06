@@ -1,0 +1,16 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/AAAA_test/Bose/Bose-Wave-Black-Studio.jpg"
+    },
+    {
+      "src": "/Portfolio/AAAA_test/Bose/ret-BOSE-Wave-vr034-FLT.jpg"
+    },
+    {
+      "src": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg"
+    }
+  ],
+  "aspectRatio": "4 / 3"
+}

@@ -1,0 +1,154 @@
+/* ======================================================
+   CSS STYLE GUIDE — COMMENTING & SECTIONING RULES
+   ======================================================
+
+   PURPOSE:
+   This document enforces a strict comment format for clarity,
+   visual symmetry, and safe copy/paste boundaries. The style is
+   designed to be operator-friendly and unambiguous.
+
+   1. DIRECTORY
+      - Always at the top of every file.
+      - Label: "CSS DIRECTORY" with dashed lines above and below.
+      - Lists major sections (1.0, 2.0, 3.0) and subsections (1.1, 1.2).
+      - Directory is *not boxed*, just plain text with separators.
+      - Example:
+
+        /*    CSS DIRECTORY
+        ---------------------------
+
+           1.0  TYPOGRAPHY
+                1.1 Base Fonts
+                1.2 Headings
+
+           2.0  LAYOUT
+                2.1 Grid
+                2.2 Lightbox
+
+        ---------------------------
+        */
+
+   2. MAJOR SECTION HEADERS
+      - Fully boxed using '=' lines at top and bottom.
+      - Fixed line width: ~60 characters (all lines equal length).
+      - Section number is on the left.
+      - Section text is in square brackets [ SECTION NAME ].
+      - The *words* must be visually centred between left and right '='.
+        Do not centre including the numbers — ignore them for alignment.
+      - Leave a blank line after the section box.
+      - Example:
+
+        /* ======================================================
+                      1.0   [ TYPOGRAPHY ]
+           ====================================================== */
+
+   3. SUBSECTION HEADERS
+      - Single dashed divider lines, same width as the '=' lines.
+      - Subsection text should appear centred by balancing dashes.
+      - The trailing '*/' must line up vertically across ALL subsection lines.
+      - Adjust the number of '-' so that alignment is exact.
+      - Example:
+
+        /* ---------------- 1.1 Base Fonts ---------------------- */
+
+   4. END MARKERS
+      - Required at the end of every major section.
+      - Start with '=' padding on both sides of the text.
+      - Include "END", the section number, and the section name.
+      - Square brackets [ ] are **not** used here.
+      - The trailing '*/' must line up vertically across ALL END markers.
+      - Adjust the number of '=' so that alignment is exact.
+      - Example:
+
+        /* ============== END 1.0  TYPOGRAPHY ================== */
+
+   5. WIDTH & ALIGNMENT
+      - Pick a fixed total width (e.g. 60 chars).
+      - Every line in section headers, subsection dividers, and END markers
+        must expand/contract '=' or '-' so that the final '*/' column
+        is perfectly aligned vertically with all others in the file.
+      - This applies even when section names are longer or shorter.
+
+   6. CONSISTENCY RULES
+      - Every CSS rule belongs inside a section or subsection.
+      - No orphan rules floating outside sections.
+      - When adding new sections, append sequential numbers
+        (4.0, 5.0...) — do not renumber existing sections.
+      - Directory must always match the current file structure.
+
+   7. SECTION SEPARATORS
+      - For additional clarity between major sections, insert a dotted block:
+          /* 
+          .
+          .
+          .
+          */
+      - This is optional but recommended for long files.
+
+   QUICK VISUAL REFERENCE (EXAMPLE ONLY)
+
+   /*    CSS DIRECTORY
+   ---------------------------
+
+      1.0  SECTION ONE
+           1.1 Subsection
+           1.2 Subsection
+
+      2.0  SECTION TWO
+           2.1 Subsection
+           2.2 Subsection
+
+      3.0  SECTION THREE
+           3.1 Subsection
+           3.2 Subsection
+
+   ---------------------------
+   */
+
+   /* ======================================================
+                 1.0   [ SECTION ONE ]
+      ====================================================== */
+
+   /* ---------------- 1.1 Subsection ---------------------- */
+   /*  (operator notes / knobs here)                         */
+
+   /* ---------------- 1.2 Subsection ---------------------- */
+   /*  (operator notes / knobs here)                         */
+
+   /* ============== END 1.0  SECTION ONE ================== */
+
+   /* 
+   .
+   .
+   .
+   */
+
+   /* ======================================================
+                 2.0   [ SECTION TWO ]
+      ====================================================== */
+
+   /* ---------------- 2.1 Subsection ---------------------- */
+   /*  (operator notes / knobs here)                         */
+
+   /* ---------------- 2.2 Subsection ---------------------- */
+   /*  (operator notes / knobs here)                         */
+
+   /* ============== END 2.0  SECTION TWO ================== */
+
+   /* 
+   .
+   .
+   .
+   */
+
+   /* ======================================================
+                3.0   [ SECTION THREE ]
+      ====================================================== */
+
+   /* ---------------- 3.1 Subsection ---------------------- */
+   /*  (operator notes / knobs here)                         */
+
+   /* ---------------- 3.2 Subsection ---------------------- */
+   /*  (operator notes / knobs here)                         */
+
+   /* ============== END 3.0  SECTION THREE ================ */

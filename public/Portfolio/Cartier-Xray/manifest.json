@@ -47,5 +47,8 @@
     {
       "src": "/Portfolio/Cartier-Xray/Muguet.jpg"
     }
-  ]
+  ],
+  "maxColumns": 4,
+  "aspectRatio": "3 / 2",
+  "titleDisplay": 0
 }

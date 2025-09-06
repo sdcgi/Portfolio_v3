@@ -1,15 +1,15 @@
 {
   "kind": "stills-gallery",
-  "cover": "/Portfolio/Rolex/Rolex_Submariner_Print-01-FLT.jpg",
+  "cover": "/Portfolio/Rolex/Rolex_Submariner_Print-02-Close-2.jpg",
   "items": [
+    {
+      "src": "/Portfolio/Rolex/Rolex_Submariner_Print-02-Close-1.jpg"
+    },
     {
       "src": "/Portfolio/Rolex/Rolex_Submariner_Print-01-FLT.jpg"
     },
     {
       "src": "/Portfolio/Rolex/Rolex_Submariner_Print-01bk-FLT.jpg"
-    },
-    {
-      "src": "/Portfolio/Rolex/Rolex_Submariner_Print-02-Close-1.jpg"
     },
     {
       "src": "/Portfolio/Rolex/Rolex_Submariner_Print-02-Close-2.jpg"

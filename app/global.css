@@ -1,12 +1,60 @@
-html { scrollbar-gutter: stable both-edges; }
-@import './variables.css';
+/* ---------- app/global.css ---------- */
+
+html {
+  scrollbar-gutter: stable; /* reserve only on the scrollbar side (right in LTR) */
+  scrollbar-width: thin;
+  scrollbar-color: #393812 #d0d0d0;
+}
+
+/* Fallback for older browsers */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: #aaa;
+} 
+
+*::-webkit-scrollbar-thumb {
+  background: #393812;
+  border-radius: 1ex;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
 
 /* Minimal, neutral; no shadows, no rounded corners */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
 body { font-family: var(--font-sans); color: var(--text); background: var(--bg); }
 
-/* Fixed/sticky header with blur */
+/* ========================================================= */
+/* ******** CURSOR KNOBS — SITE-WIDE & LIGHTBOX ************ */
+/* ========================================================= */
+:root{
+  /* general interactive cursor (links, buttons) */
+  --cursor-interactive: pointer;
+
+  /* lightbox edge hotzones (left/right) */
+  --cursor-hot-left: w-resize;
+  --cursor-hot-right: e-resize;
+
+  /* leaf image zoom hint (optional) */
+  --cursor-zoom: zoom-in;
+}
+
+:root{
+  /* Containers */
+  --frame-inline: 20px;              /* same horizontal inset as your header */
+  --content-inline: var(--frame-inline);
+  --bp-grid-1col: 640px;
+  --bp-bleed: var(--bp-grid-1col);
+
+  /* Breakpoints */
+  --bp-grid-1col: 640px;     /* grid becomes 1 column */
+  --bp-bleed: var(--bp-grid-1col);  /* when grid should go full-bleed (keep equal unless you want stagger) */
+  --bp-header-wrap: 600px;   /* when nav moves under brand (independent) */
+}
+
+/* ========================================================= */
+/* HEADER */
+/* ========================================================= */
 .site-header {
   position: sticky; top: 0; z-index: 100;
   border-bottom: 1px solid var(--border);
@@ -14,46 +62,70 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   -webkit-backdrop-filter: blur(var(--header-blur));
   background: var(--header-bg);
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 14px 20px; }
-.brand a { color: inherit; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; }
-.main-nav { display: flex; gap: 18px; }
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px; margin: 0 auto; padding: 14px 20px;
+}
+.brand a {
+  color: inherit; text-decoration: none; font-weight: 600; letter-spacing: 0.5px;
+}
+.main-nav {
+  display: flex; gap: 1em;
+  font-size: 14px; font-weight: 400; letter-spacing: 0.2px;
+}
 .main-nav a { color: inherit; text-decoration: none; }
 .main-nav a:hover { text-decoration: underline; }
 
+/* ========================================================= */
+/* LAYOUT STRUCTURE */
+/* ========================================================= */
 .site-main { max-width: 1200px; margin: 0 auto; padding: 24px; }
 
-.breadcrumbs { font-size: 13px; color: var(--muted); margin: 8px 0 16px; }
+.bleed-mobile { margin-inline: 0; }
+@media (max-width: var(--bp-bleed)) {
+  .bleed-mobile { margin-inline: calc(-1 * var(--content-inline)); }
+}
+
+/* ========================================================= */
+/* BREADCRUMBS */
+/* ========================================================= */
+.breadcrumbs {font-size: 13px; color: var(--muted); margin: 16px 0 4px;}
 .breadcrumbs a { color: inherit; text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 
-.grid-toolbar { display: flex; align-items: center; justify-content: space-between; margin: 6px 0 14px; }
+/* ========================================================= */
+/* GRID & TOOLBAR */
+/* ========================================================= */
+.grid-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 6px 0 14px;
+}
 .grid-toolbar .density { display: inline-flex; gap: 8px; }
-.grid-toolbar button { background: transparent; border: 1px solid var(--border); padding: 6px 10px; cursor: pointer; color: inherit; }
+.grid-toolbar button {
+  background: transparent; border: 0; padding: 6px 10px;
+  cursor: pointer; color: inherit;
+}
 .grid-toolbar button[aria-pressed="true"] { background: var(--accent-bg); }
 
 /* Grid — gap controlled by variables */
 .grid { display: grid; gap: var(--gap, var(--gap-comfy)); }
 
-/* Columns: Desktop 3–6; Tablet 2; Mobile 1 full-bleed */
-@media (min-width: 1100px) { .grid { grid-template-columns: repeat(var(--cols, 4), 1fr); } }
-@media (min-width: 740px) and (max-width: 1099px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 739px) {
-  .grid { grid-template-columns: 1fr; }
-  .site-main { padding: 0; } /* full-bleed mobile */
-  .page-inner { padding: 12px; }
-}
-
-/* ===== Aspect ratio plumbing (folder override wins) ====================== */
+/* Aspect ratio plumbing */
 .grid.level-top        { --ratio: var(--grid-ratio, var(--tile-aspect-top,        1 / 1)); }
 .grid.level-sub        { --ratio: var(--grid-ratio, var(--tile-aspect-sub,        1 / 1)); }
 .grid.level-leaf       { --ratio: var(--grid-ratio, var(--tile-aspect-leaf,       1 / 1)); }
 .grid.level-motion-top { --ratio: var(--grid-ratio, var(--tile-aspect-motion-top, 16 / 9)); }
 
 /* Tiles */
-.tile { border: 0; position: relative; display: flex; flex-direction: column; }
-.tile:focus, .tile.clickable:focus, a.tile:focus { outline: none; }
+.tile {
+  border: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  container-type: inline-size;   /* enables cqw (container query width units) */
+}
 
-/* The actual aspect enforcement. Next/Image fill works fine with aspect-ratio. */
+/* Aspect enforcement */
 .tile .media {
   position: relative;
   width: 100%;
@@ -69,18 +141,59 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   object-fit: cover;
 }
 
-/* Subtle hover zoom (disabled on touch) */
+/* Hover zoom (disabled on touch) */
 @media (hover:hover){
   .tile:hover .media img,
   .tile:hover .media video { transform: scale(var(--hover-zoom-scale)); }
 }
 
-/* Meta text uses site font; never looks like a link */
-.tile .meta { padding: 8px 2px 0; display: flex; justify-content: space-between; gap: 8px; font-family: var(--font-sans); }
-.tile .label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.tile .count { color: var(--muted); font-size: 12px; }
+/* Meta (title + count) */
+.tile .meta{
+  display: flex;
+  align-items: baseline;                 /* same baseline */
+  justify-content: space-between;        /* title left, count right */
+  margin-top: var(--meta-offset, 0.5rem);
+  padding: 0 2px 0;
+  font-family: var(--font-sans);
+  /* continuous sizing: clamp( min , scale by tile width , max ) */
+  font-size: clamp(var(--meta-min, 0.78rem), var(--meta-scale, 2.2cqw), var(--meta-max, 1rem));
+  line-height: var(--meta-line, 1.2);
+}
+.tile .label{
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
-/* Only the image is a link on folder tiles (meta is not clickable) */
+  /* type tokens */
+  font-family: var(--type-title-font, var(--font-sans));
+  font-size: calc(1em * var(--type-title-scale, 1));  /* inherits from .meta */
+  line-height: var(--meta-line, 1.2);
+  font-weight: var(--type-title-weight, 600);
+  letter-spacing: var(--type-title-tracking, 0.2px);
+  text-transform: var(--type-title-transform, none);
+  color: var(--type-title-color, var(--text));
+}
+
+.tile .count{
+  flex: 0 0 auto;
+  margin-left: 1ch;
+  text-align: right;
+  white-space: nowrap;
+
+  /* type tokens */
+  font-family: var(--type-count-font, var(--font-sans));
+  font-size: calc(1em * var(--type-count-scale, 0.95)); /* inherits from .meta */
+  line-height: var(--meta-line, 1.2);
+  font-weight: var(--type-count-weight, 400);
+  letter-spacing: var(--type-count-tracking, 0.1px);
+  text-transform: var(--type-count-transform, none);
+  color: var(--type-count-color, var(--muted));
+  opacity: var(--type-count-opacity, 0.8);
+}
+
+/* Prevent meta links from stealing the hit target (tile/link handles it) */
 .tile .meta a { pointer-events: none; }
 
 /* Single-image grid: center and keep width of one 2-col cell */
@@ -93,8 +206,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .grid.single-one .tile { width: 100%; max-width: none; }
 }
 
-/* Leaf-native mode: use chosen object-fit for images/videos in leaf grids */
-/* Leaf-native mode applies ONLY to leaf image grids (class added by Grid.tsx) */
+/* Leaf-native mode */
 .grid.leaf-native .tile .media img,
 .grid.leaf-native .tile .media video { object-fit: var(--leaf-native-fit); }
 
@@ -104,21 +216,7 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 .grid.level-top  .tile .media video,
 .grid.level-sub  .tile .media video { object-fit: cover !important; }
 
-/* 3-image leaves: force 3 columns on desktop */
-@media (min-width: 1100px) {
-  .grid.cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
-}
-
-/* Lightbox */
-.lb-overlay { position: fixed; inset: 0; background: var(--lightbox-overlay); display: flex; align-items: center; justify-content: center; z-index: 1000; height: 100lvh; }
-.lb-content { max-width: var(--lightbox-max-w); max-height: var(--lightbox-max-h); display: flex; align-items: center; justify-content: center; }
-.lb-content img, .lb-content video { max-width: 100%; max-height: 100%; object-fit: contain; }
-.lb-ui { position: fixed; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 20px; color: #fff; }
-.lb-btn { background: transparent; border: 1px solid #fff; color: #fff; padding: 8px 12px; cursor: pointer; }
-.lb-close { position: fixed; top: 12px; right: 12px; }
-
 /* Utilities */
-.page-inner { padding: 8px 0 24px; }
 .hidden { display: none; }
 
 /* Hover zoom conditioned by level knobs */
@@ -130,3 +228,44 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   .grid .tile:hover .media img,
   .grid .tile:hover .media video{transform:scale(calc(1 + (var(--hover-enabled) * (var(--hover-zoom-scale) - 1))));}
 }
+
+/* ======================================================
+   1-COL GRID FULL-BLEED INSIDE .site-main
+   ====================================================== */
+@media (max-width: 640px) {
+  .site-main .bleed-mobile {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+
+/* ======================================================
+   GRID TRACK STABILITY — prevent min-content blowouts
+   ====================================================== */
+.grid > * { min-width: 0; }
+.tile { min-width: 0; }
+.tile .meta, .tile .label { min-width: 0; }
+
+/* ======================================================
+          9.0   [ MOBILE BLEED GUARD ]
+   ====================================================== */
+
+/* Only the section marked .bleed-mobile should bleed on narrow viewports.
+   Breadcrumbs (and other content) remain within the .content width. */
+@media (max-width: 640px) {
+  section.bleed-mobile {
+    /* Cancel the .content horizontal padding to touch viewport edges */
+    margin-inline: calc(-1 * var(--bleed-offset));
+  }
+
+  /* Ensure crumbs never bleed */
+  .content > nav.breadcrumbs,
+  .content .breadcrumbs {
+    margin-inline: 0;
+  }
+}
+
+/* ============ END 9.0  MOBILE BLEED GUARD ============ */
+
+/* Leaves never show counts (defensive) */
+.grid.level-leaf .meta .count { display: none !important; }

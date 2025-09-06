@@ -2,6 +2,16 @@
   "kind": "portfolio-root",
   "folders": [
     {
+      "name": "AAAA_test",
+      "displayName": "AAAA Test",
+      "path": "/Portfolio/AAAA_test",
+      "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+      "counts": {
+        "images": 0,
+        "folders": 3
+      }
+    },
+    {
       "name": "Sliced",
       "displayName": "Sliced",
       "path": "/Portfolio/Sliced",
@@ -87,7 +97,7 @@
       "path": "/Portfolio/Cartier%20Panthere",
       "cover": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV.jpg",
       "counts": {
-        "images": 10,
+        "images": 9,
         "folders": 0
       }
     },
@@ -905,7 +915,7 @@
       "name": "Rolex",
       "displayName": "Rolex",
       "path": "/Portfolio/Rolex",
-      "cover": "/Portfolio/Rolex/Rolex_Submariner_Print-01-FLT.jpg",
+      "cover": "/Portfolio/Rolex/Rolex_Submariner_Print-02-Close-2.jpg",
       "counts": {
         "images": 4,
         "folders": 0
@@ -1087,7 +1097,7 @@
       "path": "/Portfolio/Woven",
       "cover": "/Portfolio/Woven/Money%20Weave%207%20Adobe%20copy-2.jpg",
       "counts": {
-        "images": 9,
+        "images": 4,
         "folders": 0
       }
     },

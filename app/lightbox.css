@@ -1,0 +1,142 @@
+/* ========================================================= */
+/* ================= Lightbox UI tokens ==================== */
+/* ========================================================= */
+:root{
+  /* ******** LB UI KNOBS — ARROW/CLOSE BOXES (size, color, timing) ******** */
+  /* fade timing */
+  --lb-ui-hide-ms: 2000;             /* how long arrows stay visible (ms) */
+  --lb-ui-fade-duration: 2000ms;     /* fade animation duration */
+
+  /* shared box styling for arrows + close */
+  --lb-ui-bg: rgba(255,255,255,0.92);
+  --lb-ui-color: #6d6d6d;
+  --lb-ui-weight: 400;
+  --lb-ui-size: 56px;                /* square box size */
+  --lb-ui-icon-size: 48px;           /* glyph size (boxes set this; icons inherit) */
+  --lb-ui-edge-margin: 12px;         /* distance from screen edges */
+
+  /* hotzone sizing */
+  --lb-hotzone-width: 20vw;          /* clickable area width at edges */
+
+  /* ========================================================= */
+  /* ******** ICON KNOBS — EDIT ICON LOOK & FEEL HERE ******** */
+  /* Applies to all <span class="material-symbols-outlined"> used in LB */
+  /* ========================================================= */
+  --lb-icon-fill: 0;                 /* 0 = outlined, 1 = filled */
+  --lb-icon-wght: 200;               /* stroke weight (100–700) */
+  --lb-icon-grad: 0;                 /* grade (−50 to +200) */
+  --lb-icon-opsz: 24;                /* optical size (20–48) */
+  /* NOTE: we do NOT set icon size here—icons inherit from their parent box. */
+  --lb-icon-color: #000;             /* default icon color (can be overridden) */
+}
+
+/* ========================================================= */
+/* ============ Material Symbols — baseline setup =========== */
+/* ========================================================= */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;                /* <<< IMPORTANT: inherit from parent box */
+  color: var(--lb-icon-color);
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings:
+    'FILL' var(--lb-icon-fill),
+    'wght' var(--lb-icon-wght),
+    'GRAD' var(--lb-icon-grad),
+    'opsz' var(--lb-icon-opsz);
+}
+
+/* Optional: override JUST for the close button’s icon */
+.lb-close-permanent .material-symbols-outlined {
+  --lb-icon-fill: 1;        /* filled X */
+  --lb-icon-wght: 400;      /* medium stroke */
+  --lb-icon-color: #2f2f2f; /* darker */
+}
+
+/* ========================================================= */
+/* ===================== Lightbox base ===================== */
+/* ========================================================= */
+.lb-overlay {
+  position: fixed; inset: 0;
+  background: var(--lightbox-overlay);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000; height: 100lvh;
+}
+.lb-content {
+  max-width: var(--lightbox-max-w);
+  max-height: var(--lightbox-max-h);
+  display: flex; align-items: center; justify-content: center;
+}
+.lb-content img, .lb-content video {
+  max-width: 100%; max-height: 100%; object-fit: contain;
+}
+
+/* ******** LIGHTBOX: HOTZONE CURSORS ******** */
+.lb-hotzone {
+  position: fixed; top: 0;
+  width: var(--lb-hotzone-width);
+  height: 100lvh;
+  background: transparent; border: none; padding: 0;
+  display: flex; align-items: center;
+}
+/* Directional cursors: left = w-resize, right = e-resize */
+.lb-hotzone.lb-left  { left: 0;  justify-content: flex-start; cursor: var(--cursor-hot-left, w-resize); }
+.lb-hotzone.lb-right { right: 0; justify-content: flex-end;   cursor: var(--cursor-hot-right, e-resize); }
+
+/* OPTIONAL: custom SVG cursor icons (commented). Remove comments to use.
+   Note: add 2nd fallback keyword to satisfy all browsers. */
+/*
+.lb-hotzone.lb-left  { cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'>\
+<path d='M15 6l-6 6 6 6' fill='none' stroke='%23000' stroke-width='2'/>\
+</svg>") 6 12, w-resize; }
+
+.lb-hotzone.lb-right { cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'>\
+<path d='M9 6l6 6-6 6' fill='none' stroke='%23000' stroke-width='2'/>\
+</svg>") 18 12, e-resize; }
+*/
+
+
+/* Visible arrow boxes: flat, centered; fade with CSS */
+.lb-arrow{
+  width: var(--lb-ui-size);
+  height: var(--lb-ui-size);
+  background: var(--lb-ui-bg);
+  color: var(--lb-ui-color);
+  font-weight: var(--lb-ui-weight);
+  font-size: var(--lb-ui-icon-size); /* icon spans inherit this */
+  line-height: 1;
+  border: none; border-radius: 0;
+  margin: 0 var(--lb-ui-edge-margin);
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none; /* clicks handled by hotzone */
+  opacity: 1;
+  transition: opacity var(--lb-ui-fade-duration) ease;
+}
+.lb-arrow.is-hidden { opacity: 0; }
+
+/* Permanent close button (top-right), shares tokens */
+.lb-close-permanent{
+  position: fixed;
+  top: var(--lb-ui-edge-margin);
+  right: var(--lb-ui-edge-margin);
+  width: var(--lb-ui-size);
+  height: var(--lb-ui-size);
+  background: var(--lb-ui-bg);
+  color: var(--lb-ui-color);
+  font-weight: var(--lb-ui-weight);
+  font-size: calc(var(--lb-ui-icon-size) * 0.56); /* smaller glyph */
+  line-height: 1;
+  border: none; border-radius: 0;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.lb-close-permanent:hover { filter: brightness(1.02); }

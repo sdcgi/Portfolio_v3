@@ -1,0 +1,22 @@
+{
+  "kind": "stills-gallery",
+  "cover": "/Portfolio/AAAA_test/Chair/CHAIR-School-seat-Cube-04.jpg",
+  "items": [
+    {
+      "src": "/Portfolio/AAAA_test/Chair/CHAIR-School-Chair-Helix-2.jpg"
+    },
+    {
+      "src": "/Portfolio/AAAA_test/Chair/CHAIR-School-seat-ball-05.jpg"
+    },
+    {
+      "src": "/Portfolio/AAAA_test/Chair/CHAIR-School-seat-Cube-04.jpg"
+    },
+    {
+      "src": "/Portfolio/AAAA_test/Chair/NS_Chairwall-Unstable-Symmetry_0010-copy.jpg"
+    },
+    {
+      "src": "/Portfolio/AAAA_test/Chair/CHAIR-Chairwall.jpg"
+    }
+  ],
+  "maxColumns": 3
+}

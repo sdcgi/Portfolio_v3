@@ -1,3 +1,4 @@
+/* path: app/portfolio/page.tsx */
 // app/portfolio/page.tsx
 'use client';
 import Grid, { type Tile } from '@/components/Grid';
@@ -7,6 +8,7 @@ import { useEffect, useState } from 'react';
 type Counts = { images?: number; folders?: number };
 type Folder = { name: string; displayName: string; path: string; cover: string | null; counts?: Counts };
 
+// new code  (TOP stays override-free)
 export default function PortfolioTop(){
   const [tiles, setTiles] = useState<Tile[] | null>(null);
 
@@ -28,12 +30,11 @@ export default function PortfolioTop(){
   },[]);
 
   return (
-    <div>
+    <div className="content">
       <Breadcrumbs baseLabel="Stills" />
-      {tiles === null ? null : (
-        // No desktopCols prop here → Grid will use --grid-max-default
-        <Grid items={tiles} level="top" />
-      )}
+      <section className="bleed-mobile">
+        <Grid items={tiles ?? []} level="top" />
+      </section>
     </div>
   );
 }
