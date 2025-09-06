@@ -1,12 +1,20 @@
 {
   "kind": "portfolio-folder",
   "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+  "coverMeta": {
+    "w": 2048,
+    "h": 1310,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA0yGKSwQD/8QAHBAAAgIDAQEAAAAAAAAAAAAAAREAEgIDBBNR/9oACAEBAAE/AEAIejnBr6a7WVbhuIESwyCMPPotapf2MYhCf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8AP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8AP//Z"
+  },
   "folders": [
     {
       "name": "Bose",
       "displayName": "Bose",
       "path": "/Portfolio/AAAA_test/Bose",
       "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+      "coverW": 2048,
+      "coverH": 1310,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA0yGKSwQD/8QAHBAAAgIDAQEAAAAAAAAAAAAAAREAEgIDBBNR/9oACAEBAAE/AEAIejnBr6a7WVbhuIESwyCMPPotapf2MYhCf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8AP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8AP//Z",
       "counts": {
         "images": 3,
         "folders": 0
@@ -17,6 +25,9 @@
       "displayName": "Chair",
       "path": "/Portfolio/AAAA_test/Chair",
       "cover": "/Portfolio/AAAA_test/Chair/CHAIR-School-seat-Cube-04.jpg",
+      "coverW": 2048,
+      "coverH": 2048,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAEEAgMFBv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAPH57bkactYVNeQUBr//xAAhEAACAgICAQUAAAAAAAAAAAABAgARAxIEMSEjUXFzgf/aAAgBAQABPwBMbOfH7Bi26I+DHxsnc4l+p7VMbAI9bAfYpnJN6xMjJepgysLqNkZxRM//xAAYEQADAQEAAAAAAAAAAAAAAAABAhEAEP/aAAgBAgEBPwBmIuU0aDn/xAAYEQEAAwEAAAAAAAAAAAAAAAABAAIREP/aAAgBAwEBPwCtRyWAZrz/2Q==",
       "counts": {
         "images": 5,
         "folders": 0

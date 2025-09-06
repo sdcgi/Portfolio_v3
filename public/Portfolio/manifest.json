@@ -6,6 +6,9 @@
       "displayName": "AAAA Test",
       "path": "/Portfolio/AAAA_test",
       "cover": "/Portfolio/AAAA_test/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+      "coverW": 2048,
+      "coverH": 1310,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA0yGKSwQD/8QAHBAAAgIDAQEAAAAAAAAAAAAAAREAEgIDBBNR/9oACAEBAAE/AEAIejnBr6a7WVbhuIESwyCMPPotapf2MYhCf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8AP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8AP//Z",
       "counts": {
         "images": 0,
         "folders": 3
@@ -26,6 +29,9 @@
       "displayName": "Fractured",
       "path": "/Portfolio/Fractured",
       "cover": "/Portfolio/Fractured/Chanel-no.5_w11_v03.Close_A.STILL_.0074-copy.jpg",
+      "coverW": 3000,
+      "coverH": 2400,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAATABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAYFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAACO673KKXbQbiTEqRX/xAAiEAACAgIBBAMBAAAAAAAAAAABAgMRAAUEIjFDURASFUH/2gAIAQEAAT8AyJGaB6juzV5JAUCNVBv56OT6XWz+AIfadOPqIeKpT7dLvSX3Jzk6vneOFjF8buR/0uIlmguREtHGT3KjP//EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAECAQE/AGP/xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAwEBPwAj/9k=",
       "counts": {
         "images": 3,
         "folders": 0
@@ -86,6 +92,9 @@
       "displayName": "Imaginary Watches",
       "path": "/Portfolio/Imaginary%20Watches",
       "cover": "/Portfolio/Imaginary%20Watches/Meteor_03b_SQ_FNT.jpg",
+      "coverW": 2048,
+      "coverH": 2560,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUCAwEEBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAOSui6EpYGu0U5JlIf/EACEQAAICAQQCAwAAAAAAAAAAAAIRAAEDBBIhQRNRBWGR/9oACAEBAAE/ABpzxMBKyFtJ8zICFwLpfcvT48ekveN1k6fcMLEefVwb4mT5Ty4QHJjZj+Qzs3d+5Sm60unHP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z",
       "counts": {
         "images": 9,
         "folders": 0
@@ -96,6 +105,9 @@
       "displayName": "Cartier Panthere",
       "path": "/Portfolio/Cartier%20Panthere",
       "cover": "/Portfolio/Cartier%20Panthere/CartierIndiaLake_A_CLIENT_Vis2_FINAL_AvecBijoux_02_PLV.jpg",
+      "coverW": 3000,
+      "coverH": 2185,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQYC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAOk84uiFYTFOMskcwR//xAAiEAEAAQMDBAMAAAAAAAAAAAABAAIDBBITIREUM3E0UrH/2gAIAQEAAT8AqAOrGhm0zusvJsGqmlGqYuRdebuk4ABm9b+xD456Zi+Or2fkZ//EABkRAAIDAQAAAAAAAAAAAAAAAAARARASIf/aAAgBAgEBPwDXUMiv/8QAFxEAAwEAAAAAAAAAAAAAAAAAARASMf/aAAgBAwEBPwCSji//2Q==",
       "counts": {
         "images": 9,
         "folders": 0
@@ -106,6 +118,9 @@
       "displayName": "Cartier Xray",
       "path": "/Portfolio/Cartier-Xray",
       "cover": "/Portfolio/Cartier-Xray/Kinkan-Black.jpg",
+      "coverW": 2455,
+      "coverH": 3000,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAdABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQBAwb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAD0jjOXOIpjtGNH/8QAIRAAAgIBAwUBAAAAAAAAAAAAAhEAARIEE0EDFCAiMUP/2gAIAQEAAT8AM6BPmbvTacAxOyXE1Al6nXEyptVmvk0437HfMunSmyPe5Yfn9cqlS8P/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q==",
       "counts": {
         "images": 15,
         "folders": 0
@@ -116,6 +131,9 @@
       "displayName": "CKW",
       "path": "/Portfolio/CKW",
       "cover": "/Portfolio/CKW/HeatPump.jpg",
+      "coverW": 2048,
+      "coverH": 1373,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAQABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADdoyaqaJD/xAAfEAABBAICAwAAAAAAAAAAAAABAAIDESExBBRTcoL/2gAIAQEAAT8AiWNWpAm8nOgmmQkUWX7UpO142H7X/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8AV//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oACAEDAQE/AFj/2Q==",
       "counts": {
         "images": 7,
         "folders": 0
@@ -136,6 +154,9 @@
       "displayName": "Black Bags",
       "path": "/Portfolio/Black%20Bags",
       "cover": "/Portfolio/Black%20Bags/Bag-Procedural_0003.jpg",
+      "coverW": 1280,
+      "coverH": 1024,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAATABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIDAQQG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQMA/9oADAMBAAIQAxAAAADjrZlvaypDBHQCf//EAB0QAAIDAAIDAAAAAAAAAAAAAAECABESAzEQE0H/2gAIAQEAAT8AAioTOPkxUTKNdXPZlw2fvUL6swGN0PH/xAAZEQABBQAAAAAAAAAAAAAAAAAAAQIQETH/2gAIAQIBAT8AwR1T/8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQMBAT8AY//Z",
       "counts": {
         "images": 3,
         "folders": 0
@@ -146,6 +167,9 @@
       "displayName": "Leather & Lenses",
       "path": "/Portfolio/Leather%20&%20Lenses",
       "cover": "/Portfolio/Leather%20&%20Lenses/Channel-Bag-on-Block-fix-05-2.jpg",
+      "coverW": 1024,
+      "coverH": 1280,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBBAUG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgME/9oADAMBAAIQAxAAAAC0KXDTvmYVjGX1FYOwNGP/xAAjEAACAgEDAwUAAAAAAAAAAAABAgADEQQhMQVBURIicYHB/9oACAEBAAE/AMgyu16GyPsGUamu8EoeOREr9IOSczUWBKyfP7vOjriix8H3vGDKSCuGHaX1vqbkrTfeVVLTUla8KJeqWDDp8EHeUaXS0WGxUYv5JgZD2M//xAAYEQACAwAAAAAAAAAAAAAAAAAAARASIf/aAAgBAgEBPwARXY//xAAYEQACAwAAAAAAAAAAAAAAAAAAARASIf/aAAgBAwEBPwAZbI//2Q==",
       "counts": {
         "images": 7,
         "folders": 0
@@ -166,6 +190,9 @@
       "displayName": "Woolite",
       "path": "/Portfolio/Woolite",
       "cover": "/Portfolio/Woolite/Woolite-Kiss.jpg",
+      "coverW": 1980,
+      "coverH": 1365,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAIBA//aAAwDAQACEAMQAAAA6tRtOyuIDN6p4psAn//EACUQAAICAgADCQAAAAAAAAAAAAECAAMEERIhciIxMzREcYKRsf/aAAgBAQABPwB8hjkWk9xflMI9lnPIAaiXVudK0rxFQPeSSg+xL+FH0p2gA18obLRocy/ENanorelpf4K9CfkxvOV+wn//xAAaEQEAAQUAAAAAAAAAAAAAAAAAARESMWHR/9oACAECAQE/AJxRbt1L/8QAHREAAgIBBQAAAAAAAAAAAAAAAQIAAxExM0FRcf/aAAgBAwEBPwAor29YENY4YRN0yzUeT//Z",
       "counts": {
         "images": 4,
         "folders": 0
@@ -196,6 +223,9 @@
       "displayName": "Bose",
       "path": "/Portfolio/Bose",
       "cover": "/Portfolio/Bose/ret-Bose-Wave-White-Studio-v2-08-FLT1.jpg",
+      "coverW": 2048,
+      "coverH": 1310,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA0yGKSwQD/8QAHBAAAgIDAQEAAAAAAAAAAAAAAREAEgIDBBNR/9oACAEBAAE/AEAIejnBr6a7WVbhuIESwyCMPPotapf2MYhCf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8AP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8AP//Z",
       "counts": {
         "images": 3,
         "folders": 0
@@ -226,6 +256,9 @@
       "displayName": "Chair",
       "path": "/Portfolio/Chair",
       "cover": "/Portfolio/Chair/CHAIR-School-seat-Cube-04.jpg",
+      "coverW": 2048,
+      "coverH": 2048,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAEEAgMFBv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAPH57bkactYVNeQUBr//xAAhEAACAgICAQUAAAAAAAAAAAABAgARAxIEMSEjUXFzgf/aAAgBAQABPwBMbOfH7Bi26I+DHxsnc4l+p7VMbAI9bAfYpnJN6xMjJepgysLqNkZxRM//xAAYEQADAQEAAAAAAAAAAAAAAAABAhEAEP/aAAgBAgEBPwBmIuU0aDn/xAAYEQEAAwEAAAAAAAAAAAAAAAABAAIREP/aAAgBAwEBPwCtRyWAZrz/2Q==",
       "counts": {
         "images": 5,
         "folders": 0
@@ -326,6 +359,9 @@
       "displayName": "Chocobarre",
       "path": "/Portfolio/Chocobarre",
       "cover": "/Portfolio/Chocobarre/Blue-Pattern_0004-c-FLT.jpg",
+      "coverW": 2000,
+      "coverH": 1495,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAH/2gAMAwEAAhADEAAAANs6LTyLo21CmLMBf//EACkQAAIABAQDCQAAAAAAAAAAAAECABESIgMTI1IUIWExMjNBQlFxcoH/2gAIAQEAAT8AIeg6K961NvUwAc5tP03t7/WBTwzzwiEnaPMxpZT3vKvm2+BTnpeZ02Lt+YTwsanGvnc57PyKVLMJCQIl0ilasY0iZUQ4HBDkI//EAB8RAAIBAgcAAAAAAAAAAAAAAAABMQLBMkFCYnFysf/aAAgBAgEBPwBOOVmV6Iw7bju/CuV1R//EACERAAECBAcAAAAAAAAAAAAAAAIAAQMyQcERISIxUXKx/9oACAEDAQE/ACabKhUUPHXvNwdk1m9QSv3Jf//Z",
       "counts": {
         "images": 10,
         "folders": 0
@@ -346,6 +382,9 @@
       "displayName": "Pepsi",
       "path": "/Portfolio/Pepsi",
       "cover": "/Portfolio/Pepsi/Pepsi-Can-with-condensation.jpg",
+      "coverW": 1980,
+      "coverH": 1365,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMEAv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgT/2gAMAwEAAhADEAAAANfefLpybE1RCwEA1//EAB4QAAICAwADAQAAAAAAAAAAAAIDAAEEERIxQWGh/9oACAEBAAE/AMcKu6hu5aIaHVnz+6mQNVdxLeYxbiy1t1XInvz93HM6gT1Cn//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEP/aAAgBAgEBPwBI3//EABkRAAIDAQAAAAAAAAAAAAAAAAExAAIQEf/aAAgBAwEBPwCpHFC9/9k=",
       "counts": {
         "images": 9,
         "folders": 0
@@ -396,6 +435,9 @@
       "displayName": "Gold Skull",
       "path": "/Portfolio/Gold-Skull",
       "cover": "/Portfolio/Gold-Skull/Gold-Skull_0001-FLT.jpg",
+      "coverW": 2000,
+      "coverH": 2000,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIFAf/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAAA3+dyJdZK84kGgz//xAAhEAACAgECBwAAAAAAAAAAAAABAgARAxIhBBMiIzFBwf/aAAgBAQABPwDGgqHMguxQjBXUMu4MezhejRqd5hu51F78TEnL4dFPoRMgqoUvbV0/Jkyz/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQIQ/9oACAECAQE/ALpnEHP/xAAXEQEBAQEAAAAAAAAAAAAAAAABAgAQ/9oACAEDAQE/AIgoc4pOf//Z",
       "counts": {
         "images": 4,
         "folders": 0
@@ -436,6 +478,9 @@
       "displayName": "Harris",
       "path": "/Portfolio/Harris",
       "cover": "/Portfolio/Harris/Tweed-headphones-10.jpg",
+      "coverW": 2048,
+      "coverH": 2048,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA8zYtcSOAQD//xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIRIRL/2gAIAQEAAT8A6Ohtohy3olG3eYTpPC9FN2OVn//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z",
       "counts": {
         "images": 3,
         "folders": 0
@@ -526,6 +571,9 @@
       "displayName": "Qbit",
       "path": "/Portfolio/Qbit",
       "cover": "/Portfolio/Qbit/qbit-07.jpg",
+      "coverW": 2048,
+      "coverH": 1536,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAMEAQIFBv/EABcBAQEBAQAAAAAAAAAAAAAAAAIDAAH/2gAMAwEAAhADEAAAAPOXqs03MwPd+aZThz//xAAkEAACAgEEAgEFAAAAAAAAAAABAgMRAAQSISITQQVDUWJx0f/aAAgBAQABPwD8HLkIDVcD95D0XRWY4eHkEi92sZEm86ZvETO7M9yno4xwFMvauoFD+j74kh05mKoqgw12FkEj1lnelB50h0+7twFJyEAxQXzcxvGJ8sg9bjnyZI1FA/RXP//EABsRAAIBBQAAAAAAAAAAAAAAAAABAgMhMTJB/9oACAECAQE/AHcabwR6U9Uf/8QAGBEBAAMBAAAAAAAAAAAAAAAAAAECITH/2gAIAQMBAT8AYlbr/9k=",
       "counts": {
         "images": 6,
         "folders": 0
@@ -546,6 +594,9 @@
       "displayName": "Beverage",
       "path": "/Portfolio/Beverage",
       "cover": "/Portfolio/Beverage/Glenmorangie/19YR_HEROLAYERS_psd%20Feb23rd%20R6Cropped%20Recolour-3.jpg",
+      "coverW": 1024,
+      "coverH": 1280,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBQYE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAANYhdbOl2LGI5zRRL6BAx//EACAQAAICAQUAAwAAAAAAAAAAAAECABEDBBITIUEjMTL/2gAIAQEAAT8AVFA7mTUqmoGAISxx778q6hVXQMPZrQvxlr7NA+Aw71JdXVW3V4SBNKW4yCbAAmZi2BwKPXsAx84sG+W5uVEAArr6iZZS7rofq6qPln//xAAcEQACAgIDAAAAAAAAAAAAAAABAgARAyEQEkH/2gAIAQIBAT8AfIEq/TUGxHTsRuuP/8QAGhEAAgMBAQAAAAAAAAAAAAAAAQIAERIQQf/aAAgBAwEBPwBU17CKMR8gir5//9k=",
       "counts": {
         "images": 0,
         "folders": 2
@@ -706,6 +757,9 @@
       "displayName": "Heineken",
       "path": "/Portfolio/Heineken",
       "cover": "/Portfolio/Heineken/CITY_ENERGY12-inter-etoile5-CMJN-def1.jpg",
+      "coverW": 1280,
+      "coverH": 914,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAUBAwb/xAAXAQADAQAAAAAAAAAAAAAAAAABAgMA/9oADAMBAAIQAxAAAADl6Ui5KMdqMcAuGH//xAAiEAACAQMCBwAAAAAAAAAAAAABAhIAAxETFCAhIjJBUnH/2gAIAQEAAT8AUO3ajH4K2N7aakWnnMfMaaanqUilLSGDW/t6RszMvamLFjI8+D//xAAYEQACAwAAAAAAAAAAAAAAAAAAEQIQIf/aAAgBAgEBPwCTxCv/xAAXEQEAAwAAAAAAAAAAAAAAAAABABAS/9oACAEDAQE/AEJkv//Z",
       "counts": {
         "images": 14,
         "folders": 0
@@ -916,6 +970,9 @@
       "displayName": "Rolex",
       "path": "/Portfolio/Rolex",
       "cover": "/Portfolio/Rolex/Rolex_Submariner_Print-02-Close-2.jpg",
+      "coverW": 2400,
+      "coverH": 3000,
+      "coverBlur": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMGBQL/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAACP12b6Rw8GhbHdICAf/8QAJRAAAgEDAwIHAAAAAAAAAAAAAQIDAAQRBRIiMUETQkNRYnGB/9oACAEBAAE/AEjeVgiIWY9gM0um3ESc7TfUyY9AJ+mtDzC73G340dRdzKjpsAOFPvWo3DTXDEdFAWtOktorKFN3LGW+zU8sD+YdKmILHB7k0szivHc0zFjX/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8AKf/EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ACH/2Q==",
       "counts": {
         "images": 4,
         "folders": 0

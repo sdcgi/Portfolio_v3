@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Light%20Work/Floating-Bland-Office-09-FLT-3.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Light%20Work/Floating-Bland-Office-09-FLT-3.jpg"
+      "src": "/Portfolio/Light%20Work/Floating-Bland-Office-09-FLT-3.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQEG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/9oADAMBAAIQAxAAAAD03KMGCus5Zh2x2QM//8QAIRAAAgICAQQDAAAAAAAAAAAAAQIAAwQREgUTMVEhQWH/2gAIAQEAAT8A468sDLDwXcFugSzD8Eqv7gRvo+plG+0kUOR8wUXIqltswEqvyK9DkfJ3MfPehTuosTLerg8OWM/uf//EAB0RAQACAgIDAAAAAAAAAAAAAAEAAhMhAxESUWH/2gAIAQIBAT8Ay5Mlaase5SnLWoeY/U7hpUDc7n//xAAZEQACAwEAAAAAAAAAAAAAAAAAAQIREjH/2gAIAQMBAT8AznLfGSkm+FFH/9k="
     },
     {
-      "src": "/Portfolio/Light%20Work/Floating-Bland-Office-09-FLT.jpg"
+      "src": "/Portfolio/Light%20Work/Floating-Bland-Office-09-FLT.jpg",
+      "w": 3068,
+      "h": 2169,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIFBgME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAADUwyHfGr5nR7pFV4j/xAAfEAACAgICAwEAAAAAAAAAAAABAgADERIEMRMUMiH/2gAIAQEAAT8A86fOymbrnG37PcpDE5B1MHHaxssx7njvQ5W1vnEv5HJapqyEKlSOpXG6ls//xAAbEQABBAMAAAAAAAAAAAAAAAARAAECIRAxUv/aAAgBAgEBPwAyGrV9Pn//xAAYEQACAwAAAAAAAAAAAAAAAAAAEQEQUf/aAAgBAwEBPwBRor//2Q=="
     }
   ]
 }

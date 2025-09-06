@@ -1,21 +1,37 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0001.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0001.jpg"
+      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0001.jpg",
+      "w": 3000,
+      "h": 3000,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQCBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAKcRjSEdGMJwf//EACEQAQEAAQQBBQEAAAAAAAAAAAECAwAREiFBBBQxUWFi/9oACAEBAAE/ALzYxT57OWsubhvxDo7X4Ne4YmnJKdb9uqIiiaonZXv7NZM++xEDZ5oAN9VdJTs3t99FP86rHkqEYGfPjl+BrMpWGCLGQWfxOzU4vU5OBdM7Ii+df//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0002.jpg"
+      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0002.jpg",
+      "w": 3000,
+      "h": 3000,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEDAgQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAAW68nQQKqgzB//8QAIhAAAgEEAgIDAQAAAAAAAAAAAQIRAAMhURITBGEUIjEy/9oACAEBAAE/ADe7p67sw0LA/asXLly2IIAD/wBGiwIwZqxbDBi0ycwN6oPxWcqv2n1NKCVyZxirK2yjJz4go0Z1qvK+SEV7igKpHEv7rxHQqqdgLZjZG6//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     },
     {
-      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0003.jpg"
+      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0003.jpg",
+      "w": 3000,
+      "h": 3000,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUDBAL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAC7h55DoRxcihuD/8QAIxAAAgEEAAYDAAAAAAAAAAAAAQIRAAMEEhMhIjFBcTJRYf/aAAgBAQABPwCKaSwJ+Ipn27RFZN5rY6dY8zRuhEJNxZPMeZ9UX4lwhF1aOqTzMfn3WSnE1AFZVl0dLWOTCjYDWfdY+HfD8a5o8RqvYSK//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     },
     {
-      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0004.jpg"
+      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0004.jpg",
+      "w": 3000,
+      "h": 3000,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAQP/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAC9n7MLDONM4PYH/8QAIBAAAgICAQUBAAAAAAAAAAAAAQIAAxEhBBIUIjJSYf/aAAgBAQABPwA4UEmdwhUlYMkbnNfFLovsVgusrXGhoAA4Mo1WN5llNbt17D/QjcVzcztj8xB4if/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0005.jpg"
+      "src": "/Portfolio/Sliced/Chanel-Sliced-Metal-Fluid_v02.RS_.0005.jpg",
+      "w": 3000,
+      "h": 3000,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAQBAgP/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAABRxBIM1hqD/8QAIBAAAgIDAAIDAQAAAAAAAAAAAQIDEQASITFBE0JRYf/aAAgBAQABPwAQGlZdefvijigPDuo7qayR4oUEkzan3zBJrRQnprUigcMwV7DMlgUOkH+VhjtpFWRtyDW+fJM6z0wpFs7+cRYlh3LbSrx775958qzBZV1bX6+w36M//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ],
   "aspectRatio": "4 / 5"

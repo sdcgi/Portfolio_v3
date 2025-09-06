@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Plexi/Plexi-02g-copy.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Plexi/Plexi-02g-copy.jpg"
+      "src": "/Portfolio/Plexi/Plexi-02g-copy.jpg",
+      "w": 1638,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIDBAUB/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQACA//aAAwDAQACEAMQAAAAx1L+e+QKVJboKPSET//EACEQAQACAgIBBQEAAAAAAAAAAAECEQAhMUEDBBIiYZHR/9oACAEBAAE/AAhAXhKFt3fRnkZItL+5Pci1p085IZRLFM8kvIx3LN1F5/c+Lv8AnW8l6iNcSwKGO771xeE0H6Lz3ht5BrRj1ef/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAXEQEBAQEAAAAAAAAAAAAAAAABEAIR/9oACAEDAQE/ANPIgz//2Q=="
     },
     {
-      "src": "/Portfolio/Plexi/Plexi-03-copy.jpg"
+      "src": "/Portfolio/Plexi/Plexi-03-copy.jpg",
+      "w": 1638,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAwL/xAAWAQEBAQAAAAAAAAAAAAAAAAABAwL/2gAMAwEAAhADEAAAAHFmcJ0zEzLUSqpJwUBP/8QAIhAAAgICAQMFAAAAAAAAAAAAAQIAAxExIQQSQRMiUZGh/9oACAEBAAE/AAOIPWrVicNs8xbArCxuTqMfYPiGxcdpcEkjIjZNgK/Uuz248BdS5najjGhpZRQ1jj8EdVK+dR6lCDluJ0rpWqqF1P/EABkRAAMBAQEAAAAAAAAAAAAAAAACIQESEf/aAAgBAgEBPwB3sO9OboqZ5T//xAAZEQADAQEBAAAAAAAAAAAAAAAAAiEBEhH/2gAIAQMBAT8AVZTjDqYM++w//9k="
     }
   ]
 }

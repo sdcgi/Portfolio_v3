@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Executive-Toys/Execturive-toys-Newton.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Executive-Toys/Execturive-toys-Newton.jpg"
+      "src": "/Portfolio/Executive-Toys/Execturive-toys-Newton.jpg",
+      "w": 1980,
+      "h": 1365,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwUE/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgUAAQP/2gAMAwEAAhADEAAAALxTVQwh61Dzcwx7Axn/xAAgEAEAAgECBwAAAAAAAAAAAAABAAIDBDEQITIzQXFy/9oACAEBAAE/AOBW1tiNgFdiYsmLLUa+ZQQ5sydFvlmj7WH1Cf/EABwRAAEDBQAAAAAAAAAAAAAAAAABAhEQEiIzgv/aAAgBAgEBPwBcUmC4fr6p/8QAGxEAAgEFAAAAAAAAAAAAAAAAAAECEBESMnL/2gAIAQMBAT8AbsZsluuaf//Z"
     },
     {
-      "src": "/Portfolio/Executive-Toys/executive-toys_Decision-07.jpg"
+      "src": "/Portfolio/Executive-Toys/executive-toys_Decision-07.jpg",
+      "w": 2048,
+      "h": 1463,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDBf/EABcBAQEBAQAAAAAAAAAAAAAAAAMBAgX/2gAMAwEAAhADEAAAAKcKcueUYTXRgDmIW//EABwQAAMAAgMBAAAAAAAAAAAAAAABAgMxEBEhcf/aAAgBAQABPwBoqO/pSc7KSe0Oogy5Kp+j4vZ//8QAGhEAAgIDAAAAAAAAAAAAAAAAABEBAhAhMf/aAAgBAgEBPwCEu7ZBXH//xAAWEQADAAAAAAAAAAAAAAAAAAARICH/2gAIAQMBAT8ApT//2Q=="
     }
   ]
 }

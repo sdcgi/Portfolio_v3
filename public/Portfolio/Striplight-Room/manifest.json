@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Striplight-Room/GlassStripLight-Room-05-2.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-05-2.jpg"
+      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-05-2.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAgP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAI4Y9SNBnI4uF8xrP//EACUQAAIBAwIFBQAAAAAAAAAAAAECAwAEERIhBRMjQUIxMmFyof/aAAgBAQABPwCa7S4jSNoW+zU0ReJVwy6ZCNXjhqsmiCOhwSsUvzUjHmaSzEg1zy0BjjXqa/fn8xVjOzTXI3wIJqgHDmkZpncCkSyKk6UPU8X3x22qMWyXE6wrLgwSeq9yK//EABkRAQEBAAMAAAAAAAAAAAAAAAEAEQIhMf/aAAgBAgEBPwAAs42e9sF//8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACIRH/2gAIAQMBAT8AWzO2ncMIuz//2Q=="
     },
     {
-      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-05.jpg"
+      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-05.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAAA5d2S6JKyQxAzDf/EACMQAAIBBAEDBQAAAAAAAAAAAAECAwARITESBBRBE0NRYXL/2gAIAQEAAT8AECxsAkmDz2L60ah6aL0Ak0vlSoIypOxU46OFXDKzus5K/k0onhDEkjHik7g2maJiwYEMfimlkcSC3uPqpuoaQAFyABx4g3yPs0JHQhQoUYN913TqDY55ndf/xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAgEBPwBj/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEREP/aAAgBAwEBPwCYiH//2Q=="
     },
     {
-      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-08.jpg"
+      "src": "/Portfolio/Striplight-Room/GlassStripLight-Room-08.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAMEAQIFBv/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAOTR9NBJz2S2NQiHTX//xAAkEAACAQMDBAMBAAAAAAAAAAABAgMAERIEEyEiMVGRI0GBof/aAAgBAQABPwBzHeR0HBY9Y7g2NqSKZywwZnMd7DwOfVTRQxaKD48ZX1T384VDsBtQrWbNfdr/ANrOOLdREa0ibfP1bm1SvkSJ8QRL+i1OkZuU3GPPQBY2NGddRtI8AVgeGYg1rDNGcWkRetu3iv/EABkRAAIDAQAAAAAAAAAAAAAAAAABAhAhEf/aAAgBAgEBPwDppDUq/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAExAhD/2gAIAQMBAT8A5qsUP//Z"
     }
   ]
 }

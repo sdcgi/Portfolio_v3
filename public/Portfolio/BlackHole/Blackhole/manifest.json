@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/BlackHole/Blackhole/BlackHole-L1.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/BlackHole/Blackhole/BlackHole-L1.jpg"
+      "src": "/Portfolio/BlackHole/Blackhole/BlackHole-L1.jpg",
+      "w": 4000,
+      "h": 2828,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAEDBAIG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAADx1saLrOqMx0ECP//EACIQAAICAQIHAQAAAAAAAAAAAAECAAMREkEEEBMhMTJRYf/aAAgBAQABPwCCi057eBmWIECfd5U6L7DfMv4rqlSEw2nST+Q8zP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABYRAQEBAAAAAAAAAAAAAAAAAAEgQf/aAAgBAwEBPwADWP/Z"
     },
     {
-      "src": "/Portfolio/BlackHole/Blackhole/BlackHole-L3-Edit-Twirl.jpg"
+      "src": "/Portfolio/BlackHole/Blackhole/BlackHole-L3-Edit-Twirl.jpg",
+      "w": 4000,
+      "h": 2828,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADkapapZBZmAD//xAAhEAABBAEDBQAAAAAAAAAAAAARAAECAzEEEiEUIEFCUf/aAAgBAQABPwCumcxw4+robNztxggsQpVvEqu2cMOm1EDv9gD5ClPO3D9n/8QAFREBAQAAAAAAAAAAAAAAAAAAICH/2gAIAQIBAT8Ao//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/BlackHole/Blackhole/BlackHole-L2-Edit.jpg"
+      "src": "/Portfolio/BlackHole/Blackhole/BlackHole-L2-Edit.jpg",
+      "w": 4000,
+      "h": 2828,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMEAQIG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAOPngt1UaowAD//EAB4QAAICAgIDAAAAAAAAAAAAAAERAAIEEiAhIjFy/9oACAEBAAE/AK12BC7gxz18tS9ND7lL6w5Ld15GmrhLL4f/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     }
   ]
 }

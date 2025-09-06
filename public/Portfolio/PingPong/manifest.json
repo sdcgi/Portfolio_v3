@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/PingPong/PingPong_0001c2.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/PingPong/PingPong_0001c2.jpg"
+      "src": "/Portfolio/PingPong/PingPong_0001c2.jpg",
+      "w": 1707,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAdABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECBAMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAPZToTIqOtZoED//xAAcEAEAAgIDAQAAAAAAAAAAAAABAhAAERMhIjL/2gAIAQEAAT8AxvjgIL6yHyVPculdYU1//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     },
     {
-      "src": "/Portfolio/PingPong/PingPong_abys.jpg"
+      "src": "/Portfolio/PingPong/PingPong_abys.jpg",
+      "w": 1707,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAdABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQG/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAA6quykcUMia4IAP/EACAQAQACAgIBBQAAAAAAAAAAAAEAAgMRITEQIjJBUWH/2gAIAQEAAT8AcCTg+ZqNk9l9fjyRzafVxC5bpjez2scea+tV0fbDHU7dzivQE2+P/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     },
     {
-      "src": "/Portfolio/PingPong/ret-PingPong-6k.jpg"
+      "src": "/Portfolio/PingPong/ret-PingPong-6k.jpg",
+      "w": 1707,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAdABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAOwlmiMIoaKnpAgP/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAEQMQISIy/9oACAEBAAE/AIdjEikWe0XyOb07Mwosaghh1//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     }
   ]
 }

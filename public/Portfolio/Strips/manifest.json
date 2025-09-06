@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Strips/Strip%20curtain_0004%20sd.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Strips/Strip%20curtain_0004%20sd.jpg"
+      "src": "/Portfolio/Strips/Strip%20curtain_0004%20sd.jpg",
+      "w": 1280,
+      "h": 845,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAQABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFAwT/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADepO7xRQ//xAAjEAACAQMCBwEAAAAAAAAAAAABAhEAAwQSIRMiIzFBQ2KB/9oACAEBAAE/ABpW1ZT5lqxYCwJNZIh4PmkPCdCsSUHffereToHOP0VkuH6iN6yK/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwA//9k="
     }
   ]
 }

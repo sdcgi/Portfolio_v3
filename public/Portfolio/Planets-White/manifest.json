@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Planets-White/PLA-Earth-004-A2.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Planets-White/PLA-Earth-004-A2.jpg"
+      "src": "/Portfolio/Planets-White/PLA-Earth-004-A2.jpg",
+      "w": 2048,
+      "h": 1439,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUCAwb/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAPR8KkpzhpFHiTKEf//EAB8QAAEDBQADAAAAAAAAAAAAAAEABBECAxIUMRMhcf/aAAgBAQABPwC3YAW02LjXE5/PScWhBRhVMLGz58quzinNYgo8Vac8K//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Planets-White/PLA-Saturn-005-A2-Print.jpg"
+      "src": "/Portfolio/Planets-White/PLA-Saturn-005-A2-Print.jpg",
+      "w": 2048,
+      "h": 1318,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAEDBAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADpCF1qQf/EABwQAAIDAQEBAQAAAAAAAAAAAAECAAMREgQxQf/aAAgBAQABPwBeUXScAlXqptd0Q7x9mjIhBEHnoFhtFa9n9jNgn//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AGf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAwEBPwCH/9k="
     },
     {
-      "src": "/Portfolio/Planets-White/ret-PLA-Saturn-005-A2-Print.jpg"
+      "src": "/Portfolio/Planets-White/ret-PLA-Saturn-005-A2-Print.jpg",
+      "w": 2048,
+      "h": 1318,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAEDBAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADpCF1qQf/EABwQAAIDAQEBAQAAAAAAAAAAAAECAAMREgQxQf/aAAgBAQABPwBeUXScAlXqptd0Q7x9mjIhBEHnoFhtFa9n9jNgn//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AGf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAwEBPwCH/9k="
     }
   ]
 }

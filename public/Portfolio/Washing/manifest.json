@@ -1,18 +1,31 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Washing/ret-Handmade-Cracked-screen-project-scaled-19.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Washing/ret-Handmade-Cracked-screen-project-scaled-19.jpg"
+      "src": "/Portfolio/Washing/ret-Handmade-Cracked-screen-project-scaled-19.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAFgEBAQEAAAAAAAAAAAAAAAAABAMB/9oADAMBAAIQAxAAAACNdh1Xm1INuAvjJ6ADp//EACAQAAIBBAEFAAAAAAAAAAAAAAECEQADBRASBCExRIL/2gAIAQEAAT8ArBuvK+s94XQMGrORdT06JbZm5wQo8jeD9j51/8QAGhEAAgIDAAAAAAAAAAAAAAAAAQIDECExM//aAAgBAgEBPwCdmC6xUvM1/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQIQMQP/2gAIAQMBAT8A5gu1Ha//2Q=="
     },
     {
-      "src": "/Portfolio/Washing/ret-Heart-washingup.jpg"
+      "src": "/Portfolio/Washing/ret-Heart-washingup.jpg",
+      "w": 2048,
+      "h": 1862,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAWABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQb/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAPRZ8+9zy1UQuNEF/8QAHRAAAQUAAwEAAAAAAAAAAAAAAgABAxESEyIxQf/aAAgBAQABPwAz2ihtSBSYI5s6+LJXrXWkQjHHgfEBuy5npGbuv//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Washing/ret-Heart-washingup1.jpg"
+      "src": "/Portfolio/Washing/ret-Heart-washingup1.jpg",
+      "w": 2048,
+      "h": 1862,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAWABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQb/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAPRZ8+9zy1UQuNEF/8QAHRAAAQUAAwEAAAAAAAAAAAAAAgABAxESEyIxQf/aAAgBAQABPwAz2ihtSBSYI5s6+LJXrXWkQjHHgfEBuy5npGbuv//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Washing/ret-Heart-washingup2.jpg"
+      "src": "/Portfolio/Washing/ret-Heart-washingup2.jpg",
+      "w": 2048,
+      "h": 1862,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAWABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQb/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAPRZ8+9zy1UQuNEF/8QAHRAAAQUAAwEAAAAAAAAAAAAAAgABAxESEyIxQf/aAAgBAQABPwAz2ihtSBSYI5s6+LJXrXWkQjHHgfEBuy5npGbuv//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     }
   ]
 }

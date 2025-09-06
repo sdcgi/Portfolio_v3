@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/L'oreal/Loreal-Infini-8-BG-19.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/L'oreal/Loreal-Infini-8-BG-19.jpg"
+      "src": "/Portfolio/L'oreal/Loreal-Infini-8-BG-19.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADsJzF1BAAP/8QAGBABAQEBAQAAAAAAAAAAAAAAAQARIEH/2gAIAQEAAT8AG2WW2PeP/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     },
     {
-      "src": "/Portfolio/L'oreal/Lorel-Lemniscate-16-BG-FLT2.1.jpg"
+      "src": "/Portfolio/L'oreal/Lorel-Lemniscate-16-BG-FLT2.1.jpg",
+      "w": 2048,
+      "h": 1707,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAUABgDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAMEAQIFBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAPWbc2QtqAlBgH//xAAgEAABBAIBBQAAAAAAAAAAAAACAAEDERASIQQxQVGR/9oACAEBAAE/ABPhbsiNF08RuRPvb+jJk0dR6WVa135+qCFoIRiYiJh8k9vi8f/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/L'oreal/Lorel-Lemniscate-18-streak-bumps.jpg"
+      "src": "/Portfolio/L'oreal/Lorel-Lemniscate-18-streak-bumps.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAAxipZMkpCaAD/xAAlEAABAgUBCQAAAAAAAAAAAAACAQMABAUREhMQFCAiIzEyQkP/2gAIAQEAAT8A20sgE3uYBe0+kp9rxrN/NyV3/FMj9YqpNFNXBQVcBzUPFT4P/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ]
 }

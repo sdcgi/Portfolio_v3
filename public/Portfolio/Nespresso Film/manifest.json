@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Nespresso%20Film/Nespresso-box-05-FLT-16bit-EDIT-FINAL-fix-2018.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Nespresso%20Film/Nespresso-box-05-FLT-16bit-EDIT-FINAL-fix-2018.jpg"
+      "src": "/Portfolio/Nespresso%20Film/Nespresso-box-05-FLT-16bit-EDIT-FINAL-fix-2018.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIEAQMG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAONtVd0sEFmAAf/EAB0QAAICAgMBAAAAAAAAAAAAAAECABEDEgQQMSH/2gAIAQEAAT8AAJNCYeLvlZHdF1W/ZlVVyOqm1B+GD2AUN6ShGNnq+v/EABcRAAMBAAAAAAAAAAAAAAAAAAERIHH/2gAIAQIBAT8AOqP/xAAWEQADAAAAAAAAAAAAAAAAAAABIHH/2gAIAQMBAT8AET//2Q=="
     }
   ]
 }

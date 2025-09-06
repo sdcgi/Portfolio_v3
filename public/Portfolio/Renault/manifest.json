@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Renault/ret-Renault-Van-COW-White-029-VAN-FLT2-copy.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Renault/ret-Renault-Van-COW-White-029-VAN-FLT2-copy.jpg"
+      "src": "/Portfolio/Renault/ret-Renault-Van-COW-White-029-VAN-FLT2-copy.jpg",
+      "w": 2048,
+      "h": 1483,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIFAQMG/8QAFwEBAAMAAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAAA6VitLMI1SCIyv//EACAQAAICAQMFAAAAAAAAAAAAAAECABEDEBIxBCEiQZH/2gAIAQEAAT8AJrQGwCIz+J7WamHJ1zvsbFsHt7v5FIVQL41bif/EABgRAAIDAAAAAAAAAAAAAAAAAAACEDKB/9oACAECAQE/AJe2H//EABcRAAMBAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8Aqw//2Q=="
     },
     {
-      "src": "/Portfolio/Renault/ret-Renault-Van-TURBINES-white-28-FULL-FLT-copy.jpg"
+      "src": "/Portfolio/Renault/ret-Renault-Van-TURBINES-white-28-FULL-FLT-copy.jpg",
+      "w": 2048,
+      "h": 1483,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEFAgMG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAADq8YqGXSRqgAiv/8QAIBAAAgIBBAMBAAAAAAAAAAAAAQIAAwQQESEiEjJSgf/aAAgBAQABPwCeXO2lrMtTmtd3A4Eqty8hu2MUI+jOugj+v6J//8QAGBEAAgMAAAAAAAAAAAAAAAAAAAIQMoH/2gAIAQIBAT8AlrYf/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAwEBPwCrD//Z"
     }
   ]
 }

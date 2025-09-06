@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB-2.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB-2.jpg"
+      "src": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB-2.jpg",
+      "w": 1276,
+      "h": 1595,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAQFAwEG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAACsovtULksLi/nNW3jgn//EAB8QAAICAgIDAQAAAAAAAAAAAAECABEDBBJxISIxE//aAAgBAQABPwBpl4n4fPcOcp8M2M2Ut6I9dQ6OF1TOSwYqDGY8iOQit+lBNhGvuZEz8ip3VCXZS4Xc+q5EbqoNnILFzEjO6rfkkCYNdkJFKasMTP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABURAQEAAAAAAAAAAAAAAAAAACAx/9oACAEDAQE/AKP/2Q=="
     },
     {
-      "src": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB.jpg"
+      "src": "/Portfolio/Panerai%20Luna%20Rossa/LunaRossa_Septembre2020_-6_RVB.jpg",
+      "w": 2560,
+      "h": 1756,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAQABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUCA//EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/aAAwDAQACEAMQAAAAsTpvVDQs/8QAIxAAAgECBAcAAAAAAAAAAAAAAQIAAxIEESNSBRMUIUFxsf/aAAgBAQABPwBnUAtd7lav25ihrd3iNijUyzMHEku1FnV0qmmjOybbRbGoAC4ZfJ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AD//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AD//2Q=="
     }
   ]
 }

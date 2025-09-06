@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Hand%20of%20God/arthur-hand_09-v2-FLT1.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Hand%20of%20God/arthur-hand_09-v2-FLT1.jpg"
+      "src": "/Portfolio/Hand%20of%20God/arthur-hand_09-v2-FLT1.jpg",
+      "w": 2048,
+      "h": 1638,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAATABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAQDBQb/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAOzkmmm9wyrgAD//xAAcEAEAAgMBAQEAAAAAAAAAAAACAQMABBEFIEH/2gAIAQEAAT8Ay7e16Z4nHcCbjvORnqHYFTRsX4SRnneWApsviZYXCZ+f/8QAFhEAAwAAAAAAAAAAAAAAAAAAESAh/9oACAECAQE/ADU//8QAFxEBAQEBAAAAAAAAAAAAAAAAARIRIP/aAAgBAwEBPwCSdXj/2Q=="
     }
   ]
 }

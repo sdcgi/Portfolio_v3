@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/V/50.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/V/50.jpg"
+      "src": "/Portfolio/V/50.jpg",
+      "w": 2048,
+      "h": 1536,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAYFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAALLG2JErwdAB/8QAHxAAAgEEAwEBAAAAAAAAAAAAAQIDBBAREgAFUTEy/9oACAEBAAE/AOTVdQvYwwCVf0Mpj6rWY4BPg5usnZ0MwKlnlGz3EECtsIkB91Fv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ]
 }

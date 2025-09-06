@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/BeLove/ret-Cupids.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/BeLove/ret-Cupids.jpg"
+      "src": "/Portfolio/BeLove/ret-Cupids.jpg",
+      "w": 2048,
+      "h": 1408,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUEA//EABcBAAMBAAAAAAAAAAAAAAAAAAABAwL/2gAMAwEAAhADEAAAAOlDOjXK2k5lQCMFr//EACEQAAICAQQCAwAAAAAAAAAAAAECAAMEBREhcTNRFEOB/9oACAEBAAE/AMUVKo5WLZWqjlZmLQ6nfaVYWn2AKFKn2pi6YQxHzGK9S6jAqTlA59tzMLyJ0s+09zN8j/s//8QAGBEBAQADAAAAAAAAAAAAAAAAAQAQEUH/2gAIAQIBAT8ABk12Mf/EABcRAQEBAQAAAAAAAAAAAAAAAAEAEGH/2gAIAQMBAT8AUh5Of//Z"
     }
   ]
 }

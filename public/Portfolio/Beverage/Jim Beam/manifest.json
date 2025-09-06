@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Beverage/Jim%20Beam/ret-JB-Bottle-Malin-Straight.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Beverage/Jim%20Beam/ret-JB-Bottle-Malin-Straight.jpg"
+      "src": "/Portfolio/Beverage/Jim%20Beam/ret-JB-Bottle-Malin-Straight.jpg",
+      "w": 2048,
+      "h": 1527,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwUG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAPZ4a82XpoWTULA//8QAIBAAAQMCBwAAAAAAAAAAAAAAAQAQEQITEiExMjRBUf/aAAgBAQABPwBX6b1qc8MsUecN2nhhBu2//8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQIBAT8AY//EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/ACP/2Q=="
     }
   ]
 }

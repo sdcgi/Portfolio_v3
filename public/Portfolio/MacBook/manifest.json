@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/MacBook/ret-Blake-MacBook-Air-010-Darling-copy-11.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/MacBook/ret-Blake-MacBook-Air-010-Darling-copy-11.jpg"
+      "src": "/Portfolio/MacBook/ret-Blake-MacBook-Air-010-Darling-copy-11.jpg",
+      "w": 2048,
+      "h": 1536,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADydNNDnNw3WCIP/8QAHxAAAQQBBQEAAAAAAAAAAAAAAQACAxFRBBMUIZJS/9oACAEBAAE/AAxzjQBK42oq9p9ZpFjmmiCEJJYuo682uXrfoeAjJLL1JXmkwDCoYTwML//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/MacBook/ret-Blake-MacBook-Air-010-Darling-copy-12.jpg"
+      "src": "/Portfolio/MacBook/ret-Blake-MacBook-Air-010-Darling-copy-12.jpg",
+      "w": 2048,
+      "h": 1536,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADydNNDnNw3WCIP/8QAHxAAAQQBBQEAAAAAAAAAAAAAAQACAxFRBBMUIZJS/9oACAEBAAE/AAxzjQBK42oq9p9ZpFjmmiCEJJYuo682uXrfoeAjJLL1JXmkwDCoYTwML//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/MacBook/ret-Blake-MacBook-Air-013-crop-blur.jpg"
+      "src": "/Portfolio/MacBook/ret-Blake-MacBook-Air-013-crop-blur.jpg",
+      "w": 2048,
+      "h": 1583,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAQP/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADvvDWayIYVYUg//8QAIBAAAgIBAwUAAAAAAAAAAAAAAQIAAxIhIpEyQlFicf/aAAgBAQABPwDJ+18RKrLkbcxP2V2hpXZEfjxK3XU6kcFYkSL1Vn3E/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ]
 }

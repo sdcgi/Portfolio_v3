@@ -1,6 +1,7 @@
 max_columns = 3   # overrides the maximum columns for this gallery (1–8)
 aspect_ratio = 0  # 0 = respect each image’s original aspect; or use 4/5, 1/1, 3/2, etc
 title_display = 0 # 0 = hide titles, 1 = show titles
+
 ------------ Overrides above --------------
 
 Joypad-3k-2008-Upsidedown.jpg

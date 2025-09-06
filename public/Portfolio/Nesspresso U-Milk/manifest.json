@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Nesspresso%20U-Milk/Plates-def3-rvb-3.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Nesspresso%20U-Milk/Plates-def3-rvb-3.jpg"
+      "src": "/Portfolio/Nesspresso%20U-Milk/Plates-def3-rvb-3.jpg",
+      "w": 2019,
+      "h": 1571,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAATABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEHAwQG/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAA4xZ+QqxaI3JCQf/EAB8QAAECBgMAAAAAAAAAAAAAAAEABAIDBRExkhBTgv/aAAgBAQABPwDkU9pDhpJ0QYtuiVoEaaziy2knwgSrlXX/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     },
     {
-      "src": "/Portfolio/Nesspresso%20U-Milk/U-Milk-Setup-39_4-def1-Caf%C3%A9-rvb.jpg"
+      "src": "/Portfolio/Nesspresso%20U-Milk/U-Milk-Setup-39_4-def1-Caf%C3%A9-rvb.jpg",
+      "w": 1973,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAZABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIDBAYF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAAyFyr3zPDBI8bEoof/8QAHhAAAQMFAQEAAAAAAAAAAAAAAQACAwQQERIyEyH/2gAIAQEAAT8AaEKaV0foI3aZxsio9g7Zo5+r2EtFTmZ/NSeVI07k4OCSRYFB1ggv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     },
     {
-      "src": "/Portfolio/Nesspresso%20U-Milk/U-Milk-Setup-39Fzn-def1-Macchiato-rvb.jpg"
+      "src": "/Portfolio/Nesspresso%20U-Milk/U-Milk-Setup-39Fzn-def1-Macchiato-rvb.jpg",
+      "w": 2048,
+      "h": 1973,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAXABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEGAwQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAAtPM3KqXdhEwAH//EAB8QAAICAgEFAAAAAAAAAAAAAAECAAMEEQUQEyExYv/aAAgBAQABPwDYUEk6Ajc3hpb29OYCCAZkq749qKuyyMBMTh86u4tZSmvohojMAFK+lHmHr//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     }
   ]
 }

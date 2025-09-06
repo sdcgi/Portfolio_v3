@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Clay/Black-and-Yellow-Lights-03.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Clay/Black-and-Yellow-Lights-03.jpg"
+      "src": "/Portfolio/Clay/Black-and-Yellow-Lights-03.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAIBAwb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADjbxZrUIoJB//EAB8QAAEDAwUAAAAAAAAAAAAAAAEAAhEQEiExQVGxwf/aAAgBAQABPwAAuMBFkBEQmlTjf3TpO4waXU//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     },
     {
-      "src": "/Portfolio/Clay/Black-and-Yellow-Lights-03b-Edit.jpg"
+      "src": "/Portfolio/Clay/Black-and-Yellow-Lights-03b-Edit.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAIDBAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADjFZjXWIAB/8QAHBABAAEEAwAAAAAAAAAAAAAAAQIAAxExECAh/9oACAEBAAE/AOYsTZmm5bcZHypMHQnT/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ]
 }

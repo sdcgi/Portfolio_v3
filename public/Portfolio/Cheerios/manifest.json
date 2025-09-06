@@ -1,18 +1,31 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Cheerios/Cheerios-Milk-Storm.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Cheerios/Cheerios-Milk-Storm.jpg"
+      "src": "/Portfolio/Cheerios/Cheerios-Milk-Storm.jpg",
+      "w": 1980,
+      "h": 1365,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA6e7KNgRQLg//xAAcEAACAgMBAQAAAAAAAAAAAAAAAQIhETJBEmH/2gAIAQEAAT8AnDqdkLjbtEs41TKdCl4l8ZQukukdUf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Cheerios/ret-cheerios-festival-2.jpg"
+      "src": "/Portfolio/Cheerios/ret-cheerios-festival-2.jpg",
+      "w": 2048,
+      "h": 1530,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIBAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA9Wio5LG6FA//xAAaEAEBAAMBAQAAAAAAAAAAAAABAAIhQTFh/9oACAEBAAE/AAXs7Nk2Rk6FIVNkm/kesduX/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     },
     {
-      "src": "/Portfolio/Cheerios/ret-cheerios-festival.jpg"
+      "src": "/Portfolio/Cheerios/ret-cheerios-festival.jpg",
+      "w": 2048,
+      "h": 1536,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA6e7KNgRUKCv/xAAdEAADAQABBQAAAAAAAAAAAAAAAQIhEjEyQUJh/9oACAEBAAE/ALjynpGzr1FNpdqZjwVcK+MwRfU9Uf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Cheerios/ret-cheerios-festival1.jpg"
+      "src": "/Portfolio/Cheerios/ret-cheerios-festival1.jpg",
+      "w": 2048,
+      "h": 1536,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA6e7KNgRUKCv/xAAeEAACAgAHAAAAAAAAAAAAAAAAAQIhERIxMkFCYf/aAAgBAQABPwCcOU7IWrdoliltTKdClkl4yhE9Tqj/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     }
   ]
 }

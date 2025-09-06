@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Post-Logistics/Post-Logistics-A-12-no-xrefs-03.1.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Post-Logistics/Post-Logistics-A-12-no-xrefs-03.1.jpg"
+      "src": "/Portfolio/Post-Logistics/Post-Logistics-A-12-no-xrefs-03.1.jpg",
+      "w": 4000,
+      "h": 1110,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAHABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwL/2gAMAwEAAhADEAAAAFApsDr/xAAeEAABAwQDAAAAAAAAAAAAAAABAAIRAxIhMQQTYf/aAAgBAQABPwBvKrRD203ewu5txIp7hZMXYBboL//EABoRAQACAwEAAAAAAAAAAAAAAAEAEQIDE1L/2gAIAQIBAT8A67PbFcm1tn//xAAaEQEAAgMBAAAAAAAAAAAAAAABABECAxNC/9oACAEDAQE/AOWt8EAxKCif/9k="
     },
     {
-      "src": "/Portfolio/Post-Logistics/Post-Logistics-B-14.jpg"
+      "src": "/Portfolio/Post-Logistics/Post-Logistics-B-14.jpg",
+      "w": 4000,
+      "h": 1109,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAHABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAK5iVZhP/8QAGxAAAwADAQEAAAAAAAAAAAAAAQIDABESQqH/2gAIAQEAAT8ALzc9mQ0NfctymiEUZK5k3a+c/8QAGxEAAgEFAAAAAAAAAAAAAAAAAAEDAhESMlL/2gAIAQIBAT8AUsl92ZVdM//EABkRAAIDAQAAAAAAAAAAAAAAAAABAgNSEv/aAAgBAwEBPwB115RzHKP/2Q=="
     }
   ],
   "maxColumns": 1

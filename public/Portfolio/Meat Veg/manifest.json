@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Meat%20Veg/Meat-Veg-05-Smaller-Plate.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Meat%20Veg/Meat-Veg-05-Smaller-Plate.jpg"
+      "src": "/Portfolio/Meat%20Veg/Meat-Veg-05-Smaller-Plate.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAEDBAL/xAAXAQEAAwAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAABrhjNbQu4oC8H/xAAgEAACAgICAgMAAAAAAAAAAAABAwACEXESIQQTIjFC/9oACAEBAAE/APHpBfviUs+8Z6Ij1xCzkCMLaNNcjq0YOQmWAfBtqahU025F+d0BlfZ+3XvvAA0BP//EABcRAAMBAAAAAAAAAAAAAAAAAAECESD/2gAIAQIBAT8AZiosx//EABcRAQADAAAAAAAAAAAAAAAAAAERIDH/2gAIAQMBAT8Ahcp//9k="
     },
     {
-      "src": "/Portfolio/Meat%20Veg/Meat-Veg-Cover-07-FLT.jpg"
+      "src": "/Portfolio/Meat%20Veg/Meat-Veg-Cover-07-FLT.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIFAwQG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/9oADAMBAAIQAxAAAADopSpy7FkIQqi3eFn/xAAhEAADAAICAAcAAAAAAAAAAAABAgMAEgQRBSEiMTJCUf/aAAgBAQABPwBThfG88KagnL2vBxvYfuTAoiuvxYdjOTB7d62IB+pHYy/hd70D0sjEZDjXnptyfQvsiDUZ/8QAFxEAAwEAAAAAAAAAAAAAAAAAAQIRIP/aAAgBAgEBPwBjMf/EABgRAAIDAAAAAAAAAAAAAAAAAAIQARES/9oACAEDAQE/ABHSuV//2Q=="
     }
   ]
 }

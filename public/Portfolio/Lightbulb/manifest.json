@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Lightbulb/3W_Exploding-Lightbulb-tall-flt.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Lightbulb/3W_Exploding-Lightbulb-tall-flt.jpg"
+      "src": "/Portfolio/Lightbulb/3W_Exploding-Lightbulb-tall-flt.jpg",
+      "w": 2400,
+      "h": 3000,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAOkix1zjhNOlAHD/xAAeEAACAgEFAQAAAAAAAAAAAAAAEQEhEgIQIzEyQf/aAAgBAQABPwAsYrFofcsmLGY8+d+FtMH0R//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Lightbulb/ret-3W_Exploding-Lightbulb-Explo-flt.jpg"
+      "src": "/Portfolio/Lightbulb/ret-3W_Exploding-Lightbulb-Explo-flt.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMCBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAOjVgaVGpBUH/8QAHRAAAgEEAwAAAAAAAAAAAAAAABESARATITFBgf/aAAgBAQABPwCIhCJ0z4u1LwVo1m9cW//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Lightbulb/ret-3W_Exploding-Lightbulb-tall-flt.jpg"
+      "src": "/Portfolio/Lightbulb/ret-3W_Exploding-Lightbulb-tall-flt.jpg",
+      "w": 1448,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAiABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDAgb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA6JUcSGVSF8RoZVMAaAP/xAAfEAACAgEEAwAAAAAAAAAAAAAAARESAhATFDFBUYH/2gAIAQEAAT8AJJKm2/SgeMMktnyPFKfZOx4kKehIeiP/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AF//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AF//2Q=="
     }
   ]
 }

@@ -1,4 +1,4 @@
-//------------------------// scripts/manifests/utils.mjs
+/* ---------- scripts/manifests/utils.mjs (full replacement) ---------- */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
@@ -56,4 +56,39 @@ export async function copyCoverFile(COVERS_OUT, srcAbs){
   const outAbs = path.join(COVERS_OUT, finalName);
   await fs.copyFile(srcAbs, outAbs);
   return `/_covers/${finalName}`;
+}
+
+/* ---------- Image metadata helpers (width/height + tiny blur) ---------- */
+/* Uses sharp at build-time; gracefully degrades if unavailable/unsupported. */
+export async function readImageMeta(abs){
+  let sharp;
+  try {
+    // dynamic import keeps this optional and build-time only
+    sharp = (await import('sharp')).default || (await import('sharp'));
+  } catch {
+    return null; // sharp not installed
+  }
+  try {
+    const img = sharp(abs);
+    const meta = await img.metadata();
+    const w = meta.width || 0;
+    const h = meta.height || 0;
+
+    // Skip blur for formats sharp might not decode well (svg, etc.)
+    const ext = path.extname(abs).toLowerCase();
+    if (!w || !h || ext === '.svg') {
+      return { w, h, blurDataURL: null };
+    }
+
+    // Tiny blur preview (e.g., ~24px wide JPEG)
+    const buf = await img
+      .resize({ width: 24, withoutEnlargement: true, fit: 'inside' })
+      .jpeg({ quality: 40, mozjpeg: true })
+      .toBuffer();
+    const blurDataURL = `data:image/jpeg;base64,${buf.toString('base64')}`;
+
+    return { w, h, blurDataURL };
+  } catch {
+    return null; // unreadable image, or sharp error
+  }
 }

@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Japan%20Window/Japan-Window-04a-FLT.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Japan%20Window/Japan-Window-04a-FLT.jpg"
+      "src": "/Portfolio/Japan%20Window/Japan-Window-04a-FLT.jpg",
+      "w": 2048,
+      "h": 1638,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAATABgDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMEAQUG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAADoK8lOZ2iqWHJUwP/EAB0QAQADAQACAwAAAAAAAAAAAAEAAhEDBBIxUYH/2gAIAQEAAT8AHY+V6WBA1Q1+pTp7VFz8hbCd6tnk15tsbbKrnxkVhCf/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAwEBPwBj/9k="
     },
     {
-      "src": "/Portfolio/Japan%20Window/Japan-Window-05-FLT.jpg"
+      "src": "/Portfolio/Japan%20Window/Japan-Window-05-FLT.jpg",
+      "w": 2048,
+      "h": 1638,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAATABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQIG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAPSU72QGi5NPCVAB/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIAAxEhMRIT/9oACAEBAAE/AGEN9YOD6XeNqYphj2WswQq5H0HRzcOo0YmOzY7P/8QAFhEBAQEAAAAAAAAAAAAAAAAAASAx/9oACAECAQE/AFyP/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ]
 }

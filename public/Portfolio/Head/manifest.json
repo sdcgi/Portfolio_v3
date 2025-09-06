@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg"
+      "src": "/Portfolio/Head/LED-Headlight_v01.Edge_.0001-copy.jpg",
+      "w": 3840,
+      "h": 2160,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAOABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAb/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/2gAMAwEAAhADEAAAAOSvxWobjETX/8QAHBAAAgMBAQEBAAAAAAAAAAAAAgMAAREEBSEy/9oACAEBAAE/AKXd5PJ4FvI7dufmejzjzvMALQzZRXQRHb0IszWefI17HWbGFpXP/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEx/9oACAECAQE/AMWv/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAEDAQE/AHWC/9k="
     },
     {
-      "src": "/Portfolio/Head/LED-Headlight_v01.Front_.0001-copy.jpg"
+      "src": "/Portfolio/Head/LED-Headlight_v01.Front_.0001-copy.jpg",
+      "w": 3840,
+      "h": 2160,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAOABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAA466B1SowH//EAB8QAAEDAwUAAAAAAAAAAAAAABEAARIDFCECExUiMf/aAAgBAQABPwDUTlcfUs7otAhMThP6t2pGMuoITL//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8AEX//xAAXEQADAQAAAAAAAAAAAAAAAAABEBFB/9oACAEDAQE/ADcX/9k="
     },
     {
-      "src": "/Portfolio/Head/LED-Headlight_v01.Sideish.0001-copy.jpg"
+      "src": "/Portfolio/Head/LED-Headlight_v01.Sideish.0001-copy.jpg",
+      "w": 3840,
+      "h": 2160,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAOABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAADjqslTUgD/AP/EAB0QAAICAgMBAAAAAAAAAAAAAAECABEDBAUSMSH/2gAIAQEAAT8AClvJra4y5kxueoZhZnKaaaW0cSPa9Q0wL2Y34BcNqz/fCYxJNkz/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwAn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8AZ//Z"
     }
   ]
 }

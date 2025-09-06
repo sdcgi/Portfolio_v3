@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Chanel%20Lipstick/Chanel-Lipstic-2.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Chanel%20Lipstick/Chanel-Lipstic-2.jpg"
+      "src": "/Portfolio/Chanel%20Lipstick/Chanel-Lipstic-2.jpg",
+      "w": 1129,
+      "h": 1411,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADjCpZQm1SAD//EAB8QAAICAgEFAAAAAAAAAAAAAAERAgMEEiAAECExsf/aAAgBAQABPwDgKJHENqK2+dolSBTR9dXZO+8axKFRkSK34D4//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQMBAT8AI//Z"
     },
     {
-      "src": "/Portfolio/Chanel%20Lipstick/Chanel-Lipstic-014-Vray-A4-009-flt-1-2.jpg"
+      "src": "/Portfolio/Chanel%20Lipstick/Chanel-Lipstic-014-Vray-A4-009-flt-1-2.jpg",
+      "w": 1448,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAiABgDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAQBAgUG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAADxm2tk1GLmnqcWglBgAH//xAAgEAADAAIBBAMAAAAAAAAAAAABAgMABBEQEiAxITJB/9oACAEBAAE/AMClgSPwddefdJz8/YL01JTtsxnRu1GYAnHo+mbwQoQmwnBAw+zk6NJ1dfankY1zVmdgOWopOH34f//EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAECAQE/AGv/xAAXEQEAAwAAAAAAAAAAAAAAAAARAiAh/9oACAEDAQE/AIjtv//Z"
     }
   ]
 }

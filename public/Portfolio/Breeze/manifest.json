@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Breeze/Breeze-Block_0002.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Breeze/Breeze-Block_0002.jpg"
+      "src": "/Portfolio/Breeze/Breeze-Block_0002.jpg",
+      "w": 1638,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAABb5M6ygXndhhQ//8QAHBABAAMBAQADAAAAAAAAAAAAAQACEQMxISIy/9oACAEBAAE/AKUXAJXmu5jnufMDI8WwksdaFV1rujOJa9C1vXYPM9ZXpyvdbfklOVCv0AF2VCIMFJ//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     },
     {
-      "src": "/Portfolio/Breeze/Breeze-Block_0003.jpg"
+      "src": "/Portfolio/Breeze/Breeze-Block_0003.jpg",
+      "w": 1638,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgUD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAGmOKRskCVztsILlf//EACEQAAICAgEEAwAAAAAAAAAAAAECAAMREiEEBRNRMUFx/9oACAEBAAE/AK0irAsC7LiX1sjoBYMlhgZlClakB+QIKWII5lHbOo2DWNggMCfYMSrRccn9gtHozYfRaeTE/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ]
 }

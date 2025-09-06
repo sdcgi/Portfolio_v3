@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Wings/ret-Wing-BLOOD-BLACK.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Wings/ret-Wing-BLOOD-BLACK.jpg"
+      "src": "/Portfolio/Wings/ret-Wing-BLOOD-BLACK.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAUCBAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAACtFbZSQh0+AAf/xAAkEAAAAwcFAQEAAAAAAAAAAAAAAgMBBRESExQhBAYVM0EWMv/aAAgBAQABPwB9vNXRsTSR7D+jlnnx9SvmvJUhkON6q6sqiS3aQbkYpekb5TZAWyfy8/s1UbbqXp25lptiHy677TMYXtJko40/D2cSxpSxDod1hp4G/Z8nH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Wings/Wing-BLOOD-WHITE.jpg"
+      "src": "/Portfolio/Wings/Wing-BLOOD-WHITE.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADGro4xE01YgAP/xAAhEAABAwQDAAMAAAAAAAAAAAACAQQRAAUUMgMSEyVBov/aAAgBAQABPwC1sAdkZcmgVhMFuPgk66/U1dGANCAuPQ6spijaEjt3Wa9fnvzV6MVbQu3dIpg7xeaS0LastM/JhY7zT93lc0joOtf/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     }
   ]
 }

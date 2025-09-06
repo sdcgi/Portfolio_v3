@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Black-Feathers/ret-HM-Black-Fathers-09-with-Gold-FLT1.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Black-Feathers/ret-HM-Black-Fathers-09-with-Gold-FLT1.jpg"
+      "src": "/Portfolio/Black-Feathers/ret-HM-Black-Fathers-09-with-Gold-FLT1.jpg",
+      "w": 2048,
+      "h": 1448,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAEDBAIG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAADycXZ940OSKxZB/8QAIBAAAgECBwEAAAAAAAAAAAAAAAIBIUEQEyIxQmGBkf/aAAgBAQABPwDMrsQ/wXVyuPCzYmBKL2NfzCD/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAVEQEBAAAAAAAAAAAAAAAAAAAgIf/aAAgBAwEBPwCD/9k="
     },
     {
-      "src": "/Portfolio/Black-Feathers/ret-HM-Black-Fathers-16-copy.jpg"
+      "src": "/Portfolio/Black-Feathers/ret-HM-Black-Fathers-16-copy.jpg",
+      "w": 2048,
+      "h": 1448,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAEG/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAAA8hp5ZeWZEUmCrCf/xAAcEAADAQACAwAAAAAAAAAAAAAAAQIRAxASE7H/2gAIAQEAAT8AlUmeinO1RU4cfh8K5MlJYXWsXTP/xAAXEQEAAwAAAAAAAAAAAAAAAAAQAREx/9oACAECAQE/AKIw/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECMRARIf/aAAgBAwEBPwBy7QtjvH//2Q=="
     }
   ]
 }

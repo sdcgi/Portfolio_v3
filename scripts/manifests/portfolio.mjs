@@ -1,9 +1,9 @@
-//------------------------// scripts/manifests/portfolio.mjs
+/* ---------- scripts/manifests/portfolio.mjs (full replacement) ---------- */
 import path from 'node:path';
 import {
   ensureDir, isHidden, isCoverFilename, stripCover, pretty,
   urlFromAbs, resolveCaseInsensitive, readLines, writeJSON,
-  copyCoverFile, writeHelperFile
+  copyCoverFile, writeHelperFile, readImageMeta
 } from './utils.mjs';
 import { readOrderWithDirectives } from './directives.mjs';
 
@@ -11,9 +11,10 @@ const IMAGES_HEADER = [
   'max_columns = 3   # overrides the maximum columns for this gallery (1–8)',
   'aspect_ratio = 0  # 0 = respect each image’s original aspect; or use 4/5, 1/1, 3/2, etc',
   'title_display = 0 # 0 = hide titles, 1 = show titles',
-  
+  '',
   '------------ Overrides above --------------',
 ];
+
 const IMG_EXT = new Set(['.jpg','.jpeg','.png','.webp','.avif','.gif','.svg']);
 
 export async function buildPortfolioManifest(ctx, dir){
@@ -28,14 +29,23 @@ export async function buildPortfolioManifest(ctx, dir){
   const fileCovers = files.filter(
     f=> isCoverFilename(f.name) && IMG_EXT.has(path.extname(stripCover(f.name)).toLowerCase())
   );
+
   let coverUrl = null;
+  let coverMeta = null; // { w, h, blurDataURL } or null
+
   if (fileCovers.length){
-    coverUrl = await copyCoverFile(COVERS_OUT, path.join(dir, fileCovers[0].name));
+    const coverAbs = path.join(dir, fileCovers[0].name);
+    coverUrl = await copyCoverFile(COVERS_OUT, coverAbs);
+    const srcAbs = path.join(dir, stripCover(fileCovers[0].name));
+    coverMeta = await readImageMeta(srcAbs);
   } else {
     const coverTxt = (await readLines(path.join(dir,'.cover')))[0];
     if (coverTxt){
       const abs = await resolveCaseInsensitive(dir, coverTxt);
-      if (abs) coverUrl = urlFromAbs(PUB, abs);
+      if (abs) {
+        coverUrl = urlFromAbs(PUB, abs);
+        coverMeta = await readImageMeta(abs);
+      }
     }
   }
 
@@ -58,6 +68,12 @@ export async function buildPortfolioManifest(ctx, dir){
             displayName: pretty(s.name),
             path: encodeURI('/' + path.relative(PUB, abs).split(path.sep).join('/')),
             cover: sm.cover || null,
+            // pass through child’s cover meta for Grid perf
+            ...(sm.coverMeta ? {
+              coverW: sm.coverMeta.w || undefined,
+              coverH: sm.coverMeta.h || undefined,
+              coverBlur: sm.coverMeta.blurDataURL || undefined,
+            } : {}),
             counts
           };
         })
@@ -77,15 +93,23 @@ export async function buildPortfolioManifest(ctx, dir){
       return ai !== bi ? ai - bi : a.name.localeCompare(b.name, undefined, { numeric:true, sensitivity:'base' });
     });
 
-    // Fallback cover from first child with cover
+    // Fallback cover from first child with cover (and propagate its meta)
     if (!coverUrl) {
       const firstChildWithCover = folders.find(f => f.cover);
-      if (firstChildWithCover?.cover) coverUrl = firstChildWithCover.cover;
+      if (firstChildWithCover?.cover) {
+        coverUrl = firstChildWithCover.cover;
+        coverMeta = {
+          w: firstChildWithCover.coverW || 0,
+          h: firstChildWithCover.coverH || 0,
+          blurDataURL: firstChildWithCover.coverBlur || null
+        };
+      }
     }
 
     return {
       kind: 'portfolio-folder',
       cover: coverUrl,
+      coverMeta: coverMeta || null,
       folders,
       ...(directives.maxColumns !== undefined ? { maxColumns: directives.maxColumns } : {}),
       ...(directives.aspectRatio !== undefined ? { aspectRatio: directives.aspectRatio } : {}),
@@ -116,7 +140,19 @@ export async function buildPortfolioManifest(ctx, dir){
     .sort((a,b)=> a.localeCompare(b, undefined, { numeric:true, sensitivity:'base' }));
   const finalList = resolvedOrder.concat(tail);
 
-  const items = finalList.map(name => ({ src: urlFromAbs(PUB, path.join(dir, name)) }));
+  // Build items with metadata
+  const items = await Promise.all(finalList.map(async (name) => {
+    const abs = path.join(dir, name);
+    const meta = await readImageMeta(abs);
+    return {
+      src: urlFromAbs(PUB, abs),
+      ...(meta ? {
+        w: meta.w || undefined,
+        h: meta.h || undefined,
+        blurDataURL: meta.blurDataURL || undefined
+      } : {})
+    };
+  }));
 
   // Convenience .images (always overwrite; keep header)
   await writeHelperFile(
@@ -128,6 +164,7 @@ export async function buildPortfolioManifest(ctx, dir){
   return {
     kind: 'stills-gallery',
     cover: coverUrl || (items[0]?.src || null),
+    coverMeta: coverMeta || null,
     items,
     ...(directives.maxColumns !== undefined ? { maxColumns: directives.maxColumns } : {}),
     ...(directives.aspectRatio !== undefined ? { aspectRatio: directives.aspectRatio } : {}),
@@ -151,6 +188,11 @@ export async function scanPortfolio({ PUB, PORTFOLIO, COVERS_OUT }){
       displayName: pretty(d.name),
       path: encodeURI('/' + path.relative(PUB, p).split(path.sep).join('/')),
       cover: m.cover || null,
+      ...(m.coverMeta ? {
+        coverW: m.coverMeta.w || undefined,
+        coverH: m.coverMeta.h || undefined,
+        coverBlur: m.coverMeta.blurDataURL || undefined,
+      } : {}),
       counts
     });
   }

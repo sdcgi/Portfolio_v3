@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Olay/Olay-Stitching-1.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Olay/Olay-Stitching-1.jpg"
+      "src": "/Portfolio/Olay/Olay-Stitching-1.jpg",
+      "w": 1980,
+      "h": 1365,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDAQL/xAAYAQACAwAAAAAAAAAAAAAAAAABBQACA//aAAwDAQACEAMQAAAAp7OQtqkgHLQ1nsVP/8QAHBAAAgIDAQEAAAAAAAAAAAAAAAECEhExUTJC/9oACAEBAAE/ALGeMSwrS0KdixvrIfQ9kfMj/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAESQTL/2gAIAQIBAT8AkhaPo1n/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     },
     {
-      "src": "/Portfolio/Olay/ret-Olay-stippy-cropped-2.jpg"
+      "src": "/Portfolio/Olay/ret-Olay-stippy-cropped-2.jpg",
+      "w": 2048,
+      "h": 1154,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAOABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgAB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/2gAMAwEAAhADEAAAADoyZWcI/8QAGRABAAIDAAAAAAAAAAAAAAAAAAExEBEh/9oACAEBAAE/ALW7Ccbf/8QAFREBAQAAAAAAAAAAAAAAAAAAECH/2gAIAQIBAT8Ah//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8AP//Z"
     },
     {
-      "src": "/Portfolio/Olay/ret-Olay-stippy-cropped.jpg"
+      "src": "/Portfolio/Olay/ret-Olay-stippy-cropped.jpg",
+      "w": 2048,
+      "h": 1476,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQUD/9oADAMBAAIQAxAAAACiKNT0M4Y0NQE//8QAGhAAAgMBAQAAAAAAAAAAAAAAAAECEjERMv/aAAgBAQABPwCx05VWeClYsa8bIbIY/LP/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQISQTH/2gAIAQIBAT8AqVWj6R0//8QAFhEAAwAAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/AKz/2Q=="
     }
   ]
 }

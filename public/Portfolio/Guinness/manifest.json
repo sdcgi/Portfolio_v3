@@ -1,21 +1,37 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Guinness/Guinness-015-copy-copy.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Guinness/Guinness-015-copy-copy.jpg"
+      "src": "/Portfolio/Guinness/Guinness-015-copy-copy.jpg",
+      "w": 1639,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAeABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQb/xAAVAQEBAAAAAAAAAAAAAAAAAAAABP/aAAwDAQACEAMQAAAA4y5DfEQC5Npz5aUTSqb/xAAlEAEAAgIBAwIHAAAAAAAAAAABAgMAEQQFEBIUMiIxQlFSgaH/2gAIAQEAAT8ADbrHoPJj7rqSX45IYqPzHt6lbD4rPcfVi7VyroN6butrq/rl9JTyZ1xn5kXXl2nyrLHTOX6y27jK7qnKX3Z5JFdGjP/EABoRAAICAwAAAAAAAAAAAAAAAAECAxAhImH/2gAIAQIBAT8AqJ5i2+eCv//EABgRAAMBAQAAAAAAAAAAAAAAAAIQEQED/9oACAEDAQE/AEfHBG2L/9k="
     },
     {
-      "src": "/Portfolio/Guinness/Guinness-Crop-flt-2.jpg"
+      "src": "/Portfolio/Guinness/Guinness-Crop-flt-2.jpg",
+      "w": 2048,
+      "h": 1451,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADjdjHsRFAAf//EACAQAAIABAcAAAAAAAAAAAAAAAECAAMEEBESExUgITH/2gAIAQEAAT8AjaWCKWqZQYrjlvqedDj/AP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8AH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8AH//Z"
     },
     {
-      "src": "/Portfolio/Guinness/ret-Guinness-015-copy-copy.jpg"
+      "src": "/Portfolio/Guinness/ret-Guinness-015-copy-copy.jpg",
+      "w": 1430,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAjABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQEG/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAIEA//aAAwDAQACEAMQAAAA8YagZaQEc+zUxfNcbJqVie2mKIv/xAAkEAACAgIABAcAAAAAAAAAAAABAgMRAAQFEhMhECAyQVFSYf/aAAgBAQABPwDya/Cpp4Fm6sSK11zHJomhleNqtTRrwEpEarXz75K3NIx/cg4TBGobcl7/AETN6PV54xqpSj1dy2OKY51HIBJyfYnVyokYDCSxskk5/8QAHBEAAgICAwAAAAAAAAAAAAAAAQIDEBESMUFh/9oACAECAQE/AKWZGbUZPvVRqNuBX//EABkRAAIDAQAAAAAAAAAAAAAAAAERAgMQEv/aAAgBAwEBPwDOJJrLSRVFHP/Z"
     },
     {
-      "src": "/Portfolio/Guinness/ret-Guinness-Crop-flt-2.jpg"
+      "src": "/Portfolio/Guinness/ret-Guinness-Crop-flt-2.jpg",
+      "w": 2048,
+      "h": 1451,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAEDBQb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADktbKsKwQAD//EACAQAAECBQUAAAAAAAAAAAAAAAECEgADBBARExUgITH/2gAIAQEAAT8AjalBAJqZTinLb6nnQ4//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     },
     {
-      "src": "/Portfolio/Guinness/ret-Guinness-Crop-flt-21.jpg"
+      "src": "/Portfolio/Guinness/ret-Guinness-Crop-flt-21.jpg",
+      "w": 2048,
+      "h": 1451,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAEDBQb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADktbKsKwQAD//EACAQAAECBQUAAAAAAAAAAAAAAAECEgADBBARExUgITH/2gAIAQEAAT8AjalBAJqZTinLb6nnQ4//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     }
   ]
 }

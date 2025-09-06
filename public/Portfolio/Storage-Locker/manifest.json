@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Storage-Locker/Industrial-Vents-Girders_0010-Balloons-FLT.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Storage-Locker/Industrial-Vents-Girders_0010-Balloons-FLT.jpg"
+      "src": "/Portfolio/Storage-Locker/Industrial-Vents-Girders_0010-Balloons-FLT.jpg",
+      "w": 2048,
+      "h": 1265,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA0sssilgf/8QAHRAAAgIDAAMAAAAAAAAAAAAAAAECERIxQVFhcf/aAAgBAQABPwDfGK61IvxFijXScHNVm18MfbP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AD//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AD//2Q=="
     },
     {
-      "src": "/Portfolio/Storage-Locker/Industrial-Vents-Girders_0010-Col-V2-FLT.jpg"
+      "src": "/Portfolio/Storage-Locker/Industrial-Vents-Girders_0010-Col-V2-FLT.jpg",
+      "w": 2048,
+      "h": 1265,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAPABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAACG7d6mWpD/xAAkEAABAwMBCQAAAAAAAAAAAAABAAIDERIhMQQTFCIzQVGBkf/aAAgBAQABPwBsUpJNjiG6ii4aa/pv8+kYZqikb6HQUW4gzzS/VCIYnEi8ktAyQU9mzPINrxnsV//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8AP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8AP//Z"
     }
   ]
 }

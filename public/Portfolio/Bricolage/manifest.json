@@ -1,12 +1,19 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Bricolage/ret-BRC-BOIS-022full-Amd-1.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Bricolage/ret-BRC-BOIS-022full-Amd-1.jpg"
+      "src": "/Portfolio/Bricolage/ret-BRC-BOIS-022full-Amd-1.jpg",
+      "w": 2048,
+      "h": 1536,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYCAwT/xAAWAQEBAQAAAAAAAAAAAAAAAAADAgT/2gAMAwEAAhADEAAAAKzEdonoUyqOHMLT4wg//8QAIBAAAgICAAcAAAAAAAAAAAAAAQMAAgQRBRIiMVJhkf/aAAgBAQABPwDnWNg3qCPcDF3HTYGPAjcpt3FkTmuV20I3ieR5j5BLRk//xAAaEQABBQEAAAAAAAAAAAAAAAAAARARE0Fh/9oACAECAQE/ALOaSyH/xAAYEQEBAAMAAAAAAAAAAAAAAAAAAQMSMf/aAAgBAwEBPwC4mtXiv//Z"
     },
     {
-      "src": "/Portfolio/Bricolage/ret-BRC-CHAUD-SCN-017-8bit-FIN3.jpg"
+      "src": "/Portfolio/Bricolage/ret-BRC-CHAUD-SCN-017-8bit-FIN3.jpg",
+      "w": 2048,
+      "h": 1638,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAATABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIFBgP/xAAVAQEBAAAAAAAAAAAAAAAAAAAABP/aAAwDAQACEAMQAAAA1ai4y0aJRiEiKqIP/8QAHhABAQABBAMBAAAAAAAAAAAAAQIAAxEhkRAiMnH/2gAIAQEAAT8A9Z5UDG9IObnvGZo3Nkcpu5Zbe8rRanZpTIaiCSkDI5XH6r8PH//EABsRAAEEAwAAAAAAAAAAAAAAAAABAhAUMVFS/9oACAECAQE/ALLeVLDdCYj/xAAYEQADAQEAAAAAAAAAAAAAAAABE1EAEP/aAAgBAwEBPwBBoyTe/wD/2Q=="
     }
   ]
 }

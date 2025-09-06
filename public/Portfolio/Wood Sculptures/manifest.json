@@ -1,18 +1,31 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Wood%20Sculptures/Disc-wood-frame-08-16x12-FLT.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Wood%20Sculptures/Disc-wood-frame-08-16x12-FLT.jpg"
+      "src": "/Portfolio/Wood%20Sculptures/Disc-wood-frame-08-16x12-FLT.jpg",
+      "w": 2048,
+      "h": 1519,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAAgrwqix1qQbCTA//EACAQAAIBAwQDAAAAAAAAAAAAAAECAAMREgQQEyEUMUL/2gAIAQEAAT8AooIjrkox6M4VtPHdkxBHfuUNNx2uwj1kH1E2qz//xAAXEQADAQAAAAAAAAAAAAAAAAACEiBB/9oACAECAQE/ACbI/8QAFxEAAwEAAAAAAAAAAAAAAAAAAhEgQf/aAAgBAwEBPwAVsf/Z"
     },
     {
-      "src": "/Portfolio/Wood%20Sculptures/SD-Slatted-Sphere-03.jpg"
+      "src": "/Portfolio/Wood%20Sculptures/SD-Slatted-Sphere-03.jpg",
+      "w": 2048,
+      "h": 1446,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAAAg0+WjNdbdsxaprUH/8QAHBAAAgMBAQEBAAAAAAAAAAAAAAIBAxEEMSFB/9oACAEBAAE/AKVOaUf8+EVLhRSxy8jJ7mbsEqywUFY3h//EABcRAAMBAAAAAAAAAAAAAAAAAAISIEL/2gAIAQIBAT8AJsx//8QAFxEAAwEAAAAAAAAAAAAAAAAAAhIgQf/aAAgBAwEBPwAV2P/Z"
     },
     {
-      "src": "/Portfolio/Wood%20Sculptures/Wood-Itteration-04.jpg"
+      "src": "/Portfolio/Wood%20Sculptures/Wood-Itteration-04.jpg",
+      "w": 2048,
+      "h": 1447,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAARABgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAQP/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAAwtSOyWtxZDcHkD//xAAbEAEAAwEBAQEAAAAAAAAAAAABAAIDETESIf/aAAgBAQABPwDKvUmdQeMPkPJjhcepM8NmxayCHI04ftiZSvk0n//EABURAQEAAAAAAAAAAAAAAAAAACBB/9oACAECAQE/AKP/xAAVEQEBAAAAAAAAAAAAAAAAAAAgQf/aAAgBAwEBPwCD/9k="
     },
     {
-      "src": "/Portfolio/Wood%20Sculptures/WoodDisk-4xTubes-07-16x12-FLT.jpg"
+      "src": "/Portfolio/Wood%20Sculptures/WoodDisk-4xTubes-07-16x12-FLT.jpg",
+      "w": 2048,
+      "h": 1518,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQP/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAAzLtHUmuiaox74TB//8QAHhAAAwEAAQUBAAAAAAAAAAAAAAECAxESEyExQXH/2gAIAQEAAT8AykyybpttcHaXBm7Sf4TpdQqUJN/Dr8ejIgZ//8QAFhEBAQEAAAAAAAAAAAAAAAAAAREg/9oACAECAQE/AFaY/8QAFhEBAQEAAAAAAAAAAAAAAAAAAREg/9oACAEDAQE/AAI4/9k="
     }
   ]
 }

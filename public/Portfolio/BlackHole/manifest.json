@@ -1,6 +1,11 @@
 {
   "kind": "portfolio-folder",
   "cover": "/Portfolio/BlackHole/Blackhole/BlackHole-L1.jpg",
+  "coverMeta": {
+    "w": 0,
+    "h": 0,
+    "blurDataURL": null
+  },
   "folders": [
     {
       "name": "Blackhole",

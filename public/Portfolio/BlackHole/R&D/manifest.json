@@ -1,15 +1,25 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/BlackHole/R&D/Screen-Shot-2016-09-14-at-19.41.02.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/BlackHole/R&D/Screen-Shot-2016-09-14-at-19.41.02.jpg"
+      "src": "/Portfolio/BlackHole/R&D/Screen-Shot-2016-09-14-at-19.41.02.jpg",
+      "w": 1160,
+      "h": 1000,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAVABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQCBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAOM3qkiUCYAH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAQIAAxESISD/2gAIAQEAAT8AioTmEESrTuxhK1rlSCTLLVdeDvj/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     },
     {
-      "src": "/Portfolio/BlackHole/R&D/Screen-Shot-2016-09-14-at-19.41.13.jpg"
+      "src": "/Portfolio/BlackHole/R&D/Screen-Shot-2016-09-14-at-19.41.13.jpg",
+      "w": 1212,
+      "h": 912,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAASABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECBAMG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAADyV+embzC5rIQE/8QAHBABAAICAwEAAAAAAAAAAAAAAQACAzEQESGh/9oACAEBAAE/ACWxuz0YwlclADXRb7LQ5//EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAECAQE/AGP/xAAXEQEBAQEAAAAAAAAAAAAAAAABEQIg/9oACAEDAQE/AMg28f/Z"
     },
     {
-      "src": "/Portfolio/BlackHole/R&D/Screen-Shot-2016-09-14-at-19.41.21.jpg"
+      "src": "/Portfolio/BlackHole/R&D/Screen-Shot-2016-09-14-at-19.41.21.jpg",
+      "w": 1244,
+      "h": 1246,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAb/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADkJnSZARcKA//EABwQAAICAwEBAAAAAAAAAAAAAAECAxEAEDEhMv/aAAgBAQABPwDaGmByVZfrsbGxWHuhIwUrfmv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
     }
   ]
 }

@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/BMW/BMW-Drop-Sculpt-14-big-FLT.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/BMW/BMW-Drop-Sculpt-14-big-FLT.jpg"
+      "src": "/Portfolio/BMW/BMW-Drop-Sculpt-14-big-FLT.jpg",
+      "w": 2048,
+      "h": 2048,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAA2FVedk1TlW3yAD//xAAfEAACAgMAAgMAAAAAAAAAAAABAgADBBESISIxUVL/2gAIAQEAAT8AeyupendVH2TqHLxl+bViWV2r0jAiZy9Y+uSfYS4WdAlmA0swdGg6/XidbmxOhP/EABYRAQEBAAAAAAAAAAAAAAAAAAERIP/aAAgBAgEBPwBZj//EABYRAQEBAAAAAAAAAAAAAAAAAAERIP/aAAgBAwEBPwBZj//Z"
     }
   ]
 }

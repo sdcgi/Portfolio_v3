@@ -1,9 +1,13 @@
 {
   "kind": "stills-gallery",
   "cover": "/Portfolio/Seiko/ret-Samurai-v5.jpg",
+  "coverMeta": null,
   "items": [
     {
-      "src": "/Portfolio/Seiko/ret-Samurai-v5.jpg"
+      "src": "/Portfolio/Seiko/ret-Samurai-v5.jpg",
+      "w": 2048,
+      "h": 1822,
+      "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////2wBDARQUFBQVFBcZGRcfIh4iHy4rJycrLkYyNjI2MkZqQk5CQk5Cal5yXVZdcl6phXZ2hanDpJukw+zT0+z/////////wgARCAAVABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADjK5L6hBgAP//EAB4QAQACAgEFAAAAAAAAAAAAAAEAAgQSAyAhMTKh/9oACAEBAAE/AJbC5603Q9dvMRIRy7au3dfsVVXo/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwAf/9k="
     }
   ]
 }
