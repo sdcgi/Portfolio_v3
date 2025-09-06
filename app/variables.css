@@ -1,5 +1,6 @@
+/* ----app/variables.css------------
 /* ===========================
-   Global UI Variables (ROOT)
+    UI Variables (ROOT)
    =========================== */
 :root {
   /* -------- Sitewide layout -------- */
@@ -11,15 +12,20 @@
   --tile-min: 280px;   /* minimum comfortable tile width */
   --tile-max: 600px;   /* cap so tiles don't get huge */
 
-  /* Leaf image aspect behavior */
-  --leaf-native-aspect: 01;      /* 1 = leaf grids use native aspect per image, 0 = disabled */
-  --leaf-native-fit: contain;   /* contain | cover when native aspect is on */
-
 
 /* -------- Folder tile aspect ratios -------- */
---tile-aspect-top: 8 / 10;   /* Top-level folders */
+--tile-aspect-top: 1/1;   /* Top-level folders */
 --tile-aspect-sub: 1 / 1;   /* Subgallery folders */
---tile-aspect-leaf: 3/2;  /* Leaf images (optional) */
+
+
+  /* Leaf image aspect behavior */
+  --leaf-native-aspect: 1;      /* 1 = leaf grids use native aspect per image, 0 = disabled */
+  --leaf-native-fit: contain;   /* contain | cover when native aspect is on */
+
+ /* If --leaf-native-aspect: 0; This sets the global Leaf image aspect ratio.
+ Inherits Top gallery setting with 'var(--tile-aspect-top'), or delete the var()
+ and use a custom value, like 3/2. Overridable per gallery with .order directives */
+--tile-aspect-leaf: var(--tile-aspect-top);
 
 
   /* -------- Title/count visibility per level (1=show, 0=hide) -------- */
@@ -93,7 +99,7 @@
   --cursor-hot-right: e-resize;
 
   /* leaf image zoom hint (optional) */
-  /*--cursor-zoom: zoom-in;
+  /*--cursor-zoom: zoom-in;*/
 
   /* ========================================================= */
 /* ******** SITE-WIDE CURSOR FEEDBACK *********************** */

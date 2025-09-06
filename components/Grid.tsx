@@ -1,4 +1,4 @@
-// app/components/Grid.tsx
+/* ---------- app/components/Grid.tsx ---------- */
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,14 +19,14 @@ type Level = 'top' | 'sub' | 'leaf' | 'motion-top';
 
 export default function Grid({
   items = [],
-  ratio,
+  ratio,                 // from manifest (.order), e.g. "3 / 2" or "0"
   desktopCols,
   enableDensityToggle = true,
   onItemClick,
   level = 'sub',
 }: {
   items?: Tile[];
-  ratio?: string; // from manifest (.order), e.g. "3 / 2" or "0"
+  ratio?: string;
   desktopCols?: number;
   enableDensityToggle?: boolean;
   onItemClick?: (item: Tile, index: number) => void;
@@ -68,50 +68,53 @@ export default function Grid({
     } else if (level === 'sub') {
       setShowFlags({ titles: pick('--show-sub-titles','0'), counts: pick('--show-sub-counts','1') });
     } else if (level === 'leaf') {
-      // Leaf pages are images only — never show counts.
       setShowFlags({ titles: pick('--show-leaf-titles','0'), counts: false });
     } else {
       setShowFlags({ titles: false, counts: false });
     }
   }, [items.length, level, density]);
 
-  // Native aspect toggle — read from :root (global)
+  // Global leaf-native toggle from :root
   const [leafNativeOnRoot, setLeafNativeOnRoot] = useState(false);
   useEffect(() => {
     const root = document.documentElement;
     const cs = getComputedStyle(root);
-    const v = cs.getPropertyValue('--leaf-native-aspect').trim();
+    const v = (cs.getPropertyValue('--leaf-native-aspect') || '').trim();
     setLeafNativeOnRoot(Number(v || '0') > 0);
   }, [items.length]);
 
-  // === Aspect decision (order: .order override → native toggle → global leaf ratio) ===
+  // ----- Aspect resolution (authoritative precedence) -----
+  // Normalize manifest ratio string once
+  const ratioTrim = (ratio ?? '').trim();
+  const hasManifestRatio = ratioTrim.length > 0;
+  const manifestWantsNative = hasManifestRatio && ratioTrim === '0';
+  const manifestFixedRatio = hasManifestRatio && ratioTrim !== '0' ? ratioTrim : undefined;
 
-  // 1) explicit native request via .order: aspect_ratio = 0 → ratio === "0"
-  const forceLeafNative = level === 'leaf' && allImages && ratio === '0';
-
-  // 2) Resolve a grid-level ratio to set on the grid container:
-  //    - If force native → leave undefined (per-image native will be used)
-  //    - Else if ratio provided → use it (e.g. "3 / 2")
-  //    - Else for leaf: only set global fixed var if global native is OFF
-  //    - Else for sub/top: set their level defaults
+  // Decide grid-level ratio:
+  //  - If manifestFixedRatio → use it (strongest)
+  //  - Else if leaf:
+  //      - If manifestWantsNative → no grid ratio (native)
+  //      - Else if global native ON → no grid ratio (native)
+  //      - Else global native OFF → fixed grid ratio (--tile-aspect-leaf)
+  //  - Else (top/sub/motion-top): use their level defaults
   let resolvedGridRatio: string | undefined;
-  if (!forceLeafNative) {
-    if (ratio) {
-      resolvedGridRatio = ratio; // "3 / 2", "4 / 5", etc.
-    } else if (level === 'leaf') {
-      if (!leafNativeOnRoot) resolvedGridRatio = 'var(--tile-aspect-leaf)';
-    } else if (level === 'sub') {
-      resolvedGridRatio = 'var(--tile-aspect-sub)';
-    } else if (level === 'top') {
-      resolvedGridRatio = 'var(--tile-aspect-top)';
-    }
-  }
 
-  // 3) Enable native when:
-  //    - explicit "0" override, OR
-  //    - leaf + images + global native ON and we did not set a grid ratio
-  const enableLeafNativeHere =
-    level === 'leaf' && allImages && (forceLeafNative || (leafNativeOnRoot && !resolvedGridRatio));
+  if (manifestFixedRatio) {
+    resolvedGridRatio = manifestFixedRatio; // e.g. "3 / 2"
+  } else if (level === 'leaf') {
+    if (manifestWantsNative || leafNativeOnRoot) {
+      resolvedGridRatio = undefined; // native mode → per-image ratio
+    } else {
+      resolvedGridRatio = 'var(--tile-aspect-leaf)'; // global native OFF → fixed
+    }
+  } else if (level === 'sub') {
+    resolvedGridRatio = 'var(--tile-aspect-sub)';
+  } else if (level === 'top') {
+    resolvedGridRatio = 'var(--tile-aspect-top)';
+  } // motion-top falls back to CSS default (16/9) via stylesheet
+
+  // Enable per-image native mode exactly when there is no grid ratio AND we’re a leaf of images
+  const enableLeafNativeHere = level === 'leaf' && allImages && !resolvedGridRatio;
 
   // Columns: override wins → special 1/2/3 → otherwise let CSS default
   const activeCols = (colsOverride ?? specialCols);
@@ -119,10 +122,7 @@ export default function Grid({
   const styleVars: Record<string, string | number> = {
     ['--gap' as any]: density === 'compact' ? 'var(--gap-compact)' : 'var(--gap-comfy)',
     ...(typeof activeCols === 'number'
-      ? {
-          ['--cols-active' as any]: activeCols,
-          ['--cols' as any]: activeCols, // legacy readers (harmless)
-        }
+      ? { ['--cols-active' as any]: activeCols, ['--cols' as any]: activeCols }
       : {}),
     ...(resolvedGridRatio ? { ['--grid-ratio' as any]: resolvedGridRatio } : {}),
   };
@@ -149,7 +149,6 @@ export default function Grid({
           <TileView
             key={i}
             item={it}
-            ratio={ratio}
             onClick={() => onItemClick?.(it, i)}
             single={isSingleImageGrid}
             showTitle={showFlags.titles}
@@ -163,9 +162,9 @@ export default function Grid({
 }
 
 function TileView({
-  item, ratio, onClick, single, showTitle, showCount, nativeAspect
+  item, onClick, single, showTitle, showCount, nativeAspect
 }: {
-  item: Tile; ratio?: string; onClick?: () => void; single?: boolean;
+  item: Tile; onClick?: () => void; single?: boolean;
   showTitle?: boolean; showCount?: boolean; nativeAspect?: boolean;
 }) {
   if (item.kind === 'folder') {
@@ -193,10 +192,9 @@ function TileView({
   }
 
   if (item.kind === 'image') {
-    // prefer alt; fallback to filename (no extension), prettified
     const file = item.src.split('/').pop() || '';
     const fallback = file.replace(/\.[^/.]+$/, '').replace(/[-_]+/g, ' ').trim();
-    const label = (item.alt && item.alt.trim()) || fallback;
+    const label = fallback;
 
     return (
       <div
@@ -209,7 +207,7 @@ function TileView({
         <div className="media">
           <Image
             src={item.src}
-            alt={item.alt || ''}
+            alt=""
             fill
             sizes="(max-width:739px) 100vw, (max-width:1099px) 50vw, 33vw"
             onLoadingComplete={

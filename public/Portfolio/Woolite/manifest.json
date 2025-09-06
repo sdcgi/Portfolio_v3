@@ -15,5 +15,6 @@
       "src": "/Portfolio/Woolite/03zWoolite-A4-HandsWire.jpg"
     }
   ],
-  "maxColumns": 3
+  "maxColumns": 3,
+  "aspectRatio": "3 / 2"
 }

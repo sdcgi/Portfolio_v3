@@ -1,3 +1,5 @@
+/* ---------- app/global.css ---------- */
+
 html {
   scrollbar-gutter: stable; /* reserve only on the scrollbar side (right in LTR) */
   scrollbar-width: thin;
@@ -16,7 +18,6 @@ html {
   border-radius: 1ex;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
 }
-
 
 /* Minimal, neutral; no shadows, no rounded corners */
 * { box-sizing: border-box; }
@@ -80,7 +81,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 /* ========================================================= */
 .site-main { max-width: 1200px; margin: 0 auto; padding: 24px; }
 
-
 .bleed-mobile { margin-inline: 0; }
 @media (max-width: var(--bp-bleed)) {
   .bleed-mobile { margin-inline: calc(-1 * var(--content-inline)); }
@@ -109,7 +109,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 
 /* Grid — gap controlled by variables */
 .grid { display: grid; gap: var(--gap, var(--gap-comfy)); }
-
 
 /* Aspect ratio plumbing */
 .grid.level-top        { --ratio: var(--grid-ratio, var(--tile-aspect-top,        1 / 1)); }
@@ -193,7 +192,9 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
   color: var(--type-count-color, var(--muted));
   opacity: var(--type-count-opacity, 0.8);
 }
-.tile .meta a { pointer-events: none; }.tile .meta a { pointer-events: none; }
+
+/* Prevent meta links from stealing the hit target (tile/link handles it) */
+.tile .meta a { pointer-events: none; }
 
 /* Single-image grid: center and keep width of one 2-col cell */
 .grid.single-one { display: flex; justify-content: center; }
@@ -215,8 +216,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 .grid.level-top  .tile .media video,
 .grid.level-sub  .tile .media video { object-fit: cover !important; }
 
-
-
 /* Utilities */
 .hidden { display: none; }
 
@@ -233,7 +232,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 /* ======================================================
    1-COL GRID FULL-BLEED INSIDE .site-main
    ====================================================== */
-
 @media (max-width: 640px) {
   .site-main .bleed-mobile {
     margin-left: -24px;
@@ -248,18 +246,12 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 .tile { min-width: 0; }
 .tile .meta, .tile .label { min-width: 0; }
 
-
-
-
-
-
 /* ======================================================
           9.0   [ MOBILE BLEED GUARD ]
    ====================================================== */
 
 /* Only the section marked .bleed-mobile should bleed on narrow viewports.
    Breadcrumbs (and other content) remain within the .content width. */
-
 @media (max-width: 640px) {
   section.bleed-mobile {
     /* Cancel the .content horizontal padding to touch viewport edges */
@@ -274,8 +266,6 @@ body { font-family: var(--font-sans); color: var(--text); background: var(--bg);
 }
 
 /* ============ END 9.0  MOBILE BLEED GUARD ============ */
-
-
 
 /* Leaves never show counts (defensive) */
 .grid.level-leaf .meta .count { display: none !important; }
